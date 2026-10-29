@@ -21,9 +21,10 @@ gate at the end of each phase decides whether we move on.
 - **Competitor scan.** Rucking (backpacks + weight plates), weighted vests,
   weighted wrist/ankle gear, structured work bags. Note price points, weight
   formats, and how they secure and release weights.
-- **Expert input.** A strength coach and a physiotherapist on: safe load
-  ranges for a 10–30 min unilateral carry, how often to switch hands, risks
-  (shoulder, elbow, lower back), and what guidance to ship with the product.
+- **Expert input.** A strength coach and a physiotherapist on: how users
+  should build up to 30 kg, the carry-to-fatigue-then-switch protocol
+  (about 10 min per side over a 20 min walk), risks (grip, shoulder, elbow,
+  lower back), and what guidance to ship with the product.
 - **User interviews (10–15).** Commute length and route (stairs, transit,
   crowds), what they carry today, where weights would live during the day,
   what would make them stop using it.
@@ -72,8 +73,18 @@ Concepts will be scored (Pugh matrix) against: drop speed, safety
 
 ### 3.4 Handle and carry ergonomics
 
-- Rigid handle directly over the centre of mass.
-- Test grip diameters (about 25–35 mm) and padding for a long hold.
+The recommended carry is one hand until fatigue, switch, repeat — up to
+30 kg total. So **grip is the limiting factor**, and the handle is the most
+important part of the bag to get right.
+
+- Rigid handle directly over the centre of mass, so the bag hangs straight
+  in either hand.
+- Fully symmetric: same balance and feel left or right, either face against
+  the leg. Switching hands mid-stride should take a second.
+- Test grip diameters (about 25–35 mm), shapes and wraps at 30 kg: a thicker
+  handle spreads pressure but tires the grip faster.
+- Handle stays put (doesn't flop or rotate), so the free hand can grab it
+  during the switch.
 - Slim bag profile so it clears the leg.
 - Shoulder strap for non-training moments.
 
@@ -110,22 +121,29 @@ decide whether moulded glass-filled nylon pays off at production volume.
 | Hardware | Metal (aluminium or steel) buckles, D-rings and fasteners on the load path |
 | Base | Reinforced base panel with protective feet |
 
-**Volume at 30 kg:** if most of the 30 kg is steel bricks, that's about
-3.8 L — a tray of roughly 38 × 12 × 8 cm. The frame and compartment need
-to fit this without making the bag bulky.
+**Brick volume:** 30 kg is the total, including bag, laptop and contents,
+so the bricks top out at about 24 kg. In steel that's about 3 L — a tray of
+roughly 38 × 12 × 7 cm. The frame and compartment need to fit this without
+making the bag bulky.
 
 ### 3.6 Safety
 
 - Rigid divider between weights and laptop.
-- Ship with clear carry guidance (warm up, start light, switch hands).
+- Ship with clear carry guidance: start light and build up toward 30 kg
+  over weeks; carry to fatigue, then switch hands; keep alternating; stand
+  tall and don't lean away from the bag.
+- Have a strength coach / physio review the guidance and the build-up plan.
 
 ## 4. Prototyping and testing
 
 **Phase 3 — rough prototypes (cheap and fast):**
 - Take 2–3 existing briefcases/totes. Add weights (sandbags, steel plates,
   bottles) at the bottom vs. side. Walk the real commute.
-- Measure: how much the bag swings, grip fatigue (time before switching
-  hands), comfort rating, how the bag looks and sounds.
+- Follow the recommended carry (one hand to fatigue, switch, repeat) at
+  several loads up to 30 kg.
+- Measure: how much the bag swings, time per hand before switching, number
+  of switches per walk, how easy the switch is, comfort rating, how the bag
+  looks and sounds.
 - Mock up concepts A–E in cardboard/foam to time the weight drop.
 
 **Phase 4 — engineering prototype:**
@@ -135,7 +153,8 @@ to fit this without making the bag bulky.
   - **Static pull:** handle and every load-bearing attachment held at
     3× load (90 kg) — no failure.
   - **Fatigue:** lift-and-carry cycling at 30 kg, at least 10,000 cycles
-    (more than 5 years of commutes) — no seam, frame or handle damage.
+    (about 5 years of commutes, counting hand switches) — no seam, frame or
+    handle damage.
   - **Fabric-only test:** frame removed or disconnected, 30 kg load —
     fabric and seams hold.
   - **Drop test:** loaded bag dropped onto concrete from desk height and
@@ -149,7 +168,8 @@ to fit this without making the bag bulky.
 
 **Phase 5 — wear test:**
 - 10–20 commuters, 4 weeks, weekly short survey + exit interview.
-- Track: days carried with weights, load used, drop/replace friction,
+- Track: days carried with weights, total load used and how it builds over
+  the weeks, time per hand and switches per walk, drop/replace friction,
   failures, any pain or injury.
 
 ## 5. Risks

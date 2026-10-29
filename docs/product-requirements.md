@@ -11,26 +11,37 @@ validated in research and prototyping, not commitments.
 - **Secondary — the fitness-minded professional.** Already trains, knows what
   a suitcase carry or ruck is, and wants to add volume through the day.
 
-## 2. Use cases
+## 2. Recommended carry
+
+- Total carried load: **up to 30 kg**, including the bag, laptop, contents
+  and weights. Users build up to this over time.
+- Carry in one hand until the grip or core fatigues, then switch hands, and
+  keep alternating.
+- A typical 20-minute walk is about 10 minutes per side, split into several
+  bouts.
+
+## 3. Use cases
 
 | ID | Use case |
 | --- | --- |
-| UC-1 | Walk to work carrying the loaded bag in one hand, switching hands as needed. |
+| UC-1 | Walk to work carrying the loaded bag in one hand until it fatigues, then switch hands; alternate for the whole walk. |
 | UC-2 | Arrive at work, pull the weights out in one motion, leave them under the desk or in a locker, and use the bag normally during the day. |
 | UC-3 | Before going home, put the weights back in (or don't — light day). |
 | UC-4 | Add or remove one brick to change the load (progression, tired day, injury). |
 | UC-5 | Mid-walk, decide the load is too much and drop weights quickly. |
 | UC-6 | Use the bag as a normal work bag with no weights at all. |
 
-## 3. Functional requirements
+## 4. Functional requirements
 
 ### Weight system
 - **R-W1** Holds added weight in a dedicated compartment, physically separated
   from the main (laptop) compartment.
 - **R-W2** Adjustable in increments of 1–2.5 kg _(hypothesis)_.
-- **R-W3** Rated for up to 30 kg in total (weights + contents). The usable
-  added-weight range inside that limit is still to be validated with users
-  and a strength coach / physio (see Q-3).
+- **R-W3** Designed to be carried at up to 30 kg in total: bag, laptop,
+  contents and weights together. With a 2.5 kg bag, ~2 kg laptop and ~1.5 kg
+  of other contents, that leaves room for **up to ~24 kg of bricks**.
+- **R-W10** The weight compartment holds no more bricks than fit within the
+  30 kg total with typical contents, so it's hard to overload by accident.
 - **R-W4** All weights can be removed together in one motion, in under
   10 seconds, without tools _(hypothesis)_.
 - **R-W5** A single brick can be added or removed without removing the others.
@@ -47,6 +58,9 @@ validated in research and prototyping, not commitments.
   over the centre of mass, comfortable diameter for a long hold.
 - **R-B2** The loaded bag hangs vertically and stays clear of the leg while
   walking.
+- **R-B9** Symmetric carry: the bag balances and feels the same in either
+  hand, and switching hands is quick and natural mid-walk (no strap to
+  untangle, no "right way round").
 - **R-B3** Load path runs from the handle through the frame to the weights —
   not through decorative fabric panels.
 - **R-B4** Handle and attachment points rated to at least 3× maximum loaded
@@ -73,7 +87,8 @@ validated in research and prototyping, not commitments.
 - **R-D6** Weight compartment base and lining resist abrasion from the
   bricks being slid in and out every day.
 - **R-D7** Design life of at least 5 years of daily commuting (about 2,300
-  loaded trips) _(hypothesis)_.
+  loaded trips, each with several hand switches — roughly 10,000 lifts)
+  _(hypothesis)_.
 - **R-D8** Wear parts (handle wrap, base feet, tray runners) can be replaced.
 
 ### Weights ("bricks")
@@ -84,13 +99,13 @@ validated in research and prototyping, not commitments.
 - **R-K4** Dense enough to keep the compartment slim (see design plan §3).
 - **R-K5** Non-toxic materials (no lead).
 
-## 4. Non-goals (v1)
+## 5. Non-goals (v1)
 
 - Backpack carry as the main mode (that's rucking, a different product).
 - Electronic features (sensors, step tracking, app).
 - Luggage / travel suitcase sizes.
 
-## 5. Success metrics (v1)
+## 6. Success metrics (v1)
 
 - Testers keep using it: ≥ 60% of wear-testers still carry weights after
   4 weeks _(hypothesis)_.

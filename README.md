@@ -28,10 +28,22 @@ want it — turns that dead time into training with zero extra time cost.
    dedicated compartment at the bottom or side of the bag. Adding, removing or
    swapping a brick needs no tools.
 5. **Built to last.** A durable plastic or light metal frame supports the
-   bag, and the fabric is extremely tough. The bag carries **up to 30 kg**
-   every day for years without tearing, sagging or failing.
+   bag, and the fabric is extremely tough. The bag carries **up to 30 kg in
+   total** (laptop, contents and weights) every day for years without
+   tearing, sagging or failing.
 6. **Still a great work bag.** It must look professional and protect a laptop
    and everyday items — the weight system can't compromise the bag's day job.
+
+## How it's used: the recommended carry
+
+1. Load the bag up to your chosen weight — **up to 30 kg in total**,
+   including your laptop and everything else in it.
+2. Carry it in one hand, at your side, standing tall, until your grip or core
+   fatigues.
+3. Switch to the other hand. Keep alternating for the whole walk.
+
+On a typical 20-minute walk that adds up to about 10 minutes per side. Start
+light and build up over weeks.
 
 ## Core principles
 
@@ -40,8 +52,9 @@ want it — turns that dead time into training with zero extra time cost.
   carry the full load anyway, as a backup.
 - **Safe first.** Weights are secured so they can't shift, rattle or fall out
   by accident, and they are kept separate from the laptop and other contents.
-- **Built for one-hand carry.** The handle sits above the bag's centre of
-  mass, so the bag hangs straight and doesn't swing into the leg.
+- **Built for one-hand carry, in either hand.** The handle sits above the
+  bag's centre of mass, so the bag hangs straight and doesn't swing into the
+  leg — and it feels the same in the left hand as in the right.
 - **Low and compact.** Dense weights sit low in the bag, so the bag stays
   slim and stable.
 - **Simple over clever.** Fewer moving parts, fewer failure points.
