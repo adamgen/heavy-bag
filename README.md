@@ -2,7 +2,7 @@
 
 > Working name. A work bag that turns the daily commute into a strength workout.
 
-Heavy Bag is a brand of everyday bags (briefcases, totes, work bags) that are
+Heavy Bag is a brand of work bags — a **backpack** and a **laptop bag** — that are
 **deliberately heavy to carry**. A built-in, adjustable weight system lets you
 carry the bag in one hand on your way to work, so every walk becomes a
 **suitcase carry** — a loaded-carry exercise that trains grip, core, obliques
@@ -27,8 +27,8 @@ want it — turns that dead time into training with zero extra time cost.
 4. **Easy to replace.** Weights are simple, standard "bricks" that slot into a
    dedicated compartment at the bottom or side of the bag. Adding, removing or
    swapping a brick needs no tools.
-5. **Built to last.** A durable plastic or light metal frame supports the
-   bag, and the fabric is extremely tough. The bag carries **up to 30 kg in
+5. **Built to last.** An aluminium frame supports the bag, and every fabric
+   option is extremely tough. The bag carries **up to 30 kg in
    total** (laptop, contents and weights) every day for years without
    tearing, sagging or failing.
 6. **Still a great work bag.** It must look professional and protect a laptop
@@ -65,6 +65,7 @@ light and build up over weeks.
 | --- | --- |
 | [`docs/product-requirements.md`](docs/product-requirements.md) | What the product must do: users, requirements, target specs |
 | [`docs/design-plan.md`](docs/design-plan.md) | How we get there: phases, concept directions, testing, risks |
+| [`docs/brand.md`](docs/brand.md) | Brand direction: positioning, look, price, marketing notes |
 | [`docs/decisions.md`](docs/decisions.md) | Open questions and the decision log |
 
 As the project grows, research notes, sketches, CAD and prototype logs will

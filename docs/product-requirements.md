@@ -11,7 +11,18 @@ validated in research and prototyping, not commitments.
 - **Secondary — the fitness-minded professional.** Already trains, knows what
   a suitcase carry or ruck is, and wants to add volume through the day.
 
-## 2. Recommended carry
+## 2. Product line
+
+- **R-P1** Two bags at launch: a **backpack** and a **laptop bag**.
+- **R-P2** Both share one weight system: the same weights fit both bags.
+- **R-P3** Backpack: rigid top handle for the suitcase carry, mounted above
+  the weight sleeve; shoulder straps stow away during the carry.
+- **R-P4** Laptop bag: rigid top handle above the weight tray, plus a
+  detachable shoulder strap.
+- **R-P5** Each bag is offered in several outer fabrics on one shared
+  internal structure (see design plan §3.7).
+
+## 3. Recommended carry
 
 - Total carried load: **up to 30 kg**, including the bag, laptop, contents
   and weights. Users build up to this over time.
@@ -20,7 +31,7 @@ validated in research and prototyping, not commitments.
 - A typical 20-minute walk is about 10 minutes per side, split into several
   bouts.
 
-## 3. Use cases
+## 4. Use cases
 
 | ID | Use case |
 | --- | --- |
@@ -31,7 +42,7 @@ validated in research and prototyping, not commitments.
 | UC-5 | Mid-walk, decide the load is too much and drop weights quickly. |
 | UC-6 | Use the bag as a normal work bag with no weights at all. |
 
-## 4. Functional requirements
+## 5. Functional requirements
 
 ### Weight system
 - **R-W1** Holds added weight in a dedicated compartment, physically separated
@@ -48,8 +59,8 @@ validated in research and prototyping, not commitments.
 - **R-W6** Weights cannot fall out by accident: release needs a deliberate
   action (for example, a two-step release).
 - **R-W7** Weights don't shift, slide or rattle while walking.
-- **R-W8** Weight compartment sits low in the bag (bottom, or lower side),
-  centred under the handle.
+- **R-W8** Weight compartment sits low and centred under the handle: a
+  base tray in the laptop bag, a back-panel sleeve in the backpack.
 - **R-W9** The removed weights are easy to carry and store as a unit (for
   example, a tray or pouch with its own grip).
 
@@ -68,20 +79,21 @@ validated in research and prototyping, not commitments.
   manufacturer)_.
 - **R-B5** Protected laptop sleeve (fits 14"–16" laptop _(hypothesis)_).
 - **R-B6** Professional look, suitable for an office.
-- **R-B7** Optional shoulder strap for days or moments you don't want to
-  train.
+- **R-B7** A way to carry the bag without training: shoulder strap on the
+  laptop bag, stowable shoulder straps on the backpack.
 - **R-B8** Empty bag weight ≤ 2.5 kg including the frame _(hypothesis; the
   frame makes the original 2 kg target tight)_.
 
 ### Durability (critical)
-- **R-D1** Internal frame of durable plastic or light metal supports the
-  bag's shape and carries the load from handle to weight compartment.
+- **R-D1** Internal frame carries the load from handle to weight
+  compartment: an aluminium (6061-T6) load spine with HDPE panels for shape
+  (see design plan §3.6).
 - **R-D2** Bag carries 30 kg in daily use without tearing, seam failure,
   permanent sagging or frame deformation.
 - **R-D3** The fabric alone (without the frame) can hold 30 kg without
   failing, so a frame fault doesn't drop the weights.
-- **R-D4** Outer fabric is highly abrasion- and tear-resistant (heavy
-  high-tenacity nylon class or better) and water-resistant.
+- **R-D4** Every outer fabric option is highly abrasion- and tear-resistant
+  and water-resistant, and passes the same 30 kg durability tests.
 - **R-D5** All load-bearing seams use heavy bonded thread with bar-tacks or
   box-X stitching; load-bearing hardware is metal, not plastic.
 - **R-D6** Weight compartment base and lining resist abrasion from the
@@ -99,13 +111,14 @@ validated in research and prototyping, not commitments.
 - **R-K4** Dense enough to keep the compartment slim (see design plan §3).
 - **R-K5** Non-toxic materials (no lead).
 
-## 5. Non-goals (v1)
+## 6. Non-goals (v1)
 
-- Backpack carry as the main mode (that's rucking, a different product).
+- Rucking as the main exercise. The backpack can be worn, but both bags are
+  designed first for the one-hand suitcase carry.
 - Electronic features (sensors, step tracking, app).
 - Luggage / travel suitcase sizes.
 
-## 6. Success metrics (v1)
+## 7. Success metrics (v1)
 
 - Testers keep using it: ≥ 60% of wear-testers still carry weights after
   4 weeks _(hypothesis)_.
