@@ -27,11 +27,17 @@ want it — turns that dead time into training with zero extra time cost.
 4. **Easy to replace.** Weights are simple, standard "bricks" that slot into a
    dedicated compartment at the bottom or side of the bag. Adding, removing or
    swapping a brick needs no tools.
-5. **Still a great work bag.** It must look professional and protect a laptop
+5. **Built to last.** A durable plastic or light metal frame supports the
+   bag, and the fabric is extremely tough. The bag carries **up to 30 kg**
+   every day for years without tearing, sagging or failing.
+6. **Still a great work bag.** It must look professional and protect a laptop
    and everyday items — the weight system can't compromise the bag's day job.
 
 ## Core principles
 
+- **The frame carries the load, the fabric protects it.** Weight goes from
+  the handle through the frame to the weights; the fabric is tough enough to
+  carry the full load anyway, as a backup.
 - **Safe first.** Weights are secured so they can't shift, rattle or fall out
   by accident, and they are kept separate from the laptop and other contents.
 - **Built for one-hand carry.** The handle sits above the bag's centre of

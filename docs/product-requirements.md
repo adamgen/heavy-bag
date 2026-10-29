@@ -28,8 +28,9 @@ validated in research and prototyping, not commitments.
 - **R-W1** Holds added weight in a dedicated compartment, physically separated
   from the main (laptop) compartment.
 - **R-W2** Adjustable in increments of 1–2.5 kg _(hypothesis)_.
-- **R-W3** Added load range 0–15 kg _(hypothesis; validate with users and a
-  strength coach / physio)_.
+- **R-W3** Rated for up to 30 kg in total (weights + contents). The usable
+  added-weight range inside that limit is still to be validated with users
+  and a strength coach / physio (see Q-3).
 - **R-W4** All weights can be removed together in one motion, in under
   10 seconds, without tools _(hypothesis)_.
 - **R-W5** A single brick can be added or removed without removing the others.
@@ -46,15 +47,34 @@ validated in research and prototyping, not commitments.
   over the centre of mass, comfortable diameter for a long hold.
 - **R-B2** The loaded bag hangs vertically and stays clear of the leg while
   walking.
-- **R-B3** Load path runs from the handle through internal structure (frame
-  or webbing) to the weights — not through decorative fabric panels.
+- **R-B3** Load path runs from the handle through the frame to the weights —
+  not through decorative fabric panels.
 - **R-B4** Handle and attachment points rated to at least 3× maximum loaded
-  weight _(hypothesis; set the final factor with the manufacturer)_.
+  weight, i.e. ≥ 90 kg static _(hypothesis; set the final factor with the
+  manufacturer)_.
 - **R-B5** Protected laptop sleeve (fits 14"–16" laptop _(hypothesis)_).
 - **R-B6** Professional look, suitable for an office.
 - **R-B7** Optional shoulder strap for days or moments you don't want to
   train.
-- **R-B8** Empty bag weight ≤ 2 kg _(hypothesis)_.
+- **R-B8** Empty bag weight ≤ 2.5 kg including the frame _(hypothesis; the
+  frame makes the original 2 kg target tight)_.
+
+### Durability (critical)
+- **R-D1** Internal frame of durable plastic or light metal supports the
+  bag's shape and carries the load from handle to weight compartment.
+- **R-D2** Bag carries 30 kg in daily use without tearing, seam failure,
+  permanent sagging or frame deformation.
+- **R-D3** The fabric alone (without the frame) can hold 30 kg without
+  failing, so a frame fault doesn't drop the weights.
+- **R-D4** Outer fabric is highly abrasion- and tear-resistant (heavy
+  high-tenacity nylon class or better) and water-resistant.
+- **R-D5** All load-bearing seams use heavy bonded thread with bar-tacks or
+  box-X stitching; load-bearing hardware is metal, not plastic.
+- **R-D6** Weight compartment base and lining resist abrasion from the
+  bricks being slid in and out every day.
+- **R-D7** Design life of at least 5 years of daily commuting (about 2,300
+  loaded trips) _(hypothesis)_.
+- **R-D8** Wear parts (handle wrap, base feet, tray runners) can be replaced.
 
 ### Weights ("bricks")
 - **R-K1** Standard size and shape; every brick fits every slot.
@@ -77,3 +97,5 @@ validated in research and prototyping, not commitments.
 - Weight drop (UC-2) takes < 10 s and is rated "easy" by ≥ 90% of testers.
 - No injuries, no load-path failures and no accidental weight releases in
   testing.
+- Passes all lab durability tests at 30 kg (design plan §4) with no
+  structural damage.
