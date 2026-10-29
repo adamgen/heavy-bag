@@ -4,11 +4,12 @@
 
 | ID | Question | Why it matters |
 | --- | --- | --- |
-| Q-1 | **Weights: how do customers get them without huge shipping costs?** Our own bricks, moulds, locally sourced standard bricks, lifting plates, something else? | Sets compartment size, cost and business model. Exploration in progress (design plan §3.2). |
+| Q-1 | **Weights: adopt "one tray, any weight"?** A standard clamping tray that takes fill-your-own cassettes, local steel bar, gym and ruck plates, and our own steel in small packs. | Recommended by the weights research (design plan §3.2, [`research/weights-exploration.md`](research/weights-exploration.md)). Founder to decide. |
+| Q-11 | **Laptop-bag base height:** size for 24 kg of shot or plates (~14 cm) or cap those at ~15 kg and keep a ~9 cm base? | Looks and leg clearance vs. weight range. Settle with mock-ups. |
 | Q-4 | **Weight placement** — confirm base tray (laptop bag) and back-panel sleeve (backpack) in prototype tests. | Balance in the hand, comfort when worn. |
 | Q-5 | **Price and look** — working direction in [`brand.md`](brand.md); founder to review. | Drives materials and suppliers. |
 | Q-6 | **First market and sales channel** (DTC website, pre-order campaign, retail)? | Shipping heavy weights changes the economics. |
-| Q-7 | **Brand name** — keep "Heavy Bag" or rename? | Trademark and domain check in progress. |
+| Q-7 | **Brand name** — desk check recommends against "Heavy Bag" as the main brand. Pick a shortlist (Counterweight, Heftwork(s), Mileweight, Loadbearer) for verification and attorney clearance? | See [`research/name-check.md`](research/name-check.md). |
 | Q-10 | **Knowing the total:** how does a user know they're at or under 30 kg with their laptop and contents? | Add-on scale noted for marketing ([`brand.md`](brand.md)); simpler aids (weight chart, printed guide) still worth having. |
 
 ## Decision log

@@ -29,10 +29,13 @@ gate at the end of each phase decides whether we move on.
   crowds), what they carry today, where weights would live during the day,
   what would make them stop using it.
 - **Quick survey / landing page** to test interest and price sensitivity.
-- **Name check.** Trademark and domain availability for "Heavy Bag" (in
-  progress).
-- **Weight sourcing.** Shipping our own metal weights is expensive; a
-  broad exploration of alternatives is in progress (see §3.2).
+- **Name check.** Done (desk research):
+  [`research/name-check.md`](research/name-check.md). Recommends not using
+  "Heavy Bag" as the main brand. Next: verify registries and domains, then
+  attorney clearance on a shortlist.
+- **Weight sourcing.** Done (desk research):
+  [`research/weights-exploration.md`](research/weights-exploration.md); see
+  §3.2.
 
 ## 3. Key design problems
 
@@ -73,11 +76,43 @@ The material sets how big the weight compartment must be:
 bag; 10 kg of clay bricks fills most of it. Bricks top out at about 24 kg
 (30 kg total minus bag, laptop and contents) — about 3 L in steel.
 
-**Open problem: shipping.** Dense metal weights are the most compact but
-expensive to ship (up to 24 kg per customer). Options include selling
-moulds, preset standard brick sizes sourced locally, supporting gym lifting
-plates, and more. A wide exploration of options is in progress; results
-will land here.
+**Shipping problem.** Dense metal weights are the most compact, but
+shipping a full 24 kg set costs an estimated $25–60 at scale, and more at
+small-shipper rates. It also needs two or three parcels to stay under the
+common 25 kg parcel limit. 25 options were explored in
+[`research/weights-exploration.md`](research/weights-exploration.md). Main
+findings:
+
+- **Only metal, or metal-loaded fillers, fit 24 kg in a slim bag.**
+  Concrete, bricks, sand and water top out around 8–12 kg — fine for
+  beginners, not for the full range.
+- **Users build up over time.** Nobody needs 24 kg on day one, so we can
+  ship a little metal now and more later, or start on local filler.
+- **Moulds rank lower than expected:** concrete is too light for more than
+  ~10 kg, and casting is dusty and fiddly. Possible hobbyist accessory only.
+
+**Recommended direction (pending founder decision): "One tray, any
+weight."** The bag sells a standard weight *interface*, not the weights. One
+rigid, clamping tray (concept A below) takes many weight sources:
+
+| Source | How it fits | Steps |
+| --- | --- | --- |
+| Fill-your-own cassettes (ship empty with the bag) | Identical sealed shells, filled locally with steel shot (~5 kg each), sand or water | ~1–5 kg |
+| Local steel flat bar | Customer buys 100 × 10 mm (or × 5 mm) bar cut to 380 mm; we ship a quiet TPU sleeve | 3 / 1.5 kg |
+| Standard 1" gym plates | "Toast-rack" tray insert holds plates on edge | 1.25 / 2.5 kg |
+| Ruck plates (backpack) | Back sleeve sized to the common 22.9 × 29.2 cm ruck plate | 4.5 / 9 / 13.6 kg |
+| Our own coated steel bricks (premium) | Native fit, marked, silent; sold in small "level-up" packs as users progress | 1.25 / 2.5 / 5 kg |
+| Bricks or water ("budget mode") | Strapped into the open tray; lower maximum | 1–3.5 kg |
+
+This cuts the default shipment from ~27 kg to ~3–8 kg per customer. One
+clamping tray handles rattle, quick release and overload limits for every
+source. The research doc lists nine validation experiments (shipping
+quotes, rattle test, local-sourcing mystery shop, preference test, and
+more).
+
+Open design fork: the laptop-bag base needs ~8–9 cm for 24 kg of flat steel
+but ~14 cm for steel shot or plates on edge. We either size for the taller
+band or cap those sources at ~15 kg in the laptop bag.
 
 ### 3.3 Where the weight goes
 
@@ -98,9 +133,10 @@ will land here.
 | D. Pocketed sleeve | Fabric sleeve with brick-sized pockets, pulls out by a handle | Cheap, light, easy to sew | Less rigid; bricks can shift |
 | E. Bring your own | Lined, washable compartment that fits standard bricks/bottles | No weights to sell; low price | Bulky, dirty, inconsistent weight |
 
-The cassette (A) and pocketed sleeve (D) suit the shared-system goal best:
-one cassette shape could slide into the laptop bag's base and the
-backpack's back sleeve. Concepts will be scored (Pugh matrix) against: drop
+The cassette (A), with a compression clamp, is the favourite: it is the
+"one tray, any weight" interface from §3.2, and one tray shape could slide
+into the laptop bag's base and the backpack's back sleeve. Bring-your-own
+(E) folds into it as the budget mode. Concepts will be scored (Pugh matrix) against: drop
 speed, safety (accidental release), rattle, volume, cost, durability, looks,
 and fit in both bags.
 
@@ -240,15 +276,17 @@ and **Heritage** as samples in the wear test, and add lines after launch.
 | Injury from too much load or poor form | Expert-set build-up plan, start-light guidance, small increments |
 | Weights fall out or damage the laptop | Two-step release, rigid divider, testing |
 | Bag looks or sounds "gym", not "office" | Brand look set early (see [`brand.md`](brand.md)); coated, rattle-free weights |
-| Heavy shipping cost for weights | Weight-sourcing exploration in progress (§3.2) |
+| Heavy shipping cost for weights | "One tray, any weight": ship empty cassettes and sleeves, support local steel and gym plates, sell our steel in small packs (§3.2) |
 | Handle, stitching or frame fails under 30 kg over time | Aluminium load spine, fabric able to hold the load alone, 3× safety factor, fatigue and creep testing |
 | Frame makes the bag heavy or bulky | 7075 fallback, moulded parts at volume; tune against the empty-weight target |
 | Backpack straps get in the way of the hand carry | Stowable straps; test hand switches with the backpack |
-| Name "Heavy Bag" collides with boxing heavy bags (search, trademark) | Trademark and domain check in progress |
+| Name "Heavy Bag" is descriptive and buried by boxing search results | Pick a distinctive brand; keep "Heavy Bag" as a product name or tagline (see name check) |
 
 ## 6. Immediate next steps
 
-1. Land the weight-sourcing exploration and the name check (in progress).
+1. Founder decisions: adopt "one tray, any weight"? Pick a brand name
+   shortlist for clearance.
 2. Competitor scan and expert interviews (Phase 0).
 3. Build the first rough prototypes from an existing laptop bag and
-   backpack and walk them to work for a week.
+   backpack and walk them to work for a week — include a first clamping
+   tray and test it with steel bar, shot cassettes and gym plates.

@@ -74,7 +74,8 @@ weight plates), landing-page test, and unit cost from suppliers.
 - **Add-on scale.** A small add-on scale (hang the bag from it, read the
   total) so customers hit their target load — e.g. "you're at 24 kg, add one
   more weight". Good accessory, bundle item and content hook. Not a core
-  product feature.
+  product feature. The weights research suggests bundling a cheap one that
+  hooks onto the tray handle, since self-filled and local weights vary.
 - **Progress story.** Content and community built around building up to
   30 kg over weeks: "kg carried this month", commute challenges, before /
   after grip-strength tests.
@@ -85,5 +86,16 @@ weight plates), landing-page test, and unit cost from suppliers.
 
 ## Name
 
-"Heavy Bag" is the working name. Trademark and domain check is in progress;
-note the clash with boxing heavy bags in search.
+"Heavy Bag" is the working name. The desk check
+([`research/name-check.md`](research/name-check.md)) recommends **not**
+using it as the main brand: it describes the product too directly to
+protect well, "heavy bag" is the generic name for a boxing bag, search
+results are all boxing gear, and heavybag.com is probably taken. It can
+live on as a product or line name, or in a tagline.
+
+**Shortlist to verify:** Counterweight (top pick), Heftwork(s), Mileweight,
+Loadbearer; Carry Heavy as a tagline. Avoid Ballast, Payload, Lug- and
+Ruck- names (existing bag brands).
+
+Nothing was verified directly against trademark registries or domain
+lookups — the research environment's network blocked them.

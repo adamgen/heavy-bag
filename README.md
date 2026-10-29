@@ -67,6 +67,7 @@ light and build up over weeks.
 | [`docs/design-plan.md`](docs/design-plan.md) | How we get there: phases, concept directions, testing, risks |
 | [`docs/brand.md`](docs/brand.md) | Brand direction: positioning, look, price, marketing notes |
 | [`docs/decisions.md`](docs/decisions.md) | Open questions and the decision log |
+| [`docs/research/`](docs/research/) | Research reports: weight sourcing, name check |
 
 As the project grows, research notes, sketches, CAD and prototype logs will
 live alongside these docs.
