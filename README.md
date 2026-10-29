@@ -1,6 +1,6 @@
 # Heavy Bag
 
-> Working name. A work bag that turns the daily commute into a strength workout.
+> A work bag that turns the daily commute into a strength workout.
 
 Heavy Bag is a brand of work bags — a **backpack** and a **laptop bag** — that are
 **deliberately heavy to carry**. A built-in, adjustable weight system lets you

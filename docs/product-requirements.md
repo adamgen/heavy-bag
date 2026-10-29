@@ -21,6 +21,8 @@ validated in research and prototyping, not commitments.
   detachable shoulder strap.
 - **R-P5** Each bag is offered in several outer fabrics on one shared
   internal structure (see design plan §3.7).
+- **R-P6** Both bags fit a 16" MacBook Pro, the weights, and everyday things
+  at the same time (starting sizes in design plan §3.1).
 
 ## 3. Recommended carry
 
@@ -63,6 +65,12 @@ validated in research and prototyping, not commitments.
   base tray in the laptop bag, a back-panel sleeve in the backpack.
 - **R-W9** The removed weights are easy to carry and store as a unit (for
   example, a tray or pouch with its own grip).
+- **R-W11** "One tray, any weight": a standard clamping tray (laptop bag) and
+  sleeve (backpack) accept many weight sources — our steel weights,
+  fill-your-own cassettes, locally cut steel bar, gym plates and ruck plates
+  (backpack) — and hold each one rattle-free.
+- **R-W12** Laptop bag: full 24 kg with our steel or steel bar; steel-shot
+  cassettes up to ~16 kg. Backpack: full 24 kg from any supported source.
 
 ### Bag & carry
 - **R-B1** A top handle designed for one-handed suitcase carry: rigid, sits
@@ -77,7 +85,8 @@ validated in research and prototyping, not commitments.
 - **R-B4** Handle and attachment points rated to at least 3× maximum loaded
   weight, i.e. ≥ 90 kg static _(hypothesis; set the final factor with the
   manufacturer)_.
-- **R-B5** Protected laptop sleeve (fits 14"–16" laptop _(hypothesis)_).
+- **R-B5** Padded laptop sleeve that fits up to a 16" MacBook Pro (about
+  35.6 × 24.8 × 1.7 cm).
 - **R-B6** Professional look, suitable for an office.
 - **R-B7** A way to carry the bag without training: shoulder strap on the
   laptop bag, stowable shoulder straps on the backpack.
@@ -104,7 +113,8 @@ validated in research and prototyping, not commitments.
 - **R-D8** Wear parts (handle wrap, base feet, tray runners) can be replaced.
 
 ### Weights ("bricks")
-- **R-K1** Standard size and shape; every brick fits every slot.
+These apply to the weights we make and the cassettes and sleeves we ship.
+- **R-K1** Standard size and shape; every brick and cassette fits every slot.
 - **R-K2** Coated or encased (no bare metal, no dust, no sharp edges),
   quiet, and safe to handle and drop.
 - **R-K3** Weight clearly marked on each brick.

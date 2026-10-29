@@ -4,12 +4,10 @@
 
 | ID | Question | Why it matters |
 | --- | --- | --- |
-| Q-1 | **Weights: adopt "one tray, any weight"?** A standard clamping tray that takes fill-your-own cassettes, local steel bar, gym and ruck plates, and our own steel in small packs. | Recommended by the weights research (design plan §3.2, [`research/weights-exploration.md`](research/weights-exploration.md)). Founder to decide. |
-| Q-11 | **Laptop-bag base height:** size for 24 kg of shot or plates (~14 cm) or cap those at ~15 kg and keep a ~9 cm base? | Looks and leg clearance vs. weight range. Settle with mock-ups. |
+| Q-7 | **Is "Heavy Bag" clear to use?** Verify trademarks (US, EU, UK), domains and social handles directly, then attorney clearance. If blocked, pick from the close alternatives in [`research/name-check.md`](research/name-check.md). | The desk check couldn't reach registries or domain lookups. |
 | Q-4 | **Weight placement** — confirm base tray (laptop bag) and back-panel sleeve (backpack) in prototype tests. | Balance in the hand, comfort when worn. |
 | Q-5 | **Price and look** — working direction in [`brand.md`](brand.md); founder to review. | Drives materials and suppliers. |
 | Q-6 | **First market and sales channel** (DTC website, pre-order campaign, retail)? | Shipping heavy weights changes the economics. |
-| Q-7 | **Brand name** — desk check recommends against "Heavy Bag" as the main brand. Pick a shortlist (Counterweight, Heftwork(s), Mileweight, Loadbearer) for verification and attorney clearance? | See [`research/name-check.md`](research/name-check.md). |
 | Q-10 | **Knowing the total:** how does a user know they're at or under 30 kg with their laptop and contents? | Add-on scale noted for marketing ([`brand.md`](brand.md)); simpler aids (weight chart, printed guide) still worth having. |
 
 ## Decision log
@@ -25,3 +23,6 @@
 | 2026-10-29 | Fabric: **several outer fabric options on one shared internal structure** — Core (ballistic/Cordura-class nylon) at launch, Tech (sailcloth laminate / UHMWPE) and Heritage (leather / waxed canvas) to follow. Closes Q-9. | Founder asked for a few options; one structure keeps every option equally durable. |
 | 2026-10-29 | Add-on scale kept as a **marketing note**, not a core feature. | Founder decision. |
 | 2026-10-29 | Brand look and price direction drafted by Claude as interim brand lead ([`brand.md`](brand.md)); founder will review later. | Founder delegated for now. |
+| 2026-10-29 | Weights: **"one tray, any weight"** — a standard clamping tray/sleeve that takes our steel, fill-your-own cassettes, local steel bar, gym plates and ruck plates. Closes Q-1. | Founder decision, based on the weights research. Cuts shipping per customer from ~27 kg to ~3–8 kg. |
+| 2026-10-29 | Sizing: both bags fit a **16" MacBook Pro + weights + everyday things**. Laptop bag ~42 × 40 × 13 cm with a ~9 cm weight base; backpack ~31 × 48 × 16 cm. Closes Q-11. | Founder set the 16" MacBook Pro requirement; Claude picked the 9 cm base (slimmer bag; full 24 kg with dense steel; plates and heavy shot go in the backpack). Confirm with mock-ups. |
+| 2026-10-29 | Name: **keep "Heavy Bag"** — simple and natural to the audience. If it's blocked, use a close alternative. | Founder decision, despite the desk check's caution about weak protection and boxing search results. |

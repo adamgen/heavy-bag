@@ -29,10 +29,10 @@ gate at the end of each phase decides whether we move on.
   crowds), what they carry today, where weights would live during the day,
   what would make them stop using it.
 - **Quick survey / landing page** to test interest and price sensitivity.
-- **Name check.** Done (desk research):
-  [`research/name-check.md`](research/name-check.md). Recommends not using
-  "Heavy Bag" as the main brand. Next: verify registries and domains, then
-  attorney clearance on a shortlist.
+- **Name check.** Desk research done:
+  [`research/name-check.md`](research/name-check.md). The founder keeps
+  "Heavy Bag". Next: verify trademarks, domains and handles directly, then
+  attorney clearance; fall back to a close alternative if it's blocked.
 - **Weight sourcing.** Done (desk research):
   [`research/weights-exploration.md`](research/weights-exploration.md); see
   §3.2.
@@ -59,6 +59,31 @@ so a customer who owns both bags only buys weights once.
 - Shoulder straps tuck away behind a zipped panel during the carry, so
   nothing dangles or snags when switching hands. Worn as a backpack, it's a
   rest mode — or a second, rucking-style workout.
+
+**Sizing (starting dimensions, to confirm with mock-ups)**
+
+Both bags must fit a **16" MacBook Pro** (about 35.6 × 24.8 × 1.7 cm,
+~2.1 kg) plus weights plus everyday things (charger, notebook, lunch,
+jacket layer).
+
+| | Laptop bag | Backpack |
+| --- | --- | --- |
+| External size (W × H × D) | ~42 × 40 × 13 cm | ~31 × 48 × 16 cm (~24 L) |
+| Laptop sleeve (internal) | ~37 × 26 × 2.5 cm, padded, above the false floor | ~37 × 26 × 2.5 cm, padded, in front of the weight sleeve |
+| Weight space | Base tray band ~38 × 11 × 9 cm (~3.8 L) | Back-panel sleeve ~28 × 30 cm, up to ~6 cm thick |
+| Space for other things | Main compartment ~8 L + front pocket | Main compartment + front pocket |
+| Weight sources at full 24 kg | Our steel, local steel bar (~7–8 cm stack) | All sources, incl. ruck plates and shot |
+| Weight sources capped | Steel-shot cassettes ~16 kg; gym plates on edge don't fit (they need ~14 cm) | — |
+
+**Why a 9 cm base, not 14 cm:** a 14 cm base makes the laptop bag ~45 cm
+tall — closer to a tote, heavier and harder to keep clear of the leg. With
+9 cm, the slim dense options (our steel, steel bar) still reach the full
+24 kg, shot reaches ~16 kg, and anyone who wants plates or 24 kg of shot
+has the backpack. The backpack's layout, from the spine outward: frame
+sheet → weight sleeve → laptop sleeve → main compartment.
+
+Check in mock-ups (experiment E7): leg and stair clearance for shorter
+users with a 40 cm-tall bag, and whether ~8 L is enough for everyday things.
 
 ### 3.2 The weights
 
@@ -91,8 +116,7 @@ findings:
 - **Moulds rank lower than expected:** concrete is too light for more than
   ~10 kg, and casting is dusty and fiddly. Possible hobbyist accessory only.
 
-**Recommended direction (pending founder decision): "One tray, any
-weight."** The bag sells a standard weight *interface*, not the weights. One
+**Decision: "One tray, any weight."** The bag sells a standard weight *interface*, not the weights. One
 rigid, clamping tray (concept A below) takes many weight sources:
 
 | Source | How it fits | Steps |
@@ -110,9 +134,8 @@ source. The research doc lists nine validation experiments (shipping
 quotes, rattle test, local-sourcing mystery shop, preference test, and
 more).
 
-Open design fork: the laptop-bag base needs ~8–9 cm for 24 kg of flat steel
-but ~14 cm for steel shot or plates on edge. We either size for the taller
-band or cap those sources at ~15 kg in the laptop bag.
+Laptop-bag base height: set at ~9 cm (see §3.1 sizing). Full 24 kg with our
+steel or steel bar; shot capped at ~16 kg; gym plates in the backpack only.
 
 ### 3.3 Where the weight goes
 
@@ -280,13 +303,15 @@ and **Heritage** as samples in the wear test, and add lines after launch.
 | Handle, stitching or frame fails under 30 kg over time | Aluminium load spine, fabric able to hold the load alone, 3× safety factor, fatigue and creep testing |
 | Frame makes the bag heavy or bulky | 7075 fallback, moulded parts at volume; tune against the empty-weight target |
 | Backpack straps get in the way of the hand carry | Stowable straps; test hand switches with the backpack |
-| Name "Heavy Bag" is descriptive and buried by boxing search results | Pick a distinctive brand; keep "Heavy Bag" as a product name or tagline (see name check) |
+| Name "Heavy Bag" is weak to protect and buried by boxing search results | Register a distinctive logo mark; own a clear domain; lead SEO with "commute" / "weighted work bag" terms; close alternatives ready (see name check) |
 
 ## 6. Immediate next steps
 
-1. Founder decisions: adopt "one tray, any weight"? Pick a brand name
-   shortlist for clearance.
+1. Verify "Heavy Bag" trademarks, domains and handles directly (needs
+   registry access or a manual check), then attorney clearance.
 2. Competitor scan and expert interviews (Phase 0).
 3. Build the first rough prototypes from an existing laptop bag and
    backpack and walk them to work for a week — include a first clamping
    tray and test it with steel bar, shot cassettes and gym plates.
+4. Cardboard mock-ups of both bags at the §3.1 sizes, with a 16" MacBook Pro
+   inside.

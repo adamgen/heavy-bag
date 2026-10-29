@@ -86,16 +86,26 @@ weight plates), landing-page test, and unit cost from suppliers.
 
 ## Name
 
-"Heavy Bag" is the working name. The desk check
-([`research/name-check.md`](research/name-check.md)) recommends **not**
-using it as the main brand: it describes the product too directly to
-protect well, "heavy bag" is the generic name for a boxing bag, search
-results are all boxing gear, and heavybag.com is probably taken. It can
-live on as a product or line name, or in a tagline.
+**Heavy Bag** — the founder's choice: simple, says what it is, natural to
+the audience.
 
-**Shortlist to verify:** Counterweight (top pick), Heftwork(s), Mileweight,
-Loadbearer; Carry Heavy as a tagline. Avoid Ballast, Payload, Lug- and
-Ruck- names (existing bag brands).
+The desk check ([`research/name-check.md`](research/name-check.md)) found
+the old "HEAVY BAG" trademark for bags appears cancelled (2023), so there's
+no obvious blocker, but flagged three things to manage:
 
-Nothing was verified directly against trademark registries or domain
-lookups — the research environment's network blocked them.
+- **Weak protection.** The words describe the product, so register a
+  distinctive **logo / stylised mark**, not only the words, and build
+  recognition through the look (the visible weight cassette, the colours).
+- **Boxing search results.** "Heavy bag" searches return punching bags.
+  Lead search and ads with "weighted work bag", "commute workout bag",
+  "suitcase carry bag"; let the brand name ride on top.
+- **Domain.** heavybag.com is probably taken (unverified). Fallbacks in
+  order: buy it if affordable, then theheavybag.com, heavybag.co,
+  getheavybag.com, heavybagco.com.
+
+**Product names that fit:** the **Heavy Pack** (backpack) and the
+**Heavy Brief** (laptop bag).
+
+**If "Heavy Bag" is blocked,** stay close to it: Heavy Bag Co., The Heavy
+Bag, Heavybag (one word), Heavy Carry, Carry Heavy, Heavy Pack. See the name
+check for details.

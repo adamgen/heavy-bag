@@ -119,6 +119,30 @@ Next steps per name: knock-out search (USPTO, EUIPO, UKIPO, WIPO; classes
 finalist, then consider a US intent-to-use filing in class 18 (plus 28 for
 the weights).
 
+## 5. Founder decision and close alternatives (added 2026-10-29)
+
+The founder keeps **"Heavy Bag"**: simple and natural to the audience. The
+risks above are managed rather than avoided (see [`../brand.md`](../brand.md)).
+
+If verification shows "Heavy Bag" is blocked, the fallbacks stay as close
+to it as possible, in rough order:
+
+| Name | Notes (web search only, unverified) |
+| --- | --- |
+| Heavy Bag Co. / The Heavy Bag | Same name with a distinguishing word; helps with domains (heavybagco.com, theheavybag.com) |
+| Heavybag (one word) | Slightly more distinctive as a mark; same search problem |
+| Heavy Carry | Names the exercise; no bag brand found in a quick search |
+| Carry Heavy | A phrase; works as name or tagline; carryheavy.com likely taken |
+| Heavy Pack | Natural for the backpack; no "HEAVY PACK" bag mark found in a quick search |
+
+The farther alternatives from §4 (Counterweight, Heftwork(s), Mileweight,
+Loadbearer) stay in reserve.
+
+**Still to verify** (registry and domain lookups were blocked again on
+2026-10-29): USPTO / EUIPO / UKIPO / WIPO searches for "HEAVY BAG" and the
+fallbacks in classes 18, 25, 28, 35; RDAP checks on heavybag.com,
+theheavybag.com, heavybag.co, getheavybag.com, heavybagco.com; handles.
+
 ## Sources
 
 - https://www.trademarkelite.com/trademark/trademark-detail/75530157/HEAVY-BAG
