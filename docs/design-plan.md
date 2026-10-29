@@ -1,0 +1,123 @@
+# Product Design Plan
+
+How we go from idea to a manufacturable first product. Phases overlap; the
+gate at the end of each phase decides whether we move on.
+
+## 1. Phases at a glance
+
+| # | Phase | Main output | Gate |
+| --- | --- | --- | --- |
+| 0 | Discovery & research | Research summary, validated load range | Is there real demand? What load is right? |
+| 1 | Requirements | Signed-off PRD v1 | Do we agree on what we're building? |
+| 2 | Concept exploration | 3–5 weight-system concepts, 2–3 bag forms, scored | Pick 1–2 concepts to prototype |
+| 3 | Rough prototypes | Hacked bags + test weights, walk tests | Does the core idea feel good on a real commute? |
+| 4 | Engineering prototype | Sewn prototype, tooled-up brick, load tests | Safe, durable, release mechanism works |
+| 5 | Wear test | 10–20 people, 4 weeks of commuting | People keep using it |
+| 6 | Manufacturing prep | Tech pack, supplier quotes, unit cost | Margin works at target price |
+| 7 | Launch | Pilot run / pre-order campaign | — |
+
+## 2. Phase 0 — Discovery & research
+
+- **Competitor scan.** Rucking (backpacks + weight plates), weighted vests,
+  weighted wrist/ankle gear, structured work bags. Note price points, weight
+  formats, and how they secure and release weights.
+- **Expert input.** A strength coach and a physiotherapist on: safe load
+  ranges for a 10–30 min unilateral carry, how often to switch hands, risks
+  (shoulder, elbow, lower back), and what guidance to ship with the product.
+- **User interviews (10–15).** Commute length and route (stairs, transit,
+  crowds), what they carry today, where weights would live during the day,
+  what would make them stop using it.
+- **Quick survey / landing page** to test interest and price sensitivity.
+
+## 3. Key design problems
+
+### 3.1 The weights ("bricks")
+
+The material sets how big the weight compartment must be:
+
+| Material | Density (g/cm³) | Volume for 10 kg | Notes |
+| --- | --- | --- | --- |
+| Steel (coated) | ~7.9 | ~1.3 L | Compact; needs rubber/TPU coating to stop noise and damage |
+| Cast iron (coated) | ~7.2 | ~1.4 L | Cheap to cast; same coating needs |
+| Concrete / clay brick | ~1.8–2.4 | ~4.5 L | Cheap, available anywhere; dusty, abrasive, crumbles |
+| Sand (sealed bag) | ~1.6 | ~6 L | Soft and quiet; bulky |
+| Water (bladder/bottles) | 1.0 | 10 L | Can be poured out at the destination; very bulky |
+
+**Takeaway:** 10 kg of steel fits in a tray about 38 × 12 × 3 cm — it
+disappears into the bottom of a briefcase. 10 kg of real clay bricks fills
+most of the bag. So the core product should use **dense, coated, standard
+bricks**, with "bring your own weight" (real bricks, water bottles) as a
+possible budget option to explore, not the default.
+
+### 3.2 Where the weight goes
+
+- **Bottom tray** — lowest centre of mass, most stable, easy to centre under
+  the handle. Raises the bag floor a little. _Leading candidate._
+- **Side panel** — keeps the bottom free; risks tilting the bag unless the
+  handle is offset to match. Worth testing as a variant.
+- Either way: centred front-to-back and side-to-side under the handle.
+
+### 3.3 Quick drop and replace — concept directions
+
+| Concept | How it works | Strengths | Risks |
+| --- | --- | --- | --- |
+| A. Drawer / cassette | All bricks sit in a rigid tray that slides out of an end hatch | One-motion drop; tray doubles as a carry/storage unit | Hatch and rails add cost and weight |
+| B. Bottom flap | Zipped or buckled bottom panel opens to release a brick pouch | Simple, soft-goods only | Dropping weights by accident; zip under heavy load |
+| C. Rail / clip-in bricks | Each brick clips into a rail on the bag floor or side | Fine-grained adjustment, no rattle | Many small mechanisms; slower full drop |
+| D. Pocketed sleeve | Fabric sleeve with brick-sized pockets, pulls out by a handle | Cheap, light, easy to sew | Less rigid; bricks can shift |
+| E. Bring your own | Lined, washable compartment that fits standard bricks/bottles | No weights to sell; low price | Bulky, dirty, inconsistent weight |
+
+Concepts will be scored (Pugh matrix) against: drop speed, safety
+(accidental release), rattle, compartment volume, cost, durability, looks.
+
+### 3.4 Handle and carry ergonomics
+
+- Rigid handle directly over the centre of mass.
+- Test grip diameters (about 25–35 mm) and padding for a long hold.
+- Slim bag profile so it clears the leg.
+- Shoulder strap for non-training moments.
+
+### 3.5 Structure and safety
+
+- Internal load path: handle → frame/webbing → weight compartment.
+- Rigid divider between weights and laptop.
+- Reinforced base; abrasion-resistant lining in the weight compartment.
+- Static and fatigue load tests on handle, stitching and hardware.
+- Ship with clear carry guidance (warm up, start light, switch hands).
+
+## 4. Prototyping and testing
+
+**Phase 3 — rough prototypes (cheap and fast):**
+- Take 2–3 existing briefcases/totes. Add weights (sandbags, steel plates,
+  bottles) at the bottom vs. side. Walk the real commute.
+- Measure: how much the bag swings, grip fatigue (time before switching
+  hands), comfort rating, how the bag looks and sounds.
+- Mock up concepts A–E in cardboard/foam to time the weight drop.
+
+**Phase 4 — engineering prototype:**
+- Sewn prototype with the chosen weight system.
+- First brick samples (3D-printed shell + steel shot, then real coated steel).
+- Load tests: handle pull test, drop test, 10,000-cycle swing/fatigue test.
+
+**Phase 5 — wear test:**
+- 10–20 commuters, 4 weeks, weekly short survey + exit interview.
+- Track: days carried with weights, load used, drop/replace friction,
+  failures, any pain or injury.
+
+## 5. Risks
+
+| Risk | Mitigation |
+| --- | --- |
+| Injury from too much load or poor form | Expert-set load range, start-light guidance, small increments |
+| Weights fall out or damage the laptop | Two-step release, rigid divider, testing |
+| Bag looks or sounds "gym", not "office" | Design early with the look in mind; coated, rattle-free bricks |
+| Heavy shipping cost for weights | Sell bricks separately or ship from a regional warehouse; explore BYO option |
+| Handle/stitching fatigue failure | Safety factor, internal frame, cycle testing |
+| Name "Heavy Bag" collides with boxing heavy bags (search, trademark) | Brand/name check in Phase 0 |
+
+## 6. Immediate next steps
+
+1. Answer the open questions in [`decisions.md`](decisions.md).
+2. Competitor scan and expert interviews (Phase 0).
+3. Build the first rough prototype from an existing bag and walk it to work
+   for a week.
