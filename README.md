@@ -66,6 +66,7 @@ light and build up over weeks.
 | [`docs/product-requirements.md`](docs/product-requirements.md) | What the product must do: users, requirements, target specs |
 | [`docs/design-plan.md`](docs/design-plan.md) | How we get there: phases, concept directions, testing, risks |
 | [`docs/decisions.md`](docs/decisions.md) | Open questions and the decision log |
+| [`docs/research/weight-sourcing.md`](docs/research/weight-sourcing.md) | Research: how to source the weights without shipping 24 kg of metal per customer (feeds Q-1, Q-6, Q-10) |
 
 As the project grows, research notes, sketches, CAD and prototype logs will
 live alongside these docs.
