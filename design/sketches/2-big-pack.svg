@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 1188" width="1680" height="1188">
+<style>
+  text { font-family: Helvetica, Arial, sans-serif; fill: #111; }
+  .o  { fill: none; stroke: #111; stroke-width: 2.4; stroke-linejoin: round; }
+  .of { fill: #fff; stroke: #111; stroke-width: 2.4; stroke-linejoin: round; }
+  .t  { fill: none; stroke: #111; stroke-width: 1.2; }
+  .h  { fill: none; stroke: #666; stroke-width: 1.3; stroke-dasharray: 9 6; }
+  .z  { fill: none; stroke: #111; stroke-width: 1.4; stroke-dasharray: 3 3; }
+  .c  { fill: none; stroke: #888; stroke-width: 1; stroke-dasharray: 18 5 3 5; }
+  .al { fill: none; stroke: #c4581c; stroke-width: 3; stroke-dasharray: 10 5; }
+  .alf { fill: #c4581c; stroke: #c4581c; stroke-width: 1; }
+  .pe { fill: #cfe8d9; stroke: #2e8b57; stroke-width: 1.6; }
+  .wt { fill: #cfd3d8; stroke: #111; stroke-width: 1.4; }
+  .lap { fill: #9aa3ad; stroke: #111; stroke-width: 1.2; }
+  .pad { fill: #f1ece2; stroke: #111; stroke-width: 1.2; }
+  .d  { fill: none; stroke: #1f5fbf; stroke-width: 1.1; }
+  .dt { fill: #1f5fbf; font-size: 17px; }
+  .lbl { font-size: 18px; font-weight: bold; letter-spacing: 1px; }
+  .sm { font-size: 15px; }
+  .note { font-size: 16px; }
+  .co { fill: #fff; stroke: #111; stroke-width: 1.6; }
+  .cot { font-size: 15px; font-weight: bold; }
+</style>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M0,1 L10,5 L0,9 z" fill="#1f5fbf"/>
+  </marker>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+  </marker>
+</defs>
+<rect width="1680" height="1188" fill="#fff"/>
+<rect x="20.0" y="20.0" width="1640.0" height="1148.0" rx="0" class="t"/>
+<rect x="110.0" y="190.0" width="310.0" height="480.0" rx="46" class="of"/>
+<rect x="180.0" y="128.0" width="170.0" height="62.0" rx="18" class="of"/>
+<rect x="204.0" y="156.0" width="122.0" height="36.0" rx="8" class="of"/>
+<line x1="204.0" y1="190.0" x2="326.0" y2="190.0" class="o"/>
+<path d="M132,460 L132,250 Q132,208 174,208 L356,208 Q398,208 398,250 L398,460" class="z"/>
+<rect x="155.0" y="440.0" width="220.0" height="200.0" rx="16" class="o"/>
+<line x1="172.0" y1="458.0" x2="358.0" y2="458.0" class="z"/>
+<rect x="235.0" y="490.0" width="60.0" height="16.0" rx="3" class="t"/>
+<text x="265.0" y="526.0" class="sm" text-anchor="middle">logo (deboss)</text>
+<rect x="122.0" y="360.0" width="286.0" height="300.0" rx="6" class="h"/>
+<line x1="217.0" y1="364.0" x2="217.0" y2="656.0" class="h"/>
+<line x1="126.0" y1="460.0" x2="404.0" y2="460.0" class="h"/>
+<line x1="312.0" y1="364.0" x2="312.0" y2="656.0" class="h"/>
+<line x1="126.0" y1="560.0" x2="404.0" y2="560.0" class="h"/>
+<rect x="150.0" y="670.0" width="30.0" height="6.0" rx="2" class="o"/>
+<rect x="350.0" y="670.0" width="30.0" height="6.0" rx="2" class="o"/>
+<line x1="265.0" y1="100.0" x2="265.0" y2="700.0" class="c"/>
+<line x1="110.0" y1="678.0" x2="110.0" y2="726.0" class="d"/>
+<line x1="420.0" y1="678.0" x2="420.0" y2="726.0" class="d"/>
+<line x1="110.0" y1="720.0" x2="420.0" y2="720.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="265.0" y="714.0" class="dt" text-anchor="middle">310</text>
+<line x1="110.0" y1="190.0" x2="64.0" y2="190.0" class="d"/>
+<line x1="110.0" y1="670.0" x2="64.0" y2="670.0" class="d"/>
+<line x1="70.0" y1="190.0" x2="70.0" y2="670.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="63.0" y="430.0" class="dt" text-anchor="middle" transform="rotate(-90 63.0 430.0)">480</text>
+<line x1="420.0" y1="360.0" x2="460.0" y2="360.0" class="d"/>
+<line x1="420.0" y1="660.0" x2="460.0" y2="660.0" class="d"/>
+<line x1="454.0" y1="360.0" x2="454.0" y2="660.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="447.0" y="510.0" class="dt" text-anchor="middle" transform="rotate(-90 447.0 510.0)">300 weight zone</text>
+<line x1="305.0" y1="142.0" x2="395.0" y2="95.0" class="t"/>
+<circle cx="305.0" cy="142.0" r="2.5" class="t"/>
+<circle cx="395.0" cy="95.0" r="13" class="co"/>
+<text x="395.0" y="100.0" class="cot" text-anchor="middle">1</text>
+<line x1="310.0" y1="610.0" x2="490.0" y2="590.0" class="t"/>
+<circle cx="310.0" cy="610.0" r="2.5" class="t"/>
+<circle cx="490.0" cy="590.0" r="13" class="co"/>
+<text x="490.0" y="595.0" class="cot" text-anchor="middle">4</text>
+<line x1="340.0" y1="458.0" x2="490.0" y2="430.0" class="t"/>
+<circle cx="340.0" cy="458.0" r="2.5" class="t"/>
+<circle cx="490.0" cy="430.0" r="13" class="co"/>
+<text x="490.0" y="435.0" class="cot" text-anchor="middle">6</text>
+<text x="265.0" y="758.0" class="lbl" text-anchor="middle">FRONT VIEW</text>
+<rect x="520.0" y="190.0" width="310.0" height="480.0" rx="46" class="of"/>
+<rect x="590.0" y="128.0" width="170.0" height="62.0" rx="18" class="of"/>
+<rect x="614.0" y="156.0" width="122.0" height="36.0" rx="8" class="of"/>
+<line x1="614.0" y1="190.0" x2="736.0" y2="190.0" class="o"/>
+<line x1="570.0" y1="220.0" x2="780.0" y2="220.0" class="z"/>
+<rect x="661.0" y="214.0" width="28.0" height="12.0" rx="4" class="t"/>
+<rect x="560.0" y="250.0" width="230.0" height="340.0" rx="20" class="z"/>
+<path d="M592.0,260 L648.0,260 L581.0,580 L529.0,580 Z" class="o"/>
+<rect x="538.0" y="645.0" width="24.0" height="14.0" rx="4" class="t"/>
+<path d="M702.0,260 L758.0,260 L821.0,580 L769.0,580 Z" class="o"/>
+<rect x="788.0" y="645.0" width="24.0" height="14.0" rx="4" class="t"/>
+<rect x="605.0" y="390.0" width="140.0" height="12.0" rx="6" class="o"/>
+<rect x="580.0" y="605.0" width="190.0" height="50.0" rx="12" class="pad"/>
+<line x1="538.0" y1="210.0" x2="538.0" y2="660.0" class="al"/>
+<line x1="812.0" y1="210.0" x2="812.0" y2="660.0" class="al"/>
+<line x1="740.0" y1="220.0" x2="890.0" y2="200.0" class="t"/>
+<circle cx="740.0" cy="220.0" r="2.5" class="t"/>
+<circle cx="890.0" cy="200.0" r="13" class="co"/>
+<text x="890.0" y="205.0" class="cot" text-anchor="middle">7</text>
+<line x1="675.0" y1="220.0" x2="890.0" y2="260.0" class="t"/>
+<circle cx="675.0" cy="220.0" r="2.5" class="t"/>
+<circle cx="890.0" cy="260.0" r="13" class="co"/>
+<text x="890.0" y="265.0" class="cot" text-anchor="middle">8</text>
+<line x1="775.0" y1="310.0" x2="890.0" y2="320.0" class="t"/>
+<circle cx="775.0" cy="310.0" r="2.5" class="t"/>
+<circle cx="890.0" cy="320.0" r="13" class="co"/>
+<text x="890.0" y="325.0" class="cot" text-anchor="middle">9</text>
+<line x1="538.0" y1="490.0" x2="480.0" y2="520.0" class="t"/>
+<circle cx="538.0" cy="490.0" r="2.5" class="t"/>
+<circle cx="480.0" cy="520.0" r="13" class="co"/>
+<text x="480.0" y="525.0" class="cot" text-anchor="middle">2</text>
+<line x1="670.0" y1="630.0" x2="890.0" y2="610.0" class="t"/>
+<circle cx="670.0" cy="630.0" r="2.5" class="t"/>
+<circle cx="890.0" cy="610.0" r="13" class="co"/>
+<text x="890.0" y="615.0" class="cot" text-anchor="middle">12</text>
+<text x="675.0" y="758.0" class="lbl" text-anchor="middle">BACK VIEW (straps out)</text>
+<rect x="930.0" y="190.0" width="160.0" height="480.0" rx="30" class="of"/>
+<rect x="945.0" y="128.0" width="50.0" height="62.0" rx="10" class="of"/>
+<rect x="942.0" y="193.0" width="58.0" height="9.0" rx="0" class="alf"/>
+<rect x="934.0" y="230.0" width="12.0" height="420.0" rx="4" class="pad"/>
+<rect x="946.0" y="210.0" width="4.0" height="450.0" rx="0" class="pe"/>
+<line x1="948.0" y1="210.0" x2="948.0" y2="660.0" class="al"/>
+<rect x="950.0" y="220.0" width="58.0" height="442.0" rx="4" class="t"/>
+<rect x="952.0" y="360.0" width="52.0" height="300.0" rx="4" class="pe"/>
+<rect x="956.0" y="362.0" width="33.0" height="96.0" rx="3" class="wt"/>
+<rect x="989.5" y="362.0" width="12.0" height="96.0" rx="2" class="wt"/>
+<rect x="956.0" y="462.0" width="33.0" height="96.0" rx="3" class="wt"/>
+<rect x="989.5" y="462.0" width="12.0" height="96.0" rx="2" class="wt"/>
+<rect x="956.0" y="562.0" width="33.0" height="96.0" rx="3" class="wt"/>
+<rect x="989.5" y="562.0" width="12.0" height="96.0" rx="2" class="wt"/>
+<rect x="1010.0" y="250.0" width="28.0" height="380.0" rx="6" class="pad"/>
+<rect x="1016.0" y="256.0" width="17.0" height="356.0" rx="3" class="lap"/>
+<line x1="1068.0" y1="440.0" x2="1068.0" y2="640.0" class="t"/>
+<text x="1053.0" y="350.0" class="sm" text-anchor="middle" transform="rotate(-90 1053.0 350.0)">main</text>
+<text x="1080.0" y="550.0" class="sm" text-anchor="middle" transform="rotate(-90 1080.0 550.0)">pkt</text>
+<line x1="970.0" y1="100.0" x2="970.0" y2="690.0" class="c"/>
+<circle cx="982.0" cy="520.0" r="9" class="t"/>
+<line x1="973.0" y1="520.0" x2="991.0" y2="520.0" class="t"/>
+<line x1="982.0" y1="511.0" x2="982.0" y2="529.0" class="t"/>
+<text x="994.0" y="517.0" class="sm" text-anchor="start">CoM</text>
+<line x1="930.0" y1="678.0" x2="930.0" y2="726.0" class="d"/>
+<line x1="1090.0" y1="678.0" x2="1090.0" y2="726.0" class="d"/>
+<line x1="930.0" y1="720.0" x2="1090.0" y2="720.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="1010.0" y="714.0" class="dt" text-anchor="middle">160</text>
+<line x1="1025.0" y1="310.0" x2="1118.0" y2="250.0" class="t"/>
+<circle cx="1025.0" cy="310.0" r="2.5" class="t"/>
+<circle cx="1118.0" cy="250.0" r="13" class="co"/>
+<text x="1118.0" y="255.0" class="cot" text-anchor="middle">3</text>
+<line x1="975.0" y1="420.0" x2="895.0" y2="390.0" class="t"/>
+<circle cx="975.0" cy="420.0" r="2.5" class="t"/>
+<circle cx="895.0" cy="390.0" r="13" class="co"/>
+<text x="895.0" y="395.0" class="cot" text-anchor="middle">10</text>
+<line x1="970.0" y1="197.0" x2="1040.0" y2="150.0" class="t"/>
+<circle cx="970.0" cy="197.0" r="2.5" class="t"/>
+<circle cx="1040.0" cy="150.0" r="13" class="co"/>
+<text x="1040.0" y="155.0" class="cot" text-anchor="middle">11</text>
+<line x1="948.0" y1="640.0" x2="895.0" y2="660.0" class="t"/>
+<circle cx="948.0" cy="640.0" r="2.5" class="t"/>
+<circle cx="895.0" cy="660.0" r="13" class="co"/>
+<text x="895.0" y="665.0" class="cot" text-anchor="middle">5</text>
+<text x="1010.0" y="758.0" class="lbl" text-anchor="middle">SECTION B–B</text>
+<rect x="110.0" y="850.0" width="297.0" height="312.0" rx="8" class="pe"/>
+<rect x="116.0" y="856.0" width="285.0" height="300.0" rx="4" class="of"/>
+<rect x="119.0" y="859.0" width="89.0" height="94.0" rx="4" class="wt"/>
+<text x="163.0" y="912.0" class="sm" text-anchor="middle">2.5</text>
+<rect x="214.0" y="859.0" width="89.0" height="94.0" rx="4" class="wt"/>
+<text x="258.0" y="912.0" class="sm" text-anchor="middle">2.5</text>
+<rect x="309.0" y="859.0" width="89.0" height="94.0" rx="4" class="wt"/>
+<text x="353.0" y="912.0" class="sm" text-anchor="middle">2.5</text>
+<rect x="119.0" y="959.0" width="89.0" height="94.0" rx="4" class="wt"/>
+<text x="163.0" y="1012.0" class="sm" text-anchor="middle">2.5</text>
+<rect x="214.0" y="959.0" width="89.0" height="94.0" rx="4" class="wt"/>
+<text x="258.0" y="1012.0" class="sm" text-anchor="middle">2.5</text>
+<rect x="309.0" y="959.0" width="89.0" height="94.0" rx="4" class="wt"/>
+<text x="353.0" y="1012.0" class="sm" text-anchor="middle">2.5</text>
+<rect x="119.0" y="1059.0" width="89.0" height="94.0" rx="4" class="wt"/>
+<text x="163.0" y="1112.0" class="sm" text-anchor="middle">2.5</text>
+<rect x="214.0" y="1059.0" width="89.0" height="94.0" rx="4" class="wt"/>
+<text x="258.0" y="1112.0" class="sm" text-anchor="middle">2.5</text>
+<rect x="309.0" y="1059.0" width="89.0" height="94.0" rx="4" class="wt"/>
+<text x="353.0" y="1112.0" class="sm" text-anchor="middle">2.5</text>
+<rect x="144.0" y="860.0" width="229.0" height="292.0" rx="0" class="h"/>
+<rect x="218.0" y="828.0" width="80.0" height="22.0" rx="8" class="o"/>
+<line x1="110.0" y1="846.0" x2="110.0" y2="804.0" class="d"/>
+<line x1="407.0" y1="846.0" x2="407.0" y2="804.0" class="d"/>
+<line x1="110.0" y1="810.0" x2="407.0" y2="810.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="258.5" y="804.0" class="dt" text-anchor="middle">297</text>
+<line x1="110.0" y1="850.0" x2="74.0" y2="850.0" class="d"/>
+<line x1="110.0" y1="1162.0" x2="74.0" y2="1162.0" class="d"/>
+<line x1="80.0" y1="850.0" x2="80.0" y2="1162.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="73.0" y="1006.0" class="dt" text-anchor="middle" transform="rotate(-90 73.0 1006.0)">312</text>
+<text x="440.0" y="890.0" class="lbl" text-anchor="start">Weight carrier (front, 1:4)</text>
+<text x="440.0" y="924.0" class="note" text-anchor="start">3 × 3 modules of 95 × 100 mm (sheet 3).</text>
+<text x="440.0" y="946.0" class="note" text-anchor="start">Up to 9 steel bricks × 2.5 kg = 22.5 kg,</text>
+<text x="440.0" y="968.0" class="note" text-anchor="start">plus a half-brick layer to reach 24 kg.</text>
+<text x="440.0" y="990.0" class="note" text-anchor="start">Dashed: standard ruck plate 229 × 292 mm</text>
+<text x="440.0" y="1012.0" class="note" text-anchor="start">fits the same sleeve (carrier removed).</text>
+<text x="440.0" y="1034.0" class="note" text-anchor="start">Lifts out by the pull loop through slot (7).</text>
+<text x="1150.0" y="70.0" class="lbl" text-anchor="start">BACKPACK — “BIG PACK”</text>
+<text x="1182.0" y="100.0" class="note" text-anchor="start">Same 30 kg total rating and one-hand suitcase carry as the</text>
+<text x="1182.0" y="120.0" class="note" text-anchor="start">laptop bag. Worn as a backpack it's a rest mode (or</text>
+<text x="1182.0" y="140.0" class="note" text-anchor="start">rucking).</text>
+<circle cx="1161.0" cy="163.0" r="11" class="co"/>
+<text x="1161.0" y="168.0" class="cot" text-anchor="middle">1</text>
+<text x="1182.0" y="168.0" class="note" text-anchor="start">Rigid top handle on the aluminium bridge (11), placed over</text>
+<text x="1182.0" y="188.0" class="note" text-anchor="start">the loaded centre of mass — close to the back panel, not</text>
+<text x="1182.0" y="208.0" class="note" text-anchor="start">mid-bag.</text>
+<circle cx="1161.0" cy="231.0" r="11" class="co"/>
+<text x="1161.0" y="236.0" class="cot" text-anchor="middle">2</text>
+<text x="1182.0" y="236.0" class="note" text-anchor="start">Two aluminium stays in the back panel, joined by the top</text>
+<text x="1182.0" y="256.0" class="note" text-anchor="start">bridge and a bottom cradle; HDPE frame sheet between them.</text>
+<circle cx="1161.0" cy="279.0" r="11" class="co"/>
+<text x="1161.0" y="284.0" class="cot" text-anchor="middle">3</text>
+<text x="1182.0" y="284.0" class="note" text-anchor="start">16" MacBook Pro in padded sleeve, in front of the weight</text>
+<text x="1182.0" y="304.0" class="note" text-anchor="start">sleeve.</text>
+<circle cx="1161.0" cy="327.0" r="11" class="co"/>
+<text x="1161.0" y="332.0" class="cot" text-anchor="middle">4</text>
+<text x="1182.0" y="332.0" class="note" text-anchor="start">Weight carrier sits low in a sleeve against the frame</text>
+<text x="1182.0" y="352.0" class="note" text-anchor="start">sheet: weight closest to the spine.</text>
+<circle cx="1161.0" cy="375.0" r="11" class="co"/>
+<text x="1161.0" y="380.0" class="cot" text-anchor="middle">5</text>
+<text x="1182.0" y="380.0" class="note" text-anchor="start">Frame sheet and stays carry the load to the bottom cradle.</text>
+<circle cx="1161.0" cy="403.0" r="11" class="co"/>
+<text x="1161.0" y="408.0" class="cot" text-anchor="middle">6</text>
+<text x="1182.0" y="408.0" class="note" text-anchor="start">Front organiser pocket.</text>
+<circle cx="1161.0" cy="431.0" r="11" class="co"/>
+<text x="1161.0" y="436.0" class="cot" text-anchor="middle">7</text>
+<text x="1182.0" y="436.0" class="note" text-anchor="start">Top-loading weight slot: zip across the top of the back</text>
+<text x="1182.0" y="456.0" class="note" text-anchor="start">panel; carrier lifts out by its pull loop.</text>
+<circle cx="1161.0" cy="479.0" r="11" class="co"/>
+<text x="1161.0" y="484.0" class="cot" text-anchor="middle">8</text>
+<text x="1182.0" y="484.0" class="note" text-anchor="start">Two-step release: buckle tab over the zip pull, then</text>
+<text x="1182.0" y="504.0" class="note" text-anchor="start">unzip.</text>
+<circle cx="1161.0" cy="527.0" r="11" class="co"/>
+<text x="1161.0" y="532.0" class="cot" text-anchor="middle">9</text>
+<text x="1182.0" y="532.0" class="note" text-anchor="start">Shoulder straps tuck behind a zip panel during the hand</text>
+<text x="1182.0" y="552.0" class="note" text-anchor="start">carry — nothing dangles when switching hands.</text>
+<circle cx="1161.0" cy="575.0" r="11" class="co"/>
+<text x="1161.0" y="580.0" class="cot" text-anchor="middle">10</text>
+<text x="1182.0" y="580.0" class="note" text-anchor="start">Carrier holds 3 × 3 bricks, ruck plates, fill-your-own</text>
+<text x="1182.0" y="600.0" class="note" text-anchor="start">shells or flat plates; cam strap clamps it.</text>
+<circle cx="1161.0" cy="623.0" r="11" class="co"/>
+<text x="1161.0" y="628.0" class="cot" text-anchor="middle">12</text>
+<text x="1182.0" y="628.0" class="note" text-anchor="start">Strap anchors, lumbar pad and base feet.</text>
+<text x="1150.0" y="668.0" class="lbl" text-anchor="start">LEGEND</text>
+<g transform="translate(1150,693)"><line x1="0" y1="0" x2="46" y2="0" class="o"/></g>
+<text x="1210.0" y="698.0" class="note" text-anchor="start">Visible outline</text>
+<g transform="translate(1150,719)"><line x1="0" y1="0" x2="46" y2="0" class="h"/></g>
+<text x="1210.0" y="724.0" class="note" text-anchor="start">Hidden / internal part</text>
+<g transform="translate(1150,745)"><line x1="0" y1="0" x2="46" y2="0" class="z"/></g>
+<text x="1210.0" y="750.0" class="note" text-anchor="start">Zip line</text>
+<g transform="translate(1150,771)"><line x1="0" y1="0" x2="46" y2="0" class="al"/></g>
+<text x="1210.0" y="776.0" class="note" text-anchor="start">Aluminium frame (6061-T6)</text>
+<g transform="translate(1150,797)"><rect x="0" y="-8" width="46" height="16" class="pe"/></g>
+<text x="1210.0" y="802.0" class="note" text-anchor="start">HDPE sheet / moulded plastic</text>
+<g transform="translate(1150,823)"><rect x="0" y="-8" width="46" height="16" class="wt"/></g>
+<text x="1210.0" y="828.0" class="note" text-anchor="start">Weights</text>
+<g transform="translate(1150,849)"><line x1="0" y1="0" x2="46" y2="0" class="c"/></g>
+<text x="1210.0" y="854.0" class="note" text-anchor="start">Centre line / load line</text>
+<g transform="translate(1150,875)"><circle cx="23" cy="0" r="8" class="t"/><line x1="15" y1="0" x2="31" y2="0" class="t"/><line x1="23" y1="-8" x2="23" y2="8" class="t"/></g>
+<text x="1210.0" y="880.0" class="note" text-anchor="start">Loaded centre of mass (CoM)</text>
+<rect x="1060.0" y="1040.0" width="590.0" height="120.0" rx="0" class="t"/>
+<line x1="1060.0" y1="1086.0" x2="1650.0" y2="1086.0" class="t"/>
+<line x1="1460.0" y1="1086.0" x2="1460.0" y2="1160.0" class="t"/>
+<text x="1074.0" y="1072.0" class="lbl" text-anchor="start">HEAVY BAG — BACKPACK</text>
+<text x="1074.0" y="1112.0" class="note" text-anchor="start">Front, back and section views; weight carrier</text>
+<text x="1074.0" y="1138.0" class="sm" text-anchor="start">Concept sketch · dims in mm · confirm with sample</text>
+<text x="1474.0" y="1112.0" class="note" text-anchor="start">Sheet 2 of 3</text>
+<text x="1474.0" y="1138.0" class="sm" text-anchor="start">Scale 1:4 at A3</text>
+</svg>

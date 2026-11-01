@@ -44,12 +44,12 @@ gate at the end of each phase decides whether we move on.
 Two bags at launch, **one shared weight system** — the same weights fit both,
 so a customer who owns both bags only buys weights once.
 
-**Laptop bag** (briefcase-style)
+**Laptop bag** (briefcase-style; "Heavy Brief", working name)
 - Top handle on a rigid bridge, directly over the weight tray.
 - Weight tray in the base, under a rigid false floor; laptop sits above it.
 - Detachable shoulder strap for non-training moments.
 
-**Backpack**
+**Backpack — "Big Pack"**
 - The suitcase carry is still the core exercise: a rigid **top handle**
   built for long one-hand carries, not a thin grab loop.
 - Weights sit in a **sleeve along the back panel**, low and between the frame
@@ -70,15 +70,15 @@ jacket layer).
 | --- | --- | --- |
 | External size (W × H × D) | ~42 × 40 × 13 cm | ~31 × 48 × 16 cm (~24 L) |
 | Laptop sleeve (internal) | ~37 × 26 × 2.5 cm, padded, above the false floor | ~37 × 26 × 2.5 cm, padded, in front of the weight sleeve |
-| Weight space | Base tray band ~38 × 11 × 9 cm (~3.8 L) | Back-panel sleeve ~28 × 30 cm, up to ~6 cm thick |
+| Weight space | 100 mm base band; tray 392 × 112 × 95 mm (inside 380 × 104 × 85) | Back-panel sleeve; carrier 297 × 312 × ~50 mm (3 × 3 modules) |
 | Space for other things | Main compartment ~8 L + front pocket | Main compartment + front pocket |
 | Weight sources at full 24 kg | Our steel, local steel bar (~7–8 cm stack) | All sources, incl. ruck plates and shot |
-| Weight sources capped | Steel-shot cassettes ~16 kg; gym plates on edge don't fit (they need ~14 cm) | — |
+| Weight sources capped | Steel-shot cassettes ~13–16 kg; gym plates on edge don't fit (they need ~14 cm) | — |
 
 **Why a 9 cm base, not 14 cm:** a 14 cm base makes the laptop bag ~45 cm
 tall — closer to a tote, heavier and harder to keep clear of the leg. With
 9 cm, the slim dense options (our steel, steel bar) still reach the full
-24 kg, shot reaches ~16 kg, and anyone who wants plates or 24 kg of shot
+24 kg, shot reaches ~13–16 kg, and anyone who wants plates or 24 kg of shot
 has the backpack. The backpack's layout, from the spine outward: frame
 sheet → weight sleeve → laptop sleeve → main compartment.
 
@@ -135,7 +135,7 @@ quotes, rattle test, local-sourcing mystery shop, preference test, and
 more).
 
 Laptop-bag base height: set at ~9 cm (see §3.1 sizing). Full 24 kg with our
-steel or steel bar; shot capped at ~16 kg; gym plates in the backpack only.
+steel or steel bar; shot capped at ~13–16 kg; gym plates in the backpack only.
 
 ### 3.3 Where the weight goes
 
@@ -315,3 +315,6 @@ and **Heritage** as samples in the wear test, and add lines after launch.
    tray and test it with steel bar, shot cassettes and gym plates.
 4. Cardboard mock-ups of both bags at the §3.1 sizes, with a 16" MacBook Pro
    inside.
+5. Share the concept sketches and tech pack
+   ([`tech-pack.md`](tech-pack.md)) with 2–3 bag manufacturers under NDA;
+   request first samples and quotes.

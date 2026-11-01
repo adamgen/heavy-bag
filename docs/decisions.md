@@ -4,7 +4,7 @@
 
 | ID | Question | Why it matters |
 | --- | --- | --- |
-| Q-7 | **Is "Heavy Bag" clear to use?** Verify trademarks (US, EU, UK), domains and social handles directly, then attorney clearance. If blocked, pick from the close alternatives in [`research/name-check.md`](research/name-check.md). | The desk check couldn't reach registries or domain lookups. |
+| Q-7 | **Are "Heavy Bag" and "Big Pack" clear to use?** Verify trademarks (US, EU, UK), domains and social handles directly, then attorney clearance. If blocked, pick from the close alternatives in [`research/name-check.md`](research/name-check.md). | The desk check couldn't reach registries or domain lookups. |
 | Q-4 | **Weight placement** — confirm base tray (laptop bag) and back-panel sleeve (backpack) in prototype tests. | Balance in the hand, comfort when worn. |
 | Q-5 | **Price and look** — working direction in [`brand.md`](brand.md); founder to review. | Drives materials and suppliers. |
 | Q-6 | **First market and sales channel** (DTC website, pre-order campaign, retail)? | Shipping heavy weights changes the economics. |
@@ -26,3 +26,5 @@
 | 2026-10-29 | Weights: **"one tray, any weight"** — a standard clamping tray/sleeve that takes our steel, fill-your-own cassettes, local steel bar, gym plates and ruck plates. Closes Q-1. | Founder decision, based on the weights research. Cuts shipping per customer from ~27 kg to ~3–8 kg. |
 | 2026-10-29 | Sizing: both bags fit a **16" MacBook Pro + weights + everyday things**. Laptop bag ~42 × 40 × 13 cm with a ~9 cm weight base; backpack ~31 × 48 × 16 cm. Closes Q-11. | Founder set the 16" MacBook Pro requirement; Claude picked the 9 cm base (slimmer bag; full 24 kg with dense steel; plates and heavy shot go in the backpack). Confirm with mock-ups. |
 | 2026-10-29 | Name: **keep "Heavy Bag"** — simple and natural to the audience. If it's blocked, use a close alternative. | Founder decision, despite the desk check's caution about weak protection and boxing search results. |
+| 2026-11-01 | Backpack product name: **Big Pack** (sounds like "backpack"). Laptop bag keeps "Heavy Brief" as a working name. | Founder decision. |
+| 2026-11-01 | Concept sketches v0.1 and a draft tech pack prepared for first manufacturer conversations ([`tech-pack.md`](tech-pack.md), `design/sketches/`). Weight module set at 95 × 100 mm; steel brick 95 × 100 × 33 mm = 2.5 kg. | Founder asked for a sketch to share with a manufacturer. |

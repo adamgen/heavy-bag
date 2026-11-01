@@ -103,8 +103,8 @@ no obvious blocker, but flagged three things to manage:
   order: buy it if affordable, then theheavybag.com, heavybag.co,
   getheavybag.com, heavybagco.com.
 
-**Product names that fit:** the **Heavy Pack** (backpack) and the
-**Heavy Brief** (laptop bag).
+**Product names:** the **Big Pack** (backpack — sounds like "backpack") and the
+**Heavy Brief** (laptop bag, working name).
 
 **If "Heavy Bag" is blocked,** stay close to it: Heavy Bag Co., The Heavy
 Bag, Heavybag (one word), Heavy Carry, Carry Heavy, Heavy Pack. See the name

@@ -70,7 +70,7 @@ validated in research and prototyping, not commitments.
   fill-your-own cassettes, locally cut steel bar, gym plates and ruck plates
   (backpack) — and hold each one rattle-free.
 - **R-W12** Laptop bag: full 24 kg with our steel or steel bar; steel-shot
-  cassettes up to ~16 kg. Backpack: full 24 kg from any supported source.
+  cassettes up to ~13–16 kg. Backpack: full 24 kg from any supported source.
 
 ### Bag & carry
 - **R-B1** A top handle designed for one-handed suitcase carry: rigid, sits

@@ -66,6 +66,8 @@ light and build up over weeks.
 | [`docs/product-requirements.md`](docs/product-requirements.md) | What the product must do: users, requirements, target specs |
 | [`docs/design-plan.md`](docs/design-plan.md) | How we get there: phases, concept directions, testing, risks |
 | [`docs/brand.md`](docs/brand.md) | Brand direction: positioning, look, price, marketing notes |
+| [`docs/tech-pack.md`](docs/tech-pack.md) | Draft tech pack for manufacturers: dimensions, materials, construction, tests |
+| [`design/sketches/`](design/sketches/) | Concept sketches (PDF, SVG, PNG) and the script that generates them |
 | [`docs/decisions.md`](docs/decisions.md) | Open questions and the decision log |
 | [`docs/research/`](docs/research/) | Research reports: weight sourcing, name check |
 

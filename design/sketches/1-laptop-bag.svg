@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 1188" width="1680" height="1188">
+<style>
+  text { font-family: Helvetica, Arial, sans-serif; fill: #111; }
+  .o  { fill: none; stroke: #111; stroke-width: 2.4; stroke-linejoin: round; }
+  .of { fill: #fff; stroke: #111; stroke-width: 2.4; stroke-linejoin: round; }
+  .t  { fill: none; stroke: #111; stroke-width: 1.2; }
+  .h  { fill: none; stroke: #666; stroke-width: 1.3; stroke-dasharray: 9 6; }
+  .z  { fill: none; stroke: #111; stroke-width: 1.4; stroke-dasharray: 3 3; }
+  .c  { fill: none; stroke: #888; stroke-width: 1; stroke-dasharray: 18 5 3 5; }
+  .al { fill: none; stroke: #c4581c; stroke-width: 3; stroke-dasharray: 10 5; }
+  .alf { fill: #c4581c; stroke: #c4581c; stroke-width: 1; }
+  .pe { fill: #cfe8d9; stroke: #2e8b57; stroke-width: 1.6; }
+  .wt { fill: #cfd3d8; stroke: #111; stroke-width: 1.4; }
+  .lap { fill: #9aa3ad; stroke: #111; stroke-width: 1.2; }
+  .pad { fill: #f1ece2; stroke: #111; stroke-width: 1.2; }
+  .d  { fill: none; stroke: #1f5fbf; stroke-width: 1.1; }
+  .dt { fill: #1f5fbf; font-size: 17px; }
+  .lbl { font-size: 18px; font-weight: bold; letter-spacing: 1px; }
+  .sm { font-size: 15px; }
+  .note { font-size: 16px; }
+  .co { fill: #fff; stroke: #111; stroke-width: 1.6; }
+  .cot { font-size: 15px; font-weight: bold; }
+</style>
+<defs>
+  <marker id="a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+    <path d="M0,1 L10,5 L0,9 z" fill="#1f5fbf"/>
+  </marker>
+  <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+  </marker>
+</defs>
+<rect width="1680" height="1188" fill="#fff"/>
+<rect x="20.0" y="20.0" width="1640.0" height="1148.0" rx="0" class="t"/>
+<rect x="110.0" y="250.0" width="420.0" height="400.0" rx="24" class="of"/>
+<rect x="235.0" y="188.0" width="170.0" height="62.0" rx="18" class="of"/>
+<rect x="259.0" y="216.0" width="122.0" height="36.0" rx="8" class="of"/>
+<line x1="259.0" y1="250.0" x2="381.0" y2="250.0" class="o"/>
+<line x1="110.0" y1="550.0" x2="530.0" y2="550.0" class="t"/>
+<rect x="150.0" y="370.0" width="340.0" height="165.0" rx="14" class="o"/>
+<line x1="168.0" y1="388.0" x2="472.0" y2="388.0" class="z"/>
+<rect x="290.0" y="425.0" width="60.0" height="16.0" rx="3" class="t"/>
+<text x="320.0" y="460.0" class="sm" text-anchor="middle">logo (deboss)</text>
+<rect x="142.0" y="290.0" width="356.0" height="248.0" rx="10" class="h"/>
+<line x1="118.0" y1="547.0" x2="522.0" y2="547.0" class="h"/>
+<rect x="124.0" y="552.0" width="392.0" height="92.0" rx="4" class="h"/>
+<line x1="225.0" y1="556.0" x2="225.0" y2="640.0" class="h"/>
+<line x1="320.0" y1="556.0" x2="320.0" y2="640.0" class="h"/>
+<line x1="415.0" y1="556.0" x2="415.0" y2="640.0" class="h"/>
+<line x1="120.0" y1="260.0" x2="520.0" y2="260.0" class="al"/>
+<line x1="120.0" y1="260.0" x2="120.0" y2="646.0" class="al"/>
+<line x1="520.0" y1="260.0" x2="520.0" y2="646.0" class="al"/>
+<line x1="120.0" y1="646.0" x2="520.0" y2="646.0" class="al"/>
+<rect x="106.0" y="276.0" width="16.0" height="22.0" rx="6" class="t"/>
+<rect x="518.0" y="276.0" width="16.0" height="22.0" rx="6" class="t"/>
+<rect x="140.0" y="650.0" width="30.0" height="6.0" rx="2" class="o"/>
+<rect x="470.0" y="650.0" width="30.0" height="6.0" rx="2" class="o"/>
+<line x1="320.0" y1="160.0" x2="320.0" y2="680.0" class="c"/>
+<line x1="110.0" y1="658.0" x2="110.0" y2="706.0" class="d"/>
+<line x1="530.0" y1="658.0" x2="530.0" y2="706.0" class="d"/>
+<line x1="110.0" y1="700.0" x2="530.0" y2="700.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="320.0" y="694.0" class="dt" text-anchor="middle">420</text>
+<line x1="110.0" y1="250.0" x2="64.0" y2="250.0" class="d"/>
+<line x1="110.0" y1="650.0" x2="64.0" y2="650.0" class="d"/>
+<line x1="70.0" y1="250.0" x2="70.0" y2="650.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="63.0" y="450.0" class="dt" text-anchor="middle" transform="rotate(-90 63.0 450.0)">400</text>
+<line x1="190.0" y1="188.0" x2="190.0" y2="250.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="183.0" y="219.0" class="dt" text-anchor="middle" transform="rotate(-90 183.0 219.0)">62</text>
+<line x1="530.0" y1="550.0" x2="576.0" y2="550.0" class="d"/>
+<line x1="530.0" y1="650.0" x2="576.0" y2="650.0" class="d"/>
+<line x1="570.0" y1="550.0" x2="570.0" y2="650.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="563.0" y="600.0" class="dt" text-anchor="middle" transform="rotate(-90 563.0 600.0)">100 weight band</text>
+<text x="320.0" y="750.0" class="lbl" text-anchor="middle">FRONT VIEW</text>
+<line x1="360.0" y1="202.0" x2="450.0" y2="155.0" class="t"/>
+<circle cx="360.0" cy="202.0" r="2.5" class="t"/>
+<circle cx="450.0" cy="155.0" r="13" class="co"/>
+<text x="450.0" y="160.0" class="cot" text-anchor="middle">1</text>
+<line x1="520.0" y1="310.0" x2="590.0" y2="280.0" class="t"/>
+<circle cx="520.0" cy="310.0" r="2.5" class="t"/>
+<circle cx="590.0" cy="280.0" r="13" class="co"/>
+<text x="590.0" y="285.0" class="cot" text-anchor="middle">2</text>
+<line x1="410.0" y1="470.0" x2="590.0" y2="410.0" class="t"/>
+<circle cx="410.0" cy="470.0" r="2.5" class="t"/>
+<circle cx="590.0" cy="410.0" r="13" class="co"/>
+<text x="590.0" y="415.0" class="cot" text-anchor="middle">3</text>
+<line x1="360.0" y1="600.0" x2="590.0" y2="500.0" class="t"/>
+<circle cx="360.0" cy="600.0" r="2.5" class="t"/>
+<circle cx="590.0" cy="500.0" r="13" class="co"/>
+<text x="590.0" y="505.0" class="cot" text-anchor="middle">4</text>
+<line x1="170.0" y1="547.0" x2="50.0" y2="500.0" class="t"/>
+<circle cx="170.0" cy="547.0" r="2.5" class="t"/>
+<circle cx="50.0" cy="500.0" r="13" class="co"/>
+<text x="50.0" y="505.0" class="cot" text-anchor="middle">5</text>
+<line x1="410.0" y1="388.0" x2="590.0" y2="345.0" class="t"/>
+<circle cx="410.0" cy="388.0" r="2.5" class="t"/>
+<circle cx="590.0" cy="345.0" r="13" class="co"/>
+<text x="590.0" y="350.0" class="cot" text-anchor="middle">6</text>
+<line x1="155.0" y1="653.0" x2="50.0" y2="680.0" class="t"/>
+<circle cx="155.0" cy="653.0" r="2.5" class="t"/>
+<circle cx="50.0" cy="680.0" r="13" class="co"/>
+<text x="50.0" y="685.0" class="cot" text-anchor="middle">12</text>
+<rect x="690.0" y="250.0" width="130.0" height="400.0" rx="20" class="of"/>
+<rect x="740.0" y="188.0" width="30.0" height="62.0" rx="8" class="of"/>
+<rect x="695.0" y="546.0" width="120.0" height="100.0" rx="10" class="z"/>
+<rect x="699.0" y="552.0" width="112.0" height="92.0" rx="6" class="o"/>
+<rect x="725.0" y="580.0" width="60.0" height="18.0" rx="8" class="o"/>
+<circle cx="755.0" cy="622.0" r="8" class="o"/>
+<rect x="747.0" y="276.0" width="16.0" height="22.0" rx="6" class="t"/>
+<line x1="705.0" y1="260.0" x2="705.0" y2="646.0" class="al"/>
+<line x1="690.0" y1="658.0" x2="690.0" y2="706.0" class="d"/>
+<line x1="820.0" y1="658.0" x2="820.0" y2="706.0" class="d"/>
+<line x1="690.0" y1="700.0" x2="820.0" y2="700.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="755.0" y="694.0" class="dt" text-anchor="middle">130</text>
+<line x1="770.0" y1="589.0" x2="790.0" y2="500.0" class="t"/>
+<circle cx="770.0" cy="589.0" r="2.5" class="t"/>
+<circle cx="790.0" cy="500.0" r="13" class="co"/>
+<text x="790.0" y="505.0" class="cot" text-anchor="middle">7</text>
+<line x1="755.0" y1="622.0" x2="660.0" y2="690.0" class="t"/>
+<circle cx="755.0" cy="622.0" r="2.5" class="t"/>
+<circle cx="660.0" cy="690.0" r="13" class="co"/>
+<text x="660.0" y="695.0" class="cot" text-anchor="middle">8</text>
+<text x="755.0" y="750.0" class="lbl" text-anchor="middle">END VIEW</text>
+<rect x="900.0" y="250.0" width="130.0" height="400.0" rx="20" class="of"/>
+<rect x="950.0" y="188.0" width="30.0" height="62.0" rx="8" class="of"/>
+<rect x="948.0" y="253.0" width="34.0" height="9.0" rx="0" class="alf"/>
+<rect x="905.0" y="542.0" width="120.0" height="5.0" rx="0" class="pe"/>
+<rect x="909.0" y="550.0" width="112.0" height="95.0" rx="4" class="pe"/>
+<rect x="913.0" y="554.0" width="104.0" height="87.0" rx="0" class="of"/>
+<rect x="916.0" y="608.0" width="98.0" height="33.0" rx="3" class="wt"/>
+<rect x="916.0" y="575.0" width="98.0" height="33.0" rx="3" class="wt"/>
+<rect x="916.0" y="558.5" width="98.0" height="16.5" rx="3" class="wt"/>
+<rect x="914.0" y="553.5" width="102.0" height="4.0" rx="0" class="pe"/>
+<rect x="906.0" y="290.0" width="34.0" height="250.0" rx="6" class="pad"/>
+<rect x="914.0" y="296.0" width="17.0" height="240.0" rx="3" class="lap"/>
+<line x1="1004.0" y1="370.0" x2="1004.0" y2="538.0" class="t"/>
+<text x="972.0" y="450.0" class="sm" text-anchor="middle">main</text>
+<text x="1017.0" y="465.0" class="sm" text-anchor="middle" transform="rotate(-90 1017.0 465.0)">pkt</text>
+<line x1="965.0" y1="160.0" x2="965.0" y2="670.0" class="c"/>
+<circle cx="964.0" cy="580.0" r="9" class="t"/>
+<line x1="955.0" y1="580.0" x2="973.0" y2="580.0" class="t"/>
+<line x1="964.0" y1="571.0" x2="964.0" y2="589.0" class="t"/>
+<text x="976.0" y="577.0" class="sm" text-anchor="start">CoM</text>
+<line x1="1030.0" y1="550.0" x2="1066.0" y2="550.0" class="d"/>
+<line x1="1030.0" y1="645.0" x2="1066.0" y2="645.0" class="d"/>
+<line x1="1060.0" y1="550.0" x2="1060.0" y2="645.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="1053.0" y="597.5" class="dt" text-anchor="middle" transform="rotate(-90 1053.0 597.5)">95</text>
+<line x1="920.0" y1="410.0" x2="870.0" y2="370.0" class="t"/>
+<circle cx="920.0" cy="410.0" r="2.5" class="t"/>
+<circle cx="870.0" cy="370.0" r="13" class="co"/>
+<text x="870.0" y="375.0" class="cot" text-anchor="middle">9</text>
+<line x1="965.0" y1="608.0" x2="870.0" y2="580.0" class="t"/>
+<circle cx="965.0" cy="608.0" r="2.5" class="t"/>
+<circle cx="870.0" cy="580.0" r="13" class="co"/>
+<text x="870.0" y="585.0" class="cot" text-anchor="middle">10</text>
+<line x1="965.0" y1="257.0" x2="1020.0" y2="210.0" class="t"/>
+<circle cx="965.0" cy="257.0" r="2.5" class="t"/>
+<circle cx="1020.0" cy="210.0" r="13" class="co"/>
+<text x="1020.0" y="215.0" class="cot" text-anchor="middle">11</text>
+<line x1="960.0" y1="544.0" x2="870.0" y2="520.0" class="t"/>
+<circle cx="960.0" cy="544.0" r="2.5" class="t"/>
+<circle cx="870.0" cy="520.0" r="13" class="co"/>
+<text x="870.0" y="525.0" class="cot" text-anchor="middle">5</text>
+<text x="965.0" y="750.0" class="lbl" text-anchor="middle">SECTION A–A</text>
+<rect x="110.0" y="860.0" width="420.0" height="130.0" rx="22" class="of"/>
+<rect x="128.0" y="876.0" width="384.0" height="98.0" rx="14" class="z"/>
+<rect x="235.0" y="910.0" width="170.0" height="30.0" rx="14" class="of"/>
+<rect x="259.0" y="912.0" width="122.0" height="26.0" rx="6" class="t"/>
+<line x1="90.0" y1="925.0" x2="550.0" y2="925.0" class="c"/>
+<text x="76.0" y="931.0" class="lbl" text-anchor="middle">A</text>
+<text x="564.0" y="931.0" class="lbl" text-anchor="middle">A</text>
+<line x1="540" y1="970" x2="600" y2="970" class="o" marker-end="url(#arr)"/>
+<text x="542.0" y="988.0" class="sm" text-anchor="start">tray out</text>
+<line x1="110.0" y1="996.0" x2="110.0" y2="1036.0" class="d"/>
+<line x1="530.0" y1="996.0" x2="530.0" y2="1036.0" class="d"/>
+<line x1="110.0" y1="1030.0" x2="530.0" y2="1030.0" class="d" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="320.0" y="1024.0" class="dt" text-anchor="middle">420</text>
+<line x1="150.0" y1="876.0" x2="70.0" y2="850.0" class="t"/>
+<circle cx="150.0" cy="876.0" r="2.5" class="t"/>
+<circle cx="70.0" cy="850.0" r="13" class="co"/>
+<text x="70.0" y="855.0" class="cot" text-anchor="middle">13</text>
+<text x="320.0" y="1080.0" class="lbl" text-anchor="middle">TOP VIEW</text>
+<text x="1110.0" y="70.0" class="lbl" text-anchor="start">LAPTOP BAG — “HEAVY BRIEF” (working name)</text>
+<text x="1142.0" y="100.0" class="note" text-anchor="start">One-hand suitcase carry, up to 30 kg total (bag + 16"</text>
+<text x="1142.0" y="120.0" class="note" text-anchor="start">laptop + contents + up to 24 kg weights). Must hang</text>
+<text x="1142.0" y="140.0" class="note" text-anchor="start">straight and feel the same in either hand.</text>
+<circle cx="1121.0" cy="163.0" r="11" class="co"/>
+<text x="1121.0" y="168.0" class="cot" text-anchor="middle">1</text>
+<text x="1142.0" y="168.0" class="note" text-anchor="start">Rigid top handle, ~30 mm grip, bolted/riveted to the</text>
+<text x="1142.0" y="188.0" class="note" text-anchor="start">aluminium bridge (11). Not sewn-only. Rated 90 kg static.</text>
+<circle cx="1121.0" cy="211.0" r="11" class="co"/>
+<text x="1121.0" y="216.0" class="cot" text-anchor="middle">2</text>
+<text x="1142.0" y="216.0" class="note" text-anchor="start">Aluminium U-frame: top bridge + one stay in each end panel</text>
+<text x="1142.0" y="236.0" class="note" text-anchor="start">+ bottom cradle under the tray. All load goes handle →</text>
+<text x="1142.0" y="256.0" class="note" text-anchor="start">frame → tray.</text>
+<circle cx="1121.0" cy="279.0" r="11" class="co"/>
+<text x="1121.0" y="284.0" class="cot" text-anchor="middle">3</text>
+<text x="1142.0" y="284.0" class="note" text-anchor="start">16" MacBook Pro (356 × 248 × 17 mm) in padded sleeve</text>
+<text x="1142.0" y="304.0" class="note" text-anchor="start">against back wall (9).</text>
+<circle cx="1121.0" cy="327.0" r="11" class="co"/>
+<text x="1121.0" y="332.0" class="cot" text-anchor="middle">4</text>
+<text x="1142.0" y="332.0" class="note" text-anchor="start">Weight tray in a 100 mm base band, centred under the</text>
+<text x="1142.0" y="352.0" class="note" text-anchor="start">handle. 4 modules of 95 × 100 mm; full 24 kg with steel</text>
+<text x="1142.0" y="372.0" class="note" text-anchor="start">bricks or steel bar. See sheet 3.</text>
+<circle cx="1121.0" cy="395.0" r="11" class="co"/>
+<text x="1121.0" y="400.0" class="cot" text-anchor="middle">5</text>
+<text x="1142.0" y="400.0" class="note" text-anchor="start">Rigid HDPE false floor separates the weights from laptop</text>
+<text x="1142.0" y="420.0" class="note" text-anchor="start">and contents.</text>
+<circle cx="1121.0" cy="443.0" r="11" class="co"/>
+<text x="1121.0" y="448.0" class="cot" text-anchor="middle">6</text>
+<text x="1142.0" y="448.0" class="note" text-anchor="start">Front organiser pocket, zipped.</text>
+<circle cx="1121.0" cy="471.0" r="11" class="co"/>
+<text x="1121.0" y="476.0" class="cot" text-anchor="middle">7</text>
+<text x="1142.0" y="476.0" class="note" text-anchor="start">Tray slides out of a zipped hatch in one end panel, on</text>
+<text x="1142.0" y="496.0" class="note" text-anchor="start">HDPE runners. Tray end cap has a pull grip.</text>
+<circle cx="1121.0" cy="519.0" r="11" class="co"/>
+<text x="1121.0" y="524.0" class="cot" text-anchor="middle">8</text>
+<text x="1142.0" y="524.0" class="note" text-anchor="start">Two-step release: open hatch zip, then press latch and</text>
+<text x="1142.0" y="544.0" class="note" text-anchor="start">pull. Tray can't fall out by accident.</text>
+<circle cx="1121.0" cy="567.0" r="11" class="co"/>
+<text x="1121.0" y="572.0" class="cot" text-anchor="middle">10</text>
+<text x="1142.0" y="572.0" class="note" text-anchor="start">Clamp plate + 2 cam straps press any stack (10–85 mm) to</text>
+<text x="1142.0" y="592.0" class="note" text-anchor="start">stop rattle.</text>
+<circle cx="1121.0" cy="615.0" r="11" class="co"/>
+<text x="1121.0" y="620.0" class="cot" text-anchor="middle">12</text>
+<text x="1142.0" y="620.0" class="note" text-anchor="start">Four protective base feet.</text>
+<circle cx="1121.0" cy="643.0" r="11" class="co"/>
+<text x="1121.0" y="648.0" class="cot" text-anchor="middle">13</text>
+<text x="1142.0" y="648.0" class="note" text-anchor="start">Main zip, 2-way, heavy coil, runs over the top.</text>
+<text x="1142.0" y="676.0" class="note" text-anchor="start">Detachable shoulder strap clips to the two D-rings.</text>
+<text x="1110.0" y="716.0" class="lbl" text-anchor="start">LEGEND</text>
+<g transform="translate(1110,741)"><line x1="0" y1="0" x2="46" y2="0" class="o"/></g>
+<text x="1170.0" y="746.0" class="note" text-anchor="start">Visible outline</text>
+<g transform="translate(1110,767)"><line x1="0" y1="0" x2="46" y2="0" class="h"/></g>
+<text x="1170.0" y="772.0" class="note" text-anchor="start">Hidden / internal part</text>
+<g transform="translate(1110,793)"><line x1="0" y1="0" x2="46" y2="0" class="z"/></g>
+<text x="1170.0" y="798.0" class="note" text-anchor="start">Zip line</text>
+<g transform="translate(1110,819)"><line x1="0" y1="0" x2="46" y2="0" class="al"/></g>
+<text x="1170.0" y="824.0" class="note" text-anchor="start">Aluminium frame (6061-T6)</text>
+<g transform="translate(1110,845)"><rect x="0" y="-8" width="46" height="16" class="pe"/></g>
+<text x="1170.0" y="850.0" class="note" text-anchor="start">HDPE sheet / moulded plastic</text>
+<g transform="translate(1110,871)"><rect x="0" y="-8" width="46" height="16" class="wt"/></g>
+<text x="1170.0" y="876.0" class="note" text-anchor="start">Weights</text>
+<g transform="translate(1110,897)"><line x1="0" y1="0" x2="46" y2="0" class="c"/></g>
+<text x="1170.0" y="902.0" class="note" text-anchor="start">Centre line / load line</text>
+<g transform="translate(1110,923)"><circle cx="23" cy="0" r="8" class="t"/><line x1="15" y1="0" x2="31" y2="0" class="t"/><line x1="23" y1="-8" x2="23" y2="8" class="t"/></g>
+<text x="1170.0" y="928.0" class="note" text-anchor="start">Loaded centre of mass (CoM)</text>
+<rect x="1060.0" y="1040.0" width="590.0" height="120.0" rx="0" class="t"/>
+<line x1="1060.0" y1="1086.0" x2="1650.0" y2="1086.0" class="t"/>
+<line x1="1460.0" y1="1086.0" x2="1460.0" y2="1160.0" class="t"/>
+<text x="1074.0" y="1072.0" class="lbl" text-anchor="start">HEAVY BAG — LAPTOP BAG</text>
+<text x="1074.0" y="1112.0" class="note" text-anchor="start">Front, end, section and top views</text>
+<text x="1074.0" y="1138.0" class="sm" text-anchor="start">Concept sketch · dims in mm · confirm with sample</text>
+<text x="1474.0" y="1112.0" class="note" text-anchor="start">Sheet 1 of 3</text>
+<text x="1474.0" y="1138.0" class="sm" text-anchor="start">Scale 1:4 at A3</text>
+</svg>
