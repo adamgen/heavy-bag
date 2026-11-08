@@ -1,139 +1,119 @@
-# Product Requirements (v0 — draft)
+# Product requirements — product-design / POC revision
 
-Status: **draft**. Numbers marked _(hypothesis)_ are starting points to be
-validated in research and prototyping, not commitments.
+Status: provisional design targets; no engineering validation or certified
+load rating. Dimensions and source-specific examples: [tech pack](tech-pack.md).
 
-## 1. Target users
+## 1. Audience and use
 
-- **Primary — the walking commuter.** Office worker who walks 10–30 minutes
-  each way (or walks to/from transit), wants to get stronger, and is short on
-  time.
-- **Secondary — the fitness-minded professional.** Already trains, knows what
-  a suitcase carry or ruck is, and wants to add volume through the day.
+Primary audience: **office workers who are heavy lifters**, already training
+and wanting an optional suitcase carry during the commute. Start with less
+weight (including zero added weight); adjust to individual ability and the
+route. **30 kg total is a ceiling, not a mandatory progression destination.**
+Switch hands as appropriate and set down before losing control; walking to
+exhaustion is not a POC test instruction. No fixed per-side time is required.
 
 ## 2. Product line
 
-- **R-P1** Two bags at launch: a **backpack** and a **laptop bag**.
-- **R-P2** Both share one weight system: the same weights fit both bags.
-- **R-P3** Backpack: rigid top handle for the suitcase carry, mounted above
-  the weight sleeve; shoulder straps stow away during the carry.
-- **R-P4** Laptop bag: rigid top handle above the weight tray, plus a
-  detachable shoulder strap.
-- **R-P5** Each bag is offered in several outer fabrics on one shared
-  internal structure (see design plan §3.7).
-- **R-P6** Both bags fit a 16" MacBook Pro, the weights, and everyday things
-  at the same time (starting sizes in design plan §3.1).
+- **R-P1** Laptop bag (Heavy Brief, working name) and backpack (Big Pack).
+- **R-P2** Shared finished-weight interface; different 4 × 1 and 3 × 3 carriers.
+- **R-P3** Backpack has frame-mounted handle receivers; straps stow for hand carry.
+- **R-P4** Laptop bag has the same handle-module concept and a detachable strap.
+- **R-P5** One structural system for future fabric choices; Core nylon for POC.
+- **R-P6** Both fit a 356 × 248 × 17 mm laptop plus weights and daily contents.
+  Big Pack carries the laptop vertically; do not specify a 370 mm-wide sleeve
+  inside a 360 mm-wide body.
 
-## 3. Recommended carry
-
-- Total carried load: **up to 30 kg**, including the bag, laptop, contents
-  and weights. Users build up to this over time.
-- Carry in one hand until the grip or core fatigues, then switch hands, and
-  keep alternating.
-- A typical 20-minute walk is about 10 minutes per side, split into several
-  bouts.
-
-## 4. Use cases
+## 3. Use cases
 
 | ID | Use case |
 | --- | --- |
-| UC-1 | Walk to work carrying the loaded bag in one hand until it fatigues, then switch hands; alternate for the whole walk. |
-| UC-2 | Arrive at work, pull the weights out in one motion, leave them under the desk or in a locker, and use the bag normally during the day. |
-| UC-3 | Before going home, put the weights back in (or don't — light day). |
-| UC-4 | Add or remove one brick to change the load (progression, tired day, injury). |
-| UC-5 | Mid-walk, decide the load is too much and drop weights quickly. |
-| UC-6 | Use the bag as a normal work bag with no weights at all. |
+| UC-1 | Carry a self-selected load; switch hands and set down when needed. |
+| UC-2 | Set the bag on stable support, deliberately release and remove weights for storage at work. |
+| UC-3 | Refit secured weights, or leave them out for a lighter return. |
+| UC-4 | Change individual weights with the bag set down. |
+| UC-5 | Stop and set down if load is unsuitable; unload safely, never dump weights onto the route. |
+| UC-6 | Use as a normal work bag with no added weights. |
 
-## 5. Functional requirements
+## 4. Functional requirements
 
 ### Weight system
-- **R-W1** Holds added weight in a dedicated compartment, physically separated
-  from the main (laptop) compartment.
-- **R-W2** Adjustable in increments of 1–2.5 kg _(hypothesis)_.
-- **R-W3** Designed to be carried at up to 30 kg in total: bag, laptop,
-  contents and weights together. With a 2.5 kg bag, ~2 kg laptop and ~1.5 kg
-  of other contents, that leaves room for **up to ~24 kg of bricks**.
-- **R-W10** The weight compartment holds no more bricks than fit within the
-  30 kg total with typical contents, so it's hard to overload by accident.
-- **R-W4** All weights can be removed together in one motion, in under
-  10 seconds, without tools _(hypothesis)_.
-- **R-W5** A single brick can be added or removed without removing the others.
-- **R-W6** Weights cannot fall out by accident: release needs a deliberate
-  action (for example, a two-step release).
-- **R-W7** Weights don't shift, slide or rattle while walking.
-- **R-W8** Weight compartment sits low and centred under the handle: a
-  base tray in the laptop bag, a back-panel sleeve in the backpack.
-- **R-W9** The removed weights are easy to carry and store as a unit (for
-  example, a tray or pouch with its own grip).
-- **R-W11** "One tray, any weight": a standard clamping tray (laptop bag) and
-  sleeve (backpack) accept many weight sources — our steel weights,
-  fill-your-own cassettes, locally cut steel bar, gym plates and ruck plates
-  (backpack) — and hold each one rattle-free.
-- **R-W12** Laptop bag: full 24 kg with our steel or steel bar; steel-shot
-  cassettes up to ~13–16 kg. Backpack: full 24 kg from any supported source.
 
-### Bag & carry
-- **R-B1** A top handle designed for one-handed suitcase carry: rigid, sits
-  over the centre of mass, comfortable diameter for a long hold.
-- **R-B2** The loaded bag hangs vertically and stays clear of the leg while
-  walking.
-- **R-B9** Symmetric carry: the bag balances and feels the same in either
-  hand, and switching hands is quick and natural mid-walk (no strap to
-  untangle, no "right way round").
-- **R-B3** Load path runs from the handle through the frame to the weights —
-  not through decorative fabric panels.
-- **R-B4** Handle and attachment points rated to at least 3× maximum loaded
-  weight, i.e. ≥ 90 kg static _(hypothesis; set the final factor with the
-  manufacturer)_.
-- **R-B5** Padded laptop sleeve that fits up to a 16" MacBook Pro (about
-  35.6 × 24.8 × 1.7 cm).
-- **R-B6** Professional look, suitable for an office.
-- **R-B7** A way to carry the bag without training: shoulder strap on the
-  laptop bag, stowable shoulder straps on the backpack.
-- **R-B8** Empty bag weight ≤ 2.5 kg including the frame _(hypothesis; the
-  frame makes the original 2 kg target tight)_.
+- **R-W1** Dedicated retained compartment, separated from laptop and contents.
+- **R-W2** Nominal 1.25 / 2.5 kg own-brick steps; other sources have measured steps.
+- **R-W3** Maximum **30 kg complete bag**, including empty tray/carrier, chosen
+  handle and any inserts. 24 kg added allowance is only the 2.5 + 2 + 1.5 kg
+  example, not a universal capacity.
+- **R-W10** Prevent accidental overload through marked source/load charts and
+  weighing the complete assembly. Volume alone cannot enforce 30 kg; dense
+  weights may fit while exceeding it. Do not claim mechanical overload limiting.
+- **R-W4** Removal is controlled with the bag supported. Single supported
+  cassette versus two smaller cassettes remains an open proposal. Record time
+  and effort; the former one-motion / under-10-second promise is withdrawn
+  until a safe method is selected and tested.
+- **R-W5** Individual weights adjustable without dumping the remaining load.
+- **R-W6** Deliberate retention release independent of the textile hatch; no
+  accidental exit. Supported-slide proposal includes a travel stop and final
+  release only with external support in place.
+- **R-W7** No shifting or harmful rattle at empty, partial or maximum load; use
+  clamp, liners and low-stack spacers appropriate to each source.
+- **R-W8** Laptop weights in base. Big Pack weights against back frame;
+  **low vs fixed mid-low is unresolved**, with 30 mm offset trial proposed.
+- **R-W9** Enclosures have two lifting grips, retained clear of their insertion
+  envelope; lifting strength and storage stability require testing.
+- **R-W11** “One tray, any weight” is an interface goal. Sources must fit the
+  finished envelope with coating/sleeves and retention hardware; no bare steel.
+- **R-W12** No universal 24 kg claim. See tech-pack capacity table. Shells,
+  water, sand, shot, bars and plates have distinct volume and mass limits.
 
-### Durability (critical)
-- **R-D1** Internal frame carries the load from handle to weight
-  compartment: an aluminium (6061-T6) load spine with HDPE panels for shape
-  (see design plan §3.6).
-- **R-D2** Bag carries 30 kg in daily use without tearing, seam failure,
-  permanent sagging or frame deformation.
-- **R-D3** The fabric alone (without the frame) can hold 30 kg without
-  failing, so a frame fault doesn't drop the weights.
-- **R-D4** Every outer fabric option is highly abrasion- and tear-resistant
-  and water-resistant, and passes the same 30 kg durability tests.
-- **R-D5** All load-bearing seams use heavy bonded thread with bar-tacks or
-  box-X stitching; load-bearing hardware is metal, not plastic.
-- **R-D6** Weight compartment base and lining resist abrasion from the
-  bricks being slid in and out every day.
-- **R-D7** Design life of at least 5 years of daily commuting (about 2,300
-  loaded trips, each with several hand switches — roughly 10,000 lifts)
-  _(hypothesis)_.
-- **R-D8** Wear parts (handle wrap, base feet, tray runners) can be replaced.
+### Bag, laptop and handles
 
-### Weights ("bricks")
-These apply to the weights we make and the cassettes and sleeves we ship.
-- **R-K1** Standard size and shape; every brick and cassette fits every slot.
-- **R-K2** Coated or encased (no bare metal, no dust, no sharp edges),
-  quiet, and safe to handle and drop.
-- **R-K3** Weight clearly marked on each brick.
-- **R-K4** Dense enough to keep the compartment slim (see design plan §3).
-- **R-K5** Non-toxic materials (no lead).
+- **R-B1** Common receivers mechanically attached to frame bridge, not sewn
+  only: interchangeable fabric module and standard rigid weight handle module.
+  POC uses captive bolts; no untested quick release. “Double weight handle”
+  module reserved as **TBD**, no inferred shape, interface extension or rating.
+- **R-B2** Bag hangs acceptably vertical and clears the leg at the tested loads.
+- **R-B9** Left/right handling and switches work without dangling harness parts.
+- **R-B3** Handle → receivers → bridge/stays → cradle → retained weights.
+- **R-B4** Proposed static proof target 90 kg equivalent (3 × 30); engineer to
+  confirm protocol, fasteners and acceptance before testing. Not an achieved rating.
+- **R-B5** Suspended padded laptop sleeve above a rigid barrier, with replaceable
+  impact pads and an unloaded free gap. No bottom-out against frame/weights
+  under agreed drop tests with a laptop surrogate; gap dimensions alone do not
+  establish protection. Big Pack also needs lateral separation from its carrier.
+- **R-B6** Professional work-bag appearance.
+- **R-B7** Detachable shoulder strap / stowable backpack harness for non-training use.
+- **R-B8** ≤2.5 kg empty incl. frame, empty cassette, selected handle and all
+  required inserts is a stretch hypothesis. Measure each configuration and
+  reduce permitted ballast if it is heavier.
 
-## 6. Non-goals (v1)
+### Durability and own weights
 
-- Rucking as the main exercise. The backpack can be worn, but both bags are
-  designed first for the one-hand suitcase carry.
-- Electronic features (sensors, step tracking, app).
-- Luggage / travel suitcase sizes.
+- **R-D1** 6061-T6 spine plus HDPE panels; profiles/joints unvalidated.
+- **R-D2** Daily-use structural target up to 30 kg; verify statics/fatigue/creep.
+- **R-D3** Textile backup containment to be tested with primary frame disconnected.
+- **R-D4** Future fabric options must pass the same structural tests.
+- **R-D5** Reinforced seams and metal load-path hardware; inspect bolt retention.
+- **R-D6** Replaceable abrasion-resistant weight lining and runners.
+- **R-D7** Five-year life / 10,000 lift-cycle target is a hypothesis, not proof.
+- **R-D8** Replaceable wraps, pads, feet, runners and handle modules.
+- **R-K1** Nominal steel core footprint 95 × 100 mm, finished full envelope
+  ≤97 × 102 × 35 mm, half ≤97 × 102 × 18 mm. All adapters fit their stated cavity.
+- **R-K2** Encased/coated, quiet, no exposed sharp metal; sample impact testing required.
+- **R-K3** Mark measured finished mass. 2.5 / 1.25 kg are targets, not exact mass
+  guaranteed by dimensions. Tolerance to be agreed before fabrication.
+- **R-K4** Dense sources support slim compartments; low-density fillers need less mass.
+- **R-K5** No lead; assess materials and containment before handling trials.
 
-## 7. Success metrics (v1)
+## 5. Scope and POC gates
 
-- Testers keep using it: ≥ 60% of wear-testers still carry weights after
-  4 weeks _(hypothesis)_.
-- Weight drop (UC-2) takes < 10 s and is rated "easy" by ≥ 90% of testers.
-- No injuries, no load-path failures and no accidental weight releases in
-  testing.
-- Passes all lab durability tests at 30 kg (design plan §4) with no
-  structural damage.
+Product design only now: resolve packaging, extraction, laptop isolation,
+handle module ergonomics and backpack position, then prepare sample/parts
+orders in Israel or abroad. Rucking is not the primary v1 exercise. Legal,
+market validation, shipping economics, ads and Kickstarter are deferred until
+a satisfying product POC; none is a gate to the current design iteration.
+
+POC evidence: fit gauges for finished coated parts; empty/partial-load rattle
+checks; supported removal; mass record; grip and balance comparison at
+comfortable submaximal loads; controlled rig tests before heavy human carries;
+surrogate-laptop drop tests with no bottom-out. Record failures and revise.
+No live laptop or improvised cardboard structure in a 30 kg walk test.

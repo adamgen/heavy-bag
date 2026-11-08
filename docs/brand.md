@@ -1,3 +1,10 @@
+> **Deferred brand exploration (2026-11-08).** Current work is product design
+> and POC only. Audience: office workers who lift heavy. Start light;30 kg is
+> the maximum complete mass, not a progression goal or a tested rating.
+> Ads/Kickstarter, prices and market/legal work below follow a satisfying
+> product POC and are not present design gates. Capacity/structure claims
+> below are hypotheses; current requirements and tech pack take precedence.
+
 # Brand Direction (interim)
 
 Status: **working direction**, drafted while the founder is focused
@@ -77,7 +84,7 @@ weight plates), landing-page test, and unit cost from suppliers.
   product feature. The weights research suggests bundling a cheap one that
   hooks onto the tray handle, since self-filled and local weights vary.
 - **Progress story.** Content and community built around building up to
-  30 kg over weeks: "kg carried this month", commute challenges, before /
+  a personally appropriate load over time, not necessarily 30 kg: "kg carried this month", commute challenges, before /
   after grip-strength tests.
 - **Expert credibility.** Carry guide co-written with a strength coach or
   physiotherapist.

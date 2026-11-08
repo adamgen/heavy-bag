@@ -1,75 +1,70 @@
 # Heavy Bag
 
-> A work bag that turns the daily commute into a strength workout.
+Work bags for **office workers who lift heavy**: a laptop bag (working name
+“Heavy Brief”) and backpack (“Big Pack”) with removable weights for one-hand
+suitcase carries, and normal work-bag use without added weights.
 
-Heavy Bag is a brand of work bags — a **backpack** and a **laptop bag** — that are
-**deliberately heavy to carry**. A built-in, adjustable weight system lets you
-carry the bag in one hand on your way to work, so every walk becomes a
-**suitcase carry** — a loaded-carry exercise that trains grip, core, obliques
-and posture.
+**Start light. 30 kg is the maximum total carried mass, not a starting load,
+not 30 kg of added weights, and not a goal every user should work toward.**
+Total includes the bag, frame, empty cassette/carrier, selected handle, laptop,
+weights and all other contents. These are design targets, not a tested rating.
 
-## The problem
+## Current focus: product design and a POC
 
-People who work in offices sit most of the day and struggle to fit strength
-training in. The commute is time already spent walking, carrying a bag. A bag
-that adds the right amount of load — and gets out of the way when you don't
-want it — turns that dead time into training with zero extra time cost.
+Settle the design, then prepare a parts/sample order in Israel or abroad.
+Only after a satisfying product POC do ads or a Kickstarter campaign enter the
+plan. Market proof, shipping economics and legal/trademark work are deferred;
+US fitness brands shipping steel is not treated as a product-design blocker.
+No sourcing orders or outreach are authorized by these design documents.
 
-## Product goals
+## Design direction
 
-1. **Heavy on purpose.** The bag carries added weight for a one-handed
-   suitcase carry during the walk to work.
-2. **Adjustable.** The user can choose how much weight to carry, in small
-   increments, to match their strength and progress over time.
-3. **Easy to drop.** The weights come out of the bag quickly and in one
-   motion, so you can leave them behind (at your desk, in a locker, at home)
-   and carry on with a normal bag.
-4. **Easy to replace.** Weights are simple, standard "bricks" that slot into a
-   dedicated compartment at the bottom or side of the bag. Adding, removing or
-   swapping a brick needs no tools.
-5. **Built to last.** An aluminium frame supports the bag, and every fabric
-   option is extremely tough. The bag carries **up to 30 kg in
-   total** (laptop, contents and weights) every day for years without
-   tearing, sagging or failing.
-6. **Still a great work bag.** It must look professional and protect a laptop
-   and everyday items — the weight system can't compromise the bag's day job.
+- Shared **weight interface**, not an identical cassette: laptop bag uses a
+  4 × 1 tray; Big Pack a 3 × 3 carrier. “One tray, any weight” means supported,
+  dimension-checked sources with their own capacities, not universal fit.
+- Aluminium load spine and HDPE barriers; textile backup containment remains
+  a test requirement, not a proven fail-safe.
+- Frame-mounted receivers accept interchangeable **fabric** and **standard
+  rigid weight handles**. POC swaps use captive bolts. A “double weight handle”
+  is requested but its meaning/geometry remains TBD.
+- A suspended laptop sleeve, replaceable impact pads and a free gap isolate
+  the laptop from rigid weight structures. Drop-test with a surrogate first.
+- **Proposals, not selected mechanisms:** a supported single-cassette slide-out
+  versus two smaller cassettes; a low versus a fixed mid-low Big Pack position.
+  Do not extract a heavy cassette one-handed while holding the bag.
 
-## How it's used: the recommended carry
+## Provisional packaging
 
-1. Load the bag up to your chosen weight — **up to 30 kg in total**,
-   including your laptop and everything else in it.
-2. Carry it in one hand, at your side, standing tall, until your grip or core
-   fatigues.
-3. Switch to the other hand. Keep alternating for the whole walk.
+| | Laptop bag | Big Pack |
+| --- | --- | --- |
+| Body W × H × D, mm | 440 × 430 × 150 | 360 × 500 × 190 |
+| Weight enclosure, mm | 406 × 114 × 106 (L × D × H) | 307 × 322 × 66 (W × H × D) |
+| Usable weight stack, mm, excluding clamp | 88 | 53 |
 
-On a typical 20-minute walk that adds up to about 10 minutes per side. Start
-light and build up over weeks.
+These larger envelopes allow coating, gaps, frame/textile space and laptop
+isolation; they are **not engineering validated**. Check leg clearance, laptop
+access and useful everyday volume before freezing sizes. Source dimensions
+are in [`geometry.json`](design/sketches/geometry.json), with the stack-up and
+source limits in the [tech pack](docs/tech-pack.md).
 
-## Core principles
+Example mass budget only: 30 − 2.5 bag − 2 laptop − 1.5 contents = **24 kg**
+of added weights. Weigh the actual complete bag; a physically fitting load can
+still exceed the limit. Four stacks of 2.5 + 2.5 + 1.25 = **25 kg**, not 24;
+use eight full and three half bricks = **23.75 kg** nominal in that example.
 
-- **The frame carries the load, the fabric protects it.** Weight goes from
-  the handle through the frame to the weights; the fabric is tough enough to
-  carry the full load anyway, as a backup.
-- **Safe first.** Weights are secured so they can't shift, rattle or fall out
-  by accident, and they are kept separate from the laptop and other contents.
-- **Built for one-hand carry, in either hand.** The handle sits above the
-  bag's centre of mass, so the bag hangs straight and doesn't swing into the
-  leg — and it feels the same in the left hand as in the right.
-- **Low and compact.** Dense weights sit low in the bag, so the bag stays
-  slim and stable.
-- **Simple over clever.** Fewer moving parts, fewer failure points.
+## Documents and drawings
 
-## Repository layout
+- [Product requirements](docs/product-requirements.md)
+- [Design and POC plan](docs/design-plan.md)
+- [Tech pack and packaging arithmetic](docs/tech-pack.md)
+- [Decisions and unresolved proposals](docs/decisions.md)
+- [Concept SVG sheets](design/sketches/) and their generator
+- [Brand notes](docs/brand.md) and [research archive](docs/research/): deferred,
+  historical material, not current capacity specifications
 
-| Path | Contents |
-| --- | --- |
-| [`docs/product-requirements.md`](docs/product-requirements.md) | What the product must do: users, requirements, target specs |
-| [`docs/design-plan.md`](docs/design-plan.md) | How we get there: phases, concept directions, testing, risks |
-| [`docs/brand.md`](docs/brand.md) | Brand direction: positioning, look, price, marketing notes |
-| [`docs/tech-pack.md`](docs/tech-pack.md) | Draft tech pack for manufacturers: dimensions, materials, construction, tests |
-| [`design/sketches/`](design/sketches/) | Concept sketches (PDF, SVG, PNG) and the script that generates them |
-| [`docs/decisions.md`](docs/decisions.md) | Open questions and the decision log |
-| [`docs/research/`](docs/research/) | Research reports: weight sourcing, name check |
-
-As the project grows, research notes, sketches, CAD and prototype logs will
-live alongside these docs.
+Regenerate SVGs: `python3 design/sketches/make_sketches.py`.
+Check packaging arithmetic: `python3 design/sketches/validate_geometry.py`.
+The generator also accepts `--output-dir /absolute/scratch/path`.
+SVG, PNG and PDF exports have been regenerated from the current sketch
+generator. Rerun the generator and export step after future drawing changes;
+see the sketch-folder README.

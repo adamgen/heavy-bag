@@ -1,0 +1,155 @@
+{
+  "status": "Provisional packaging envelope only; not engineering validated",
+  "total_mass_limit_kg": 30,
+  "example_empty_bag_kg": 2.5,
+  "example_laptop_kg": 2,
+  "example_other_contents_kg": 1.5,
+  "brick": {
+    "core_nominal_mm": [
+      95,
+      100,
+      33
+    ],
+    "finished_max_full_mm": [
+      97,
+      102,
+      35
+    ],
+    "finished_max_half_mm": [
+      97,
+      102,
+      18
+    ],
+    "nominal_full_kg": 2.5,
+    "nominal_half_kg": 1.25,
+    "steel_density_kg_m3": 7850
+  },
+  "grid": {
+    "edge_clearance_mm": 2,
+    "intermodule_gap_mm": 2
+  },
+  "laptop": {
+    "body_mm": [
+      440,
+      430,
+      150
+    ],
+    "cassette_outer_mm": [
+      406,
+      114,
+      106
+    ],
+    "cassette_inner_mm": [
+      398,
+      106,
+      98
+    ],
+    "bay_mm": [
+      414,
+      122,
+      110
+    ],
+    "hatch_clear_mm": [
+      118,
+      110
+    ],
+    "stack_max_mm": 88,
+    "clamp_mm": 4,
+    "clamp_reserve_mm": 6,
+    "sleeve_clear_mm": [
+      370,
+      260,
+      25
+    ],
+    "sleeve_outer_mm": [
+      382,
+      272,
+      37
+    ],
+    "base_under_cassette_mm": 10,
+    "cassette_top_mm": 116,
+    "bay_top_mm": 120,
+    "barrier_mm": 4,
+    "impact_pad_mm": 6,
+    "free_gap_mm": 12,
+    "sleeve_bottom_mm": 142,
+    "top_allowance_mm": 16
+  },
+  "backpack": {
+    "body_mm": [
+      360,
+      500,
+      190
+    ],
+    "carrier_outer_mm": [
+      307,
+      322,
+      66
+    ],
+    "carrier_inner_mm": [
+      299,
+      314,
+      58
+    ],
+    "bay_mm": [
+      319,
+      334,
+      78
+    ],
+    "stack_max_mm": 53,
+    "clamp_mm": 4,
+    "clamp_reserve_mm": 1,
+    "low_carrier_bottom_mm": 36,
+    "midlow_carrier_bottom_mm": 66,
+    "rear_pad_frame_mm": 18,
+    "barrier_mm": 4,
+    "sleeve_clear_mm": [
+      260,
+      370,
+      25
+    ],
+    "sleeve_outer_mm": [
+      272,
+      382,
+      37
+    ],
+    "sleeve_bottom_mm": 32,
+    "impact_pad_mm": 6,
+    "lateral_isolation_mm": 12,
+    "vertical_free_gap_mm": 12
+  },
+  "bar": {
+    "laptop_raw_mm": [
+      380,
+      100,
+      10
+    ],
+    "laptop_finished_max_mm": [
+      384,
+      104,
+      12
+    ],
+    "backpack_raw_mm": [
+      285,
+      100,
+      10
+    ],
+    "backpack_finished_max_mm": [
+      289,
+      104,
+      12
+    ]
+  },
+  "handle": {
+    "receiver_pitch_mm": 140,
+    "rigid_grip_trials_mm": [
+      30,
+      35,
+      40
+    ],
+    "rigid_grip_length_mm": 120,
+    "hand_clearance_min_mm": 45,
+    "fastener": "Captive bolts; sizing, torque, edge distances and locking TBD",
+    "double_variant": "TBD: no geometry or load claim"
+  }
+}
