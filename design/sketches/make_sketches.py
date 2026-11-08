@@ -6,12 +6,17 @@ Then: node design/sketches/make_pdf.js   (combines the sheets into one PDF)
 Each sheet is A3 landscape at 1680 x 1188 units (4 units per printed mm).
 Bag sheets use 1 unit = 1 mm of product, i.e. scale 1:4 when printed on A3.
 The weight-system sheet uses 2 units = 1 mm, i.e. scale 1:2 on A3.
-All dimensions are concept dimensions in mm, to be confirmed with samples.
+All dimensions are provisional packaging in mm, not engineering validated.
+Use --output-dir to render to isolated scratch storage. Source: geometry.json.
 """
 
 from pathlib import Path
+import argparse
+import html
+import json
 
-OUT = Path(__file__).parent
+SOURCE = Path(__file__).resolve().parent
+G = json.loads((SOURCE / "geometry.json").read_text())
 W, H = 1680, 1188
 
 ALU = "#c4581c"     # aluminium frame
@@ -65,7 +70,7 @@ class Sheet:
 
     def text(self, x, y, s, cls="sm", anchor="start", rotate=None):
         tr = f' transform="rotate({rotate} {x:.1f} {y:.1f})"' if rotate else ""
-        self.add(f'<text x="{x:.1f}" y="{y:.1f}" class="{cls}" text-anchor="{anchor}"{tr}>{s}</text>')
+        self.add(f'<text x="{x:.1f}" y="{y:.1f}" class="{cls}" text-anchor="{anchor}"{tr}>{html.escape(str(s))}</text>')
 
     # --- drafting helpers -------------------------------------------------
     def dim_h(self, x1, x2, y, label, y_from=None):
@@ -183,364 +188,264 @@ def d_handle(s, cx, top_y, width=170, height=62, grip=28):
     s.line(cx - width / 2 + 24, top_y, cx + width / 2 - 24, top_y, "o")
 
 
-# ======================================================================
-# Sheet 1 — Laptop bag ("Heavy Brief")
-# ======================================================================
+# Envelope order is explicit: laptop L,D,H; backpack W,H,D.
+# Coordinates below are body-space mm, except the labelled 2x detail views.
+def receiver_handle(s, cx, body_top):
+    """Symbolic modular handle, not a commercial-handle fit specification."""
+    pitch = G['handle']['receiver_pitch_mm']
+    for x in (cx - pitch / 2, cx + pitch / 2):
+        s.rect(x - 10, body_top - 8, 20, 12, 'alf', rx=2)
+        s.circle(x, body_top - 3, 3, 't')
+    s.path(f'M{cx-pitch/2},{body_top-8} L{cx-pitch/2},{body_top-65} '
+           f'L{cx+pitch/2},{body_top-65} L{cx+pitch/2},{body_top-8}', 'o')
+    s.rect(cx - 60, body_top - 80, 120, 30, 'pad', rx=10)
+    s.text(cx, body_top - 97, 'Interchangeable module (symbolic)', 'sm', 'middle')
+
+
+def footer(s, title, sheet):
+    s.text(60, 1090, 'PROVISIONAL PACKAGING ONLY — NOT ENGINEERING VALIDATED', 'lbl')
+    s.text(60, 1118, 'Blue: dimensions · orange: frame/receivers · green: barrier/enclosure · grey: weight', 'sm')
+    s.text(60, 1143, 'SVG / PNG / PDF exports regenerated from current generator. See tech-pack v0.2.', 'sm')
+    s.title_block(title, 'Product-design / POC revision v0.2', sheet, 'Views as labelled')
+
+
 def laptop_bag():
-    s = Sheet()
-    s.frame()
-    BW, BH, BD = 420, 400, 130
-    bx, by = 110, 250
-    cx = bx + BW / 2
+    s = Sheet(); s.frame()
+    q = G['laptop']; bw, bh, bd = q['body_mm']
+    cl, cd, ch = q['cassette_outer_mm']
+    sw, sh, sd = q['sleeve_outer_mm']
+    bx, by = 110, 240
+    base = by + bh
+    s.rect(bx, by, bw, bh, 'of', rx=10)
+    receiver_handle(s, bx + bw / 2, by)
+    # Keep shell outline corners symbolic; critical clear envelopes are square.
+    for x in (bx + 8, bx + bw - 8):
+        s.line(x, by + 10, x, base - 5, 'al')
+    s.line(bx + 8, by + 10, bx + bw - 8, by + 10, 'al')
+    s.line(bx + 8, base - 5, bx + bw - 8, base - 5, 'al')
+    s.rect(bx + (bw-cl)/2, base-q['cassette_top_mm'], cl, ch, 'pe')
+    for i in range(4):
+        s.rect(bx + (bw-cl)/2 + 6 + i*99, base-112, 97, 88, 'wt', rx=2)
+    sy = base-q['sleeve_bottom_mm']-sh
+    s.rect(bx+(bw-sw)/2, sy, sw, sh, 'pad', rx=4)
+    s.rect(bx+(bw-356)/2, sy+12, 356, 248, 'lap', rx=3)
+    s.line(bx+20, sy, bx+20, by+10, 't')
+    s.line(bx+bw-20, sy, bx+bw-20, by+10, 't')
+    s.rect(bx+14, base-124, bw-28, 4, 'pe')
+    s.rect(bx+28, base-130, bw-56, 6, 'pad')
+    s.text(bx+bw/2, sy+125, '356 × 248 laptop surrogate', 'sm', 'middle')
+    s.dim_h(bx, bx+bw, base+35, str(bw), base)
+    s.dim_v(by, base, bx-35, str(bh), bx)
+    s.view_label(bx+bw/2, base+72, 'FRONT — 1:4 AT A3')
 
-    # ---- FRONT VIEW ----
-    s.rect(bx, by, BW, BH, "of", rx=24)
-    d_handle(s, cx, by)
-    # weight band seam and front pocket
-    s.line(bx, by + 300, bx + BW, by + 300, "t")
-    s.rect(bx + 40, by + 120, 340, 165, "o", rx=14)
-    s.line(bx + 58, by + 138, bx + 362, by + 138, "z")
-    s.rect(cx - 30, by + 175, 60, 16, "t", rx=3)
-    s.text(cx, by + 210, "logo (deboss)", "sm", "middle")
-    # hidden internals
-    s.rect(bx + 32, by + 40, 356, 248, "h", rx=10)           # 16" laptop
-    s.line(bx + 8, by + 297, bx + BW - 8, by + 297, "h")      # false floor
-    s.rect(bx + 14, by + 302, 392, 92, "h", rx=4)            # weight tray
-    for i in range(1, 4):                                    # 95 mm modules
-        x = bx + 14 + 6 + i * 95
-        s.line(x, by + 306, x, by + 390, "h")
-    # aluminium U-frame: bridge + two end stays + cradle
-    s.line(bx + 10, by + 10, bx + BW - 10, by + 10, "al")
-    s.line(bx + 10, by + 10, bx + 10, by + BH - 4, "al")
-    s.line(bx + BW - 10, by + 10, bx + BW - 10, by + BH - 4, "al")
-    s.line(bx + 10, by + BH - 4, bx + BW - 10, by + BH - 4, "al")
-    # D-rings and feet
-    for x in (bx - 4, bx + BW - 12):
-        s.rect(x, by + 26, 16, 22, "t", rx=6)
-    for x in (bx + 30, bx + BW - 60):
-        s.rect(x, by + BH, 30, 6, "o", rx=2)
-    s.line(cx, by - 90, cx, by + BH + 30, "c")
-    # dims
-    s.dim_h(bx, bx + BW, by + BH + 50, "420", by + BH + 8)
-    s.dim_v(by, by + BH, bx - 40, "400", bx)
-    s.dim_v(by - 62, by, bx + 80, "62", None)
-    s.dim_v(by + 300, by + BH, bx + BW + 40, "100 weight band", bx + BW)
-    s.view_label(cx, by + BH + 100, "FRONT VIEW")
-    # callouts
-    s.callout(1, cx + 40, by - 48, cx + 130, by - 95)
-    s.callout(2, bx + BW - 10, by + 60, bx + BW + 60, by + 30)
-    s.callout(3, bx + 300, by + 220, bx + BW + 60, by + 160)
-    s.callout(4, bx + 250, by + 350, bx + BW + 60, by + 250)
-    s.callout(5, bx + 60, by + 297, bx - 60, by + 250)
-    s.callout(6, bx + 300, by + 138, bx + BW + 60, by + 95)
-    s.callout(12, bx + 45, by + BH + 3, bx - 60, by + BH + 30)
+    ax = 760
+    s.rect(ax, by, bd, bh, 'of', rx=8)
+    s.rect(ax+14, base-116, cd, ch, 'pe')
+    floor = base-14
+    for h in (35,35,18):
+        floor -= h
+        s.rect(ax+20, floor, 102, h, 'wt')
+    s.rect(ax+18, floor-4, 106, 4, 'pe')
+    s.rect(ax+14, base-124, 122, 4, 'pe')
+    s.rect(ax+22, base-130, 106, 6, 'pad')
+    s.rect(ax+14, sy, sd, sh, 'pad')
+    s.rect(ax+24, sy+12, 17, 248, 'lap')
+    s.line(ax+15, by+8, ax+15, sy, 'al')
+    s.dim_h(ax, ax+bd, base+35, str(bd), base)
+    s.dim_v(base-142, base-130, ax-25, '12 free', ax)
+    s.dim_v(base-116, base-10, ax+bd+35, '106 cassette', ax+bd)
+    s.view_label(ax+bd/2, base+72, 'SECTION — 1:4')
+    s.text(ax+bd/2, by-15, 'Suspend sleeve from upper structure', 'sm', 'middle')
+    # End-hatch clear-opening detail; enclosure projects inside with2mm/face.
+    hx,hy=770,80
+    s.rect(hx-8,hy-8,134,126,'al')
+    s.rect(hx,hy,118,110,'z')
+    s.rect(hx+2,hy+2,114,106,'pe')
+    s.dim_h(hx,hx+118,hy-20,'118 clear',hy)
+    s.dim_v(hy,hy+110,hx+150,'110 clear',hx+118)
+    s.text(hx+59,hy-48,'END HATCH — 1:4','lbl','middle')
 
-    # ---- END VIEW (weight hatch side) ----
-    sx = 690
-    s.rect(sx, by, BD, BH, "of", rx=20)
-    s.rect(sx + 50, by - 62, 30, 62, "of", rx=8)
-    s.rect(sx + 5, by + 296, BD - 10, 100, "z", rx=10)       # hatch zip
-    s.rect(sx + 9, by + 302, 112, 92, "o", rx=6)              # tray end cap
-    s.rect(sx + 35, by + 330, 60, 18, "o", rx=8)              # pull grip
-    s.circle(sx + 65, by + 372, 8, "o")                        # latch button
-    s.rect(sx + 57, by + 26, 16, 22, "t", rx=6)               # D-ring
-    s.line(sx + 15, by + 10, sx + 15, by + BH - 4, "al")
-    s.dim_h(sx, sx + BD, by + BH + 50, "130", by + BH + 8)
-    s.callout(7, sx + 80, by + 339, sx + 100, by + 250)
-    s.callout(8, sx + 65, by + 372, sx - 30, by + 440)
-    s.view_label(sx + BD / 2, by + BH + 100, "END VIEW")
+    # Supported-slide proposal: top schematic uses true body-space dimensions.
+    x, y = 110, 830
+    s.rect(x, y, bw, bd, 'o')
+    s.rect(x+bw+10, y, 450, bd, 'pad')
+    s.text(x+bw+235, y-15, 'Adjacent stable support ≥450 long', 'sm', 'middle')
+    s.rect(x+bw-65, y+(bd-cd)/2, cl, cd, 'pe')
+    for gx in (x+bw-50, x+bw-65+cl-30):
+        s.rect(gx, y+60, 20, 24, 'h')
+    s.line(x+bw-10, y+5, x+bw-10, y+bd-5, 'd')
+    s.text(x+220, y+60, 'Bag set down', 'sm', 'middle')
+    s.text(x+bw+130, y+82, 'Two stowable lifting grips', 'sm', 'middle')
+    s.view_label(555, y+bd+35, 'PROPOSAL A: SUPPORTED SLIDE — NOT SELECTED')
+    s.text(110, 1044, 'Travel stop before loss of runner support; deliberate final release only after support.', 'sm')
 
-    # ---- SECTION A-A ----
-    ax = 900
-    s.rect(ax, by, BD, BH, "of", rx=20)
-    s.rect(ax + 50, by - 62, 30, 62, "of", rx=8)
-    s.rect(ax + 48, by + 3, 34, 9, "alf")                       # bridge section
-    s.rect(ax + 5, by + 292, BD - 10, 5, "pe")                  # false floor
-    s.rect(ax + 9, by + 300, 112, 95, "pe", rx=4)               # tray shell
-    s.rect(ax + 13, by + 304, 104, 87, "of")                    # tray inside
-    yb = by + 391
-    for hgt in (33, 33, 16.5):                                  # brick stack
-        yb -= hgt
-        s.rect(ax + 16, yb, 98, hgt, "wt", rx=3)
-    s.rect(ax + 14, yb - 5, 102, 4, "pe")                       # clamp plate
-    s.rect(ax + 6, by + 40, 34, 250, "pad", rx=6)               # laptop sleeve
-    s.rect(ax + 14, by + 46, 17, 240, "lap", rx=3)              # laptop
-    s.line(ax + 104, by + 120, ax + 104, by + 288, "t")         # front pocket wall
-    s.text(ax + 72, by + 200, "main", "sm", "middle")
-    s.text(ax + 117, by + 215, "pkt", "sm", "middle", rotate=-90)
-    s.line(ax + 65, by - 90, ax + 65, by + BH + 20, "c")
-    s.circle(ax + 64, by + 330, 9, "t")
-    s.line(ax + 55, by + 330, ax + 73, by + 330, "t")
-    s.line(ax + 64, by + 321, ax + 64, by + 339, "t")
-    s.text(ax + 76, by + 327, "CoM", "sm")
-    s.dim_v(by + 300, by + 395, ax + BD + 30, "95", ax + BD)
-    s.callout(9, ax + 20, by + 160, ax - 30, by + 120)
-    s.callout(10, ax + 65, by + 358, ax - 30, by + 330)
-    s.callout(11, ax + 65, by + 7, ax + 120, by - 40)
-    s.callout(5, ax + 60, by + 294, ax - 30, by + 270)
-    s.view_label(ax + BD / 2, by + BH + 100, "SECTION A–A")
-
-    # ---- TOP VIEW ----
-    tx, ty = bx, 860
-    s.rect(tx, ty, BW, BD, "of", rx=22)
-    s.rect(tx + 18, ty + 16, BW - 36, BD - 32, "z", rx=14)     # main zip
-    s.rect(cx - 85, ty + 50, 170, 30, "of", rx=14)              # handle
-    s.rect(cx - 61, ty + 52, 122, 26, "t", rx=6)
-    s.line(tx - 20, ty + BD / 2, tx + BW + 20, ty + BD / 2, "c")
-    s.text(tx - 34, ty + BD / 2 + 6, "A", "lbl", "middle")
-    s.text(tx + BW + 34, ty + BD / 2 + 6, "A", "lbl", "middle")
-    s.add(f'<line x1="{tx + BW + 10}" y1="{ty + 110}" x2="{tx + BW + 70}" y2="{ty + 110}" '
-          f'class="o" marker-end="url(#arr)"/>')
-    s.text(tx + BW + 12, ty + 128, "tray out", "sm")
-    s.dim_h(tx, tx + BW, ty + BD + 40, "420", ty + BD + 6)
-    s.callout(13, tx + 40, ty + 16, tx - 40, ty - 10)
-    s.view_label(cx, ty + BD + 90, "TOP VIEW")
-
-    # ---- NOTES ----
-    y = s.notes(1110, 70, "LAPTOP BAG — “HEAVY BRIEF” (working name)", [
-        (None, "One-hand suitcase carry, up to 30 kg total (bag + 16\" laptop + contents + up to 24 kg weights). Must hang straight and feel the same in either hand."),
-        (1, "Rigid top handle, ~30 mm grip, bolted/riveted to the aluminium bridge (11). Not sewn-only. Rated 90 kg static."),
-        (2, "Aluminium U-frame: top bridge + one stay in each end panel + bottom cradle under the tray. All load goes handle → frame → tray."),
-        (3, "16\" MacBook Pro (356 × 248 × 17 mm) in padded sleeve against back wall (9)."),
-        (4, "Weight tray in a 100 mm base band, centred under the handle. 4 modules of 95 × 100 mm; full 24 kg with steel bricks or steel bar. See sheet 3."),
-        (5, "Rigid HDPE false floor separates the weights from laptop and contents."),
-        (6, "Front organiser pocket, zipped."),
-        (7, "Tray slides out of a zipped hatch in one end panel, on HDPE runners. Tray end cap has a pull grip."),
-        (8, "Two-step release: open hatch zip, then press latch and pull. Tray can't fall out by accident."),
-        (10, "Clamp plate + 2 cam straps press any stack (10–85 mm) to stop rattle."),
-        (12, "Four protective base feet."),
-        (13, "Main zip, 2-way, heavy coil, runs over the top."),
-        (None, "Detachable shoulder strap clips to the two D-rings."),
-    ])
-    s.legend(1110, y + 12)
-    s.title_block("LAPTOP BAG", "Front, end, section and top views", 1, "Scale 1:4 at A3")
+    s.notes(1060, 70, 'LAPTOP BAG — HEAVY BRIEF', [
+        (None, 'For office workers who lift heavy. Start light; 30 kg total maximum, not a required goal. Targets untested.'),
+        (1, '440 W × 430 H × 150 D body. 406 L × 114 D × 106 H cassette; clear bay 414 × 122 × 110.'),
+        (2, 'Clear hatch 118 D × 110 H after zip and lining intrusion. End-frame load path must route around hatch, not cross extraction path.'),
+        (3, 'Base stack: 10 cradle + 106 cassette + 4 clearance + 4 barrier + 6 impact pad + 12 free gap + 272 padded sleeve + 16 top = 430.'),
+        (4, 'Suspended sleeve clear 370 × 260 × 25; outer 382 × 272 × 37. Replaceable pads. Test hard bottom-out with a surrogate, not a real laptop.'),
+        (5, 'Frame-mounted modular fabric or standard rigid handle. Captive bolts POC. Double weight handle meaning/geometry TBD; see sheet 3.'),
+        (6, 'Supported single cassette vs two smaller cassettes stays OPEN. Split loses continuous long-bar fit. Neither is a final mechanism decision.'),
+        (7, '88 mm stack + 4 clamp + 6 reserve. Two full + one half = 6.25 kg/module; four = 25 kg, over example 24 kg allowance.'),
+        (8, '8 full + 3 half = 23.75 kg nominal example. Actual complete mass, including tray and handle, must be ≤30 kg. No automatic volume limiter.'),
+    ], width_chars=58)
+    footer(s, 'LAPTOP BAG', 1)
     return s
 
 
-# ======================================================================
-# Sheet 2 — Backpack ("Big Pack")
-# ======================================================================
 def big_pack():
-    s = Sheet()
-    s.frame()
-    PW, PH, PD = 310, 480, 160
-    fx, fy = 110, 190
-    cx = fx + PW / 2
-
-    # ---- FRONT VIEW ----
-    s.rect(fx, fy, PW, PH, "of", rx=46)
-    d_handle(s, cx, fy)
-    s.path(f"M{fx + 22},{fy + 270} L{fx + 22},{fy + 60} Q{fx + 22},{fy + 18} {fx + 64},{fy + 18} "
-           f"L{fx + PW - 64},{fy + 18} Q{fx + PW - 22},{fy + 18} {fx + PW - 22},{fy + 60} "
-           f"L{fx + PW - 22},{fy + 270}", "z")                    # main zip
-    s.rect(fx + 45, fy + 250, 220, 200, "o", rx=16)               # front pocket
-    s.line(fx + 62, fy + 268, fx + 248, fy + 268, "z")
-    s.rect(cx - 30, fy + 300, 60, 16, "t", rx=3)
-    s.text(cx, fy + 336, "logo (deboss)", "sm", "middle")
-    s.rect(fx + 12, fy + 170, 286, 300, "h", rx=6)                # weight carrier
-    for i in (1, 2):
-        s.line(fx + 12 + i * 95, fy + 174, fx + 12 + i * 95, fy + 466, "h")
-        s.line(fx + 16, fy + 170 + i * 100, fx + 294, fy + 170 + i * 100, "h")
-    for x in (fx + 40, fx + PW - 70):
-        s.rect(x, fy + PH, 30, 6, "o", rx=2)
-    s.line(cx, fy - 90, cx, fy + PH + 30, "c")
-    s.dim_h(fx, fx + PW, fy + PH + 50, "310", fy + PH + 8)
-    s.dim_v(fy, fy + PH, fx - 40, "480", fx)
-    s.dim_v(fy + 170, fy + 470, fx + PW + 34, "300 weight zone", fx + PW)
-    s.callout(1, cx + 40, fy - 48, cx + 130, fy - 95)
-    s.callout(4, fx + 200, fy + 420, fx + PW + 70, fy + 400)
-    s.callout(6, fx + 230, fy + 268, fx + PW + 70, fy + 240)
-    s.view_label(cx, fy + PH + 88, "FRONT VIEW")
-
-    # ---- BACK VIEW ----
-    kx = 520
-    s.rect(kx, fy, PW, PH, "of", rx=46)
-    d_handle(s, kx + PW / 2, fy)
-    s.line(kx + 50, fy + 30, kx + PW - 50, fy + 30, "z")          # weight slot zip
-    s.rect(kx + PW / 2 - 14, fy + 24, 28, 12, "t", rx=4)          # slot buckle tab
-    s.rect(kx + 40, fy + 60, 230, 340, "z", rx=20)                # strap stow panel
-    for side in (-1, 1):
-        x_top = kx + PW / 2 + side * 55
-        x_bot = kx + PW / 2 + side * 120
-        s.path(f"M{x_top - 28},{fy + 70} L{x_top + 28},{fy + 70} "
-               f"L{x_bot + 26},{fy + 390} L{x_bot - 26},{fy + 390} Z", "o")
-        s.rect(kx + PW / 2 + side * 125 - 12, fy + 455, 24, 14, "t", rx=4)  # strap anchor
-    s.rect(kx + PW / 2 - 70, fy + 200, 140, 12, "o", rx=6)        # sternum strap
-    s.rect(kx + 60, fy + 415, 190, 50, "pad", rx=12)              # lumbar pad
-    s.line(kx + 18, fy + 20, kx + 18, fy + PH - 10, "al")
-    s.line(kx + PW - 18, fy + 20, kx + PW - 18, fy + PH - 10, "al")
-    s.callout(7, kx + 220, fy + 30, kx + PW + 60, fy + 10)
-    s.callout(8, kx + PW / 2, fy + 30, kx + PW + 60, fy + 70)
-    s.callout(9, kx + 255, fy + 120, kx + PW + 60, fy + 130)
-    s.callout(2, kx + 18, fy + 300, kx - 40, fy + 330)
-    s.callout(12, kx + 150, fy + 440, kx + PW + 60, fy + 420)
-    s.view_label(kx + PW / 2, fy + PH + 88, "BACK VIEW (straps out)")
-
-    # ---- SECTION B-B (side) : back panel on the left ----
-    ax = 930
-    s.rect(ax, fy, PD, PH, "of", rx=30)
-    s.rect(ax + 15, fy - 62, 50, 62, "of", rx=10)                 # handle edge-on
-    s.rect(ax + 12, fy + 3, 58, 9, "alf")                          # bridge
-    s.rect(ax + 4, fy + 40, 12, 420, "pad", rx=4)                 # back padding
-    s.rect(ax + 16, fy + 20, 4, 450, "pe")                         # frame sheet
-    s.line(ax + 18, fy + 20, ax + 18, fy + 470, "al")
-    s.rect(ax + 20, fy + 30, 58, 442, "t", rx=4)                   # weight sleeve
-    s.rect(ax + 22, fy + 170, 52, 300, "pe", rx=4)                 # carrier
-    for r in range(3):
-        s.rect(ax + 26, fy + 172 + r * 100, 33, 96, "wt", rx=3)
-        s.rect(ax + 59.5, fy + 172 + r * 100, 12, 96, "wt", rx=2)
-    s.rect(ax + 80, fy + 60, 28, 380, "pad", rx=6)                 # laptop sleeve
-    s.rect(ax + 86, fy + 66, 17, 356, "lap", rx=3)
-    s.line(ax + 138, fy + 250, ax + 138, fy + 450, "t")
-    s.text(ax + 123, fy + 160, "main", "sm", "middle", rotate=-90)
-    s.text(ax + 150, fy + 360, "pkt", "sm", "middle", rotate=-90)
-    s.line(ax + 40, fy - 90, ax + 40, fy + PH + 20, "c")
-    s.circle(ax + 52, fy + 330, 9, "t")
-    s.line(ax + 43, fy + 330, ax + 61, fy + 330, "t")
-    s.line(ax + 52, fy + 321, ax + 52, fy + 339, "t")
-    s.text(ax + 64, fy + 327, "CoM", "sm")
-    s.dim_h(ax, ax + PD, fy + PH + 50, "160", fy + PH + 8)
-    s.callout(3, ax + 95, fy + 120, ax + PD + 28, fy + 60)
-    s.callout(10, ax + 45, fy + 230, ax - 35, fy + 200)
-    s.callout(11, ax + 40, fy + 7, ax + 110, fy - 40)
-    s.callout(5, ax + 18, fy + 450, ax - 35, fy + 470)
-    s.view_label(ax + PD / 2, fy + PH + 88, "SECTION B–B")
-
-    # ---- WEIGHT CARRIER ----
-    wx, wy = 110, 850
-    s.rect(wx, wy, 297, 312, "pe", rx=8)
-    s.rect(wx + 6, wy + 6, 285, 300, "of", rx=4)
+    s = Sheet(); s.frame()
+    q=G['backpack']; bw,bh,bd=q['body_mm']; cw,ch,cd=q['carrier_outer_mm']
+    bx,by=110,230; base=by+bh
+    s.rect(bx,by,bw,bh,'of',rx=12)
+    receiver_handle(s,bx+bw/2,by)
+    for x in (bx+14,bx+bw-14):
+        s.line(x,by+10,x,base-10,'al')
+    s.line(bx+14,by+10,bx+bw-14,by+10,'al')
+    # Both positions shown as alternatives, never an installed adjustment rail.
+    x=bx+(bw-cw)/2
+    low_top=base-q['low_carrier_bottom_mm']-ch
+    mid_top=base-q['midlow_carrier_bottom_mm']-ch
+    s.rect(x-6,low_top-6,cw+12,ch+12,'h')
+    s.rect(x,low_top,cw,ch,'pe')
     for r in range(3):
         for c in range(3):
-            s.rect(wx + 9 + c * 95, wy + 9 + r * 100, 89, 94, "wt", rx=4)
-            s.text(wx + 9 + c * 95 + 44, wy + 9 + r * 100 + 53, "2.5", "sm", "middle")
-    s.rect(wx + 34, wy + 10, 229, 292, "h")                         # ruck plate outline
-    s.rect(wx + 108, wy - 22, 80, 22, "o", rx=8)                    # pull loop
-    s.dim_h(wx, wx + 297, wy - 40, "297", wy - 4)
-    s.dim_v(wy, wy + 312, wx - 30, "312", wx)
-    s.text(wx + 330, wy + 40, "Weight carrier (front, 1:4)", "lbl")
-    for i, ln in enumerate([
-        "3 × 3 modules of 95 × 100 mm (sheet 3).",
-        "Up to 9 steel bricks × 2.5 kg = 22.5 kg,",
-        "plus a half-brick layer to reach 24 kg.",
-        "Dashed: standard ruck plate 229 × 292 mm",
-        "fits the same sleeve (carrier removed).",
-        "Lifts out by the pull loop through slot (7).",
+            s.rect(x+6+c*99,low_top+6+r*104,97,102,'wt',rx=2)
+    s.rect(x,mid_top,cw,ch,'d')
+    s.dim_v(mid_top,low_top,bx+bw+30,'30 offset',bx+bw)
+    s.dim_h(bx,bx+bw,base+35,str(bw),base)
+    s.dim_v(by,base,bx-35,str(bh),bx)
+    s.view_label(bx+bw/2,base+72,'FRONT — 1:4 AT A3')
+    s.text(bx+bw/2,by+80,'Blue = alternative fixed mid-low', 'sm','middle')
+
+    ax=750
+    s.rect(ax,by,bd,bh,'of',rx=8)
+    s.rect(ax,by+14,18,bh-28,'pad')
+    s.line(ax+16,by+10,ax+16,base-10,'al')
+    s.rect(ax+18,low_top-6,78,ch+12,'h')
+    s.rect(ax+24,low_top,cd,ch,'pe')
+    for r in range(3):
+        s.rect(ax+28,low_top+6+r*104,35,102,'wt')
+        s.rect(ax+63,low_top+6+r*104,18,102,'wt')
+    s.rect(ax+24,mid_top,cd,ch,'d')
+    s.rect(ax+96,by+20,4,bh-40,'pe')
+    # 12 lateral gap from barrier at100 to sleeve at112.
+    sw,sh,sd=q['sleeve_outer_mm']; sy=base-q['sleeve_bottom_mm']-sh
+    s.rect(ax+100,sy+30,6,sh-60,'pad')
+    s.rect(ax+112,sy,sd,sh,'pad')
+    s.rect(ax+122,sy+13,17,356,'lap')
+    s.line(ax+113,by+10,ax+113,sy,'t')
+    s.rect(ax+112,base-20,sd,6,'pad')
+    s.dim_h(ax,ax+bd,base+35,str(bd),base)
+    s.view_label(ax+bd/2,base+72,'SECTION — 1:4')
+    s.text(ax+bd/2,by-25,'Back at left; laptop portrait', 'sm','middle')
+    s.text(ax+140,base-40,'12 free above base pad', 'sm','middle',rotate=-90)
+
+    # Detail: carrier grid fits finished bricks with actual gaps at scale1:4.
+    wx,wy=110,850
+    s.rect(wx,wy,cw,ch/2,'pe')  # compact projection is explicitly NTS below
+    for c in range(3):
+        s.rect(wx+6+c*99,wy+6,97,102,'wt')
+    s.dim_h(wx,wx+cw,wy-24,str(cw),wy)
+    s.text(wx+cw/2,wy+137,'3 × 3 grid; diagram cropped to one row', 'sm','middle')
+    s.text(470,860,'Carrier overall 307 W × 322 H × 66 D', 'lbl')
+    for i,line in enumerate([
+        'Clear cavity 299 × 314 × 58; 53 stack +4 clamp +1 reserve.',
+        'Bay 319 × 334 × 78. Side structure/textile 20.5 each.',
+        'LOW bottom36 / top358; MID-LOW bottom66 / top388.',
+        'Separate fixed layouts, no adjustable slider in POC.',
+        '9 × 2.5 =22.5 kg; +1 ×1.25 =23.75 kg, not24.',
+        'Heavy top-lift: grounded bag, two grips, rig-test first.',
     ]):
-        s.text(wx + 330, wy + 74 + i * 22, ln, "note")
-
-    # ---- NOTES ----
-    y = s.notes(1150, 70, "BACKPACK — “BIG PACK”", [
-        (None, "Same 30 kg total rating and one-hand suitcase carry as the laptop bag. Worn as a backpack it's a rest mode (or rucking)."),
-        (1, "Rigid top handle on the aluminium bridge (11), placed over the loaded centre of mass — close to the back panel, not mid-bag."),
-        (2, "Two aluminium stays in the back panel, joined by the top bridge and a bottom cradle; HDPE frame sheet between them."),
-        (3, "16\" MacBook Pro in padded sleeve, in front of the weight sleeve."),
-        (4, "Weight carrier sits low in a sleeve against the frame sheet: weight closest to the spine."),
-        (5, "Frame sheet and stays carry the load to the bottom cradle."),
-        (6, "Front organiser pocket."),
-        (7, "Top-loading weight slot: zip across the top of the back panel; carrier lifts out by its pull loop."),
-        (8, "Two-step release: buckle tab over the zip pull, then unzip."),
-        (9, "Shoulder straps tuck behind a zip panel during the hand carry — nothing dangles when switching hands."),
-        (10, "Carrier holds 3 × 3 bricks, ruck plates, fill-your-own shells or flat plates; cam strap clamps it."),
-        (12, "Strap anchors, lumbar pad and base feet."),
-    ])
-    s.legend(1150, y + 12)
-    s.title_block("BACKPACK", "Front, back and section views; weight carrier", 2, "Scale 1:4 at A3")
+        s.text(470,890+i*25,line,'sm')
+    s.notes(1060,70,'BACKPACK — BIG PACK',[
+        (None,'30 kg complete mass ceiling; start lighter. Hand carry first; worn mode is secondary, not primary rucking.'),
+        (1,'360 W × 500 H × 190 D body. Carrier 307 × 322 × 66. Old 310-wide bag / 300-high zone did not allow finished parts and frame.'),
+        (2,'Low vs fixed mid-low is a PROPOSAL comparison, not a selected position. Compare hand tilt and shoulder pressure at equal total mass.'),
+        (3,'Back-to-front: 18 pad/frame + 78 bay + 4 barrier + 12 gap + 37 sleeve + 41 main/front =190. Gap includes 6 replaceable pads, 6 free.'),
+        (4,'Portrait laptop sleeve clear 260 W × 370 H × 25 D; padded outer 272 × 382 × 37. Bottom32: 14 base +6 pad +12 free gap.'),
+        (5,'Suspend sleeve; test lateral and base impact with surrogate. No load transfer from carrier or frame to laptop.'),
+        (6,'Stow harness for hand carry. Top-loading carrier path, zipped opening and retention need real-part insertion tests. Two lifting grips stow inside carrier envelope.'),
+        (7,'Modular handle receivers and captive-bolt POC swaps. Double variant TBD. Handle location must be checked against actual loaded CoM, not guessed.'),
+        (8,'Grid insert removable for compatible flat plates. Finished stack ≤53 incl. coating/separators; check actual SKU. Not every weight source reaches24 kg.'),
+    ],width_chars=58)
+    footer(s,'BIG PACK',2)
     return s
 
 
-# ======================================================================
-# Sheet 3 — Weight system ("one tray, any weight")
-# ======================================================================
 def weight_system():
-    s = Sheet()
-    s.frame()
-    k = 2  # 2 units per mm (1:2 at A3)
+    s=Sheet(); s.frame(); k=2
+    q=G['laptop']; cl,cd,ch=q['cassette_outer_mm']; il,id_,ih=q['cassette_inner_mm']
+    x,y=100,160
+    s.rect(x,y,cl*k,cd*k,'pe')
+    s.rect(x+8,y+8,il*k,id_*k,'of')
+    for c in range(4):
+        xx=x+(6+c*99)*k
+        s.rect(xx,y+12,97*k,102*k,'wt',rx=3)
+        s.text(xx+97,y+105,'97 × 102','sm','middle')
+    s.dim_h(x,x+cl*k,y-30,str(cl),y)
+    s.dim_v(y,y+cd*k,x-30,str(cd),x)
+    s.view_label(x+cl, y+cd*k+45,'LAPTOP CASSETTE TOP — 1:2 AT A3')
+    s.text(x+cl,y+cd*k+75,'398 cavity =4×97 +3×2 +2×2; depth106 =102 +2×2','sm','middle')
 
-    # ---- LAPTOP TRAY: top view ----
-    tx, ty = 90, 130
-    TL, TW = 392, 112
-    s.rect(tx, ty, TL * k, TW * k, "pe", rx=10)
-    s.rect(tx + 6 * k, ty + 4 * k, 380 * k, 104 * k, "of", rx=4)
-    for i in range(4):
-        s.rect(tx + (6 + i * 95) * k + 3, ty + 6 * k, 95 * k - 6, 100 * k, "wt", rx=6)
-        s.text(tx + (6 + i * 95 + 47.5) * k, ty + 60 * k, "95 × 100", "sm", "middle")
-    for x in (120, 270):                                           # cam straps
-        s.rect(tx + x * k, ty - 6, 25 * k, TW * k + 12, "t", rx=4)
-    s.rect(tx + TL * k, ty + 30 * k, 18 * k, 52 * k, "pe", rx=8)   # end cap
-    s.rect(tx + TL * k + 8, ty + 42 * k, 10 * k, 28 * k, "of", rx=6)
-    s.dim_h(tx, tx + TL * k, ty - 30, "392", ty - 8)
-    s.dim_v(ty, ty + TW * k, tx - 30, "112", tx)
-    s.dim_h(tx + 6 * k, tx + 101 * k, ty + TW * k + 36, "95 module", ty + TW * k + 6)
-    s.callout(1, tx + 135 * k, ty + 2, tx + 135 * k, ty - 60)
-    s.callout(2, tx + (TL + 9) * k, ty + 56 * k, tx + (TL + 40) * k, ty + 20 * k)
-    s.view_label(tx + TL * k / 2, ty + TW * k + 100, "LAPTOP-BAG WEIGHT TRAY — TOP (lid off)", "1:2")
+    # Physical stack at 2x: walls4, weight88, clamp4, reserve6, roof4.
+    sx,sy=100,550
+    s.rect(sx,sy,228,212,'pe')
+    s.rect(sx+8,sy+8,212,196,'of')
+    floor=sy+204
+    for h in (35,35,18):
+        floor-=h*k
+        s.rect(sx+12,floor,204,h*k,'wt')
+        s.text(sx+114,floor+h,'full ≤35' if h==35 else 'half ≤18','sm','middle')
+    s.rect(sx+8,floor-8,212,8,'pe')
+    s.dim_v(sy,sy+212,sx-30,'106 outer',sx)
+    s.text(sx+114,sy-22,'4 clamp +6 reserve above stack','sm','middle')
+    s.view_label(sx+114,sy+250,'END SECTION — 1:2')
+    s.text(370,570,'Mass and finished dimensions are separate', 'lbl')
+    for i,line in enumerate([
+        'Core reference95 ×100 ×33 steel ≈2.461 kg before radii/coating.',
+        'Nominal2.5 /1.25 kg targets: measure finished; tune core to suit.',
+        'Finished full ≤97 ×102 ×35; half ≤97 ×102 ×18.',
+        '4 ×(2.5 +2.5 +1.25) =25 kg, not24.',
+        '23.75 kg example: 8 full +3 half; weigh actual whole bag.',
+        '88 stack +4 clamp +6 reserve =98 inner height.',
+        '7 sleeved bars ×12 =84 fit; 8×12 =96 do NOT fit.',
+        'Lower stacks require secured spacers and clamp testing.',
+    ]): s.text(370,602+i*27,line,'sm')
 
-    # ---- LAPTOP TRAY: side elevation with three loadings ----
-    ey = 560
-    s.rect(tx, ey, TL * k, 95 * k, "pe", rx=8)
-    s.rect(tx + 6 * k, ey + 4 * k, 380 * k, 87 * k, "of", rx=3)
-    floor = ey + 91 * k
-    # left half: steel bricks (2 full + 1 half layer); right half: steel bar in sleeves
-    yb = floor
-    for hgt in (33, 33, 16.5):
-        yb -= hgt * k
-        for i in range(2):
-            s.rect(tx + (6 + i * 95) * k + 3, yb, 95 * k - 6, hgt * k - 3, "wt", rx=5)
-    s.rect(tx + 6 * k, yb - 5 * k, 190 * k, 4 * k, "pe")
-    yb = floor
-    for _ in range(8):
-        yb -= 10 * k
-        s.rect(tx + 196 * k, yb, 190 * k - 4, 10 * k - 2, "wt", rx=3)
-    s.rect(tx + 196 * k, yb - 5 * k, 190 * k, 4 * k, "pe")
-    s.line(tx + 196 * k - 2, ey + 6, tx + 196 * k - 2, ey + 95 * k - 6, "c")
-    s.text(tx + 101 * k, ey - 14, "steel bricks: 2.5 + 2.5 + 1.25 kg per module", "sm", "middle")
-    s.text(tx + 291 * k, ey - 14, "steel flat bar 100 × 10, 8 layers", "sm", "middle")
-    s.dim_v(ey, ey + 95 * k, tx - 30, "95", tx)
-    s.callout(3, tx + 100 * k, yb - 3 * k + 1, tx + 100 * k, ey - 60)
-    s.view_label(tx + TL * k / 2, ey + 95 * k + 50, "TRAY — SIDE ELEVATION (two loadings shown)", "1:2")
+    # Handle options are explicitly symbolic, not dimensioned final geometry.
+    s.text(100,900,'MODULAR HANDLE CONCEPT — NTS', 'lbl')
+    receiver_handle(s,250,1030)
+    s.path('M180,980 Q250,915 320,980','h')
+    s.text(440,920,'Shared frame receivers: provisional140 centres', 'sm')
+    s.text(440,947,'Fabric module (dashed) or standard rigid module', 'sm')
+    s.text(440,974,'120 grip length; ≥45 knuckle clearance; trial30/35/40 grip', 'sm')
+    s.text(440,1001,'Captive bolts; swap unloaded with tool; fastening details TBD', 'sm')
+    s.text(440,1028,'DOUBLE WEIGHT HANDLE: MEANING / GEOMETRY TBD', 'lbl')
 
-    # ---- BRICK + SHELL ----
-    bx, by = 90, 850
-    s.rect(bx, by, 95 * k, 100 * k, "wt", rx=8)
-    s.text(bx + 95, by + 108, "2.5 kg", "lbl", "middle")
-    s.rect(bx + 95 * k + 40, by, 33 * k, 100 * k, "wt", rx=8)
-    s.rect(bx + 95 * k + 40 + 33 * k + 30, by + 0, 16.5 * k, 100 * k, "wt", rx=6)
-    s.dim_h(bx, bx + 95 * k, by + 100 * k + 30, "95", by + 100 * k + 6)
-    s.dim_v(by, by + 100 * k, bx - 26, "100", bx)
-    s.dim_h(bx + 95 * k + 40, bx + 95 * k + 40 + 33 * k, by + 100 * k + 30, "33", by + 100 * k + 6)
-    s.dim_h(bx + 95 * k + 40 + 33 * k + 30, bx + 95 * k + 40 + 33 * k + 30 + 16.5 * k,
-            by + 100 * k + 30, "16.5", by + 100 * k + 6)
-    s.text(bx + 95 * k + 40 + 33 * k + 30 + 16.5 * k + 14, by + 30, "half brick", "sm")
-    s.text(bx + 95 * k + 40 + 33 * k + 30 + 16.5 * k + 14, by + 50, "1.25 kg", "sm")
-    s.view_label(bx + 180, by + 100 * k + 75, "STEEL BRICK — front + edge", "1:2")
-
-    sx = 560
-    s.rect(sx, by, 95 * k, 100 * k, "pe", rx=10)
-    s.rect(sx + 70, by - 18, 50, 18, "o", rx=4)                     # cap
-    s.rect(sx + 95 * k + 40, by, 33 * k, 100 * k, "pe", rx=10)
-    s.view_label(sx + 140, by + 100 * k + 75, "FILL-YOUR-OWN SHELL — same footprint", "1:2")
-    s.callout(4, sx + 120, by - 10, sx + 220, by - 30)
-
-    # ---- NOTES ----
-    y = s.notes(1110, 70, "WEIGHT SYSTEM — “ONE TRAY, ANY WEIGHT”", [
-        (None, "The bags sell a standard weight interface. Every weight source fits the same module, so one tray (laptop bag) and one carrier (Big Pack) take them all."),
-        (None, "MODULE: 95 × 100 mm footprint. Laptop tray = 4 × 1 modules, 85 mm usable height. Big Pack carrier = 3 × 3 modules, 50 mm."),
-        (1, "Two cam straps press a clamp plate onto any stack from 10 to 85 mm: no rattle with any source."),
-        (2, "Tray end cap with pull grip and latch; slides on HDPE runners. Tray: aluminium or glass-filled nylon, HDPE liner."),
-        (3, "Clamp plate (HDPE, 4 mm)."),
-        (4, "Fill-your-own shell: HDPE, screw cap with snap seal. Ships empty; fill with steel shot (~1 kg), sand or water. Long 4-module shell (380 × 100 × 35) for the laptop tray holds ~5 kg of shot."),
-        (None, "STEEL BRICK: 95 × 100 × 33 mm steel, 2.5 kg; half brick 16.5 mm, 1.25 kg. TPU or rubber coated, R3 edges, weight laser-marked on face. No lead."),
-        (None, "LOCAL STEEL BAR: 100 × 10 mm mild steel cut to 380 mm (3.0 kg, laptop tray) or 285 mm (2.2 kg, Big Pack). We supply TPU sleeves with end caps."),
-        (None, "PLATES: standard ruck plate 229 × 292 mm goes straight into the Big Pack sleeve. 1\" gym plates up to 150 mm diameter lie flat in the Big Pack carrier. Gym plates don't fit the laptop tray."),
-        (None, "CAPACITY: laptop tray 24 kg with bricks or bar; ~13–16 kg with shot shells. Big Pack 24 kg with any source."),
-    ])
-    s.legend(1110, y + 12)
-    s.title_block("WEIGHT SYSTEM", "Tray, carrier module, bricks and shells", 3, "Scale 1:2 at A3")
+    s.notes(1060,70,'WEIGHT INTERFACE — SOURCE LIMITS',[
+        (None,'One shared interface goal, two enclosure shapes. No universal-fit or universal24 kg claim. Complete bag ≤30 kg.'),
+        (1,'Finished95 ×100 core coating allowance gives ≤97 ×102 footprint. 2 mm edge and intermodule gaps. Source limits in tech pack v0.2.'),
+        (2,'Big Pack cavity299 ×314 ×58; 3×97 +2×2 +2×2 =299; 3×102 +2×2 +2×2 =314. 53 stack +4 clamp +1 reserve.'),
+        (3,'Raw bar laptop380 ×100 ×10 ≈2.983 kg. Finished sleeve ≤384 ×104 ×12. Seven layers ≈20.88 kg steel; add sleeve tare.'),
+        (4,'Big Pack raw285 ×100 ×10 ≈2.237 kg; sleeved ≤289 ×104 ×12. 2 rows ×4 layers =8 pieces, ≈17.90 kg steel. Three rows need320 high with gaps/edges; do not fit. Secure unused space.'),
+        (5,'Shot theoretical upper bounds before shell losses: laptop13.7–17.8 kg, Big Pack18.4–23.9 kg at3.7–4.8 kg/L. Real capacity is lower.'),
+        (6,'Water/sand much lighter. Long shells must fit cavity and stack including caps; nominal outside shell volume is not fill capacity.'),
+        (7,'Ruck plate229 ×292 is a candidate Big Pack footprint, insert removed. Finished stack ≤53; sleeves/clamp included. Not every SKU fits.'),
+        (8,'Small gym plates ≤150 diameter are Big Pack candidates only; confirm layout and stack. Laptop cavity depth106 cannot take them.'),
+        (9,'Proposed supports, clamps, fasteners and coatings are untested. Low-stack spacers, sealed fillers and two-grip retention need POC validation.'),
+    ],width_chars=58)
+    footer(s,'WEIGHT SYSTEM',3)
     return s
 
 
-if __name__ == "__main__":
-    for name, fn in [("1-laptop-bag", laptop_bag), ("2-big-pack", big_pack), ("3-weight-system", weight_system)]:
-        (OUT / f"{name}.svg").write_text(fn().svg())
-        print("wrote", OUT / f"{name}.svg")
+if __name__ == '__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output-dir',type=Path,default=SOURCE)
+    args=parser.parse_args()
+    args.output_dir.mkdir(parents=True,exist_ok=True)
+    for name,fn in [('1-laptop-bag',laptop_bag),('2-big-pack',big_pack),('3-weight-system',weight_system)]:
+        out=args.output_dir/f'{name}.svg'
+        out.write_text(fn().svg())
+        print('wrote',out)

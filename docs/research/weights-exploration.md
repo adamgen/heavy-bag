@@ -1,3 +1,15 @@
+> **Historical exploration — not the current product specification (2026-11-08).**
+> Product design/POC is the present scope; shipping, legal and market tests below
+> are deferred. The 24 kg scenarios, “perfect fit”, exact bar weights and
+> volume-limited overload assumptions below are superseded by the
+> [v0.2 tech pack](../tech-pack.md). Finished coatings, sleeves, clamp and
+> insertion clearances must be included. A 380 mm raw bar needs a ≤384 mm
+> finished sleeve; only seven 12 mm layers fit the laptop's 88 mm stack (~20.88
+> kg steel), not eight. Big Pack sources have distinct capacities, not universal
+> 24 kg. Ruck-plate stacks over53 mm finished do not fit. Start light;30 kg total
+> is a ceiling, not every user's goal. Research estimates below are retained
+> only as dated hypotheses, not validated sourcing or fabrication instructions.
+
 <!-- Produced by a child research session on 2026-10-29. Research only; figures marked (E) are estimates. -->
 
 # Heavy Bag — Weight-sourcing research: how to avoid shipping 24 kg of metal per customer

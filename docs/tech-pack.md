@@ -1,137 +1,189 @@
-# Tech Pack (draft v0.1) — for first samples
+# Tech pack — provisional packaging revision v0.2
 
-Status: **draft for a first conversation with manufacturers.** Everything
-here is a concept to be refined with the sample maker. Dimensions in mm.
+**Product-design / POC only. Not engineering validated, not fabrication-ready.**
+All dimensions mm. Coordinate order is explicit below. No purchase or supplier
+outreach is authorized by this document. Current SVG, PNG and PDF
+exports have been regenerated from the current sketch generator. Central envelope values:
+[`geometry.json`](../design/sketches/geometry.json).
 
-Drawings: [`design/sketches/heavy-bag-concept-sketches.pdf`](../design/sketches/heavy-bag-concept-sketches.pdf)
-(3 sheets, A3; SVG and PNG versions in the same folder).
+## 1. Intent and mass budget
 
-| Sheet | Contents |
-| --- | --- |
-| 1 | Laptop bag ("Heavy Brief", working name): front, end, section, top views |
-| 2 | Backpack ("Big Pack"): front, back, section views; weight carrier |
-| 3 | Weight system: laptop-bag tray, 95 × 100 mm module, steel brick, fill-your-own shell |
+Laptop bag and Big Pack for **office workers who lift heavy**. Start light;
+**30 kg maximum complete mass**, not a training destination or added-weight
+rating. Complete mass includes frame, empty enclosure, handle module, clamps,
+liners, laptop and all contents. ≤2.5 kg empty is an unproven stretch target.
 
-## 1. What we're asking for
+Example: 30 − 2.5 empty bag − 2 laptop − 1.5 other contents = **24 kg** added
+weight allowance. Weigh actual assemblies; a 2.1 kg laptop or heavier handle
+reduces this allowance. Physical fit does not prevent overload.
 
-- **Two prototype samples:** one laptop bag and one Big Pack, Core fabric
-  (black ballistic nylon), with frames and a working weight tray / carrier.
-- **Feedback on construction:** how the factory would build the frame, the
-  handle mount and the weight hatch. We welcome better ideas.
-- **Quotes:** sample cost and lead time; unit cost at 300 / 1,000 / 3,000
-  units; MOQ per colour; tooling costs (if any).
-- **Their sources:** whether they can supply the aluminium frame parts, or
-  recommend a partner.
+## 2. Weight and enclosure envelope arithmetic
 
-Before sharing: put an NDA in place.
+### Own bricks: core is not finished size or guaranteed mass
 
-## 2. Product summary
+- Initial steel core reference 95 × 100 × 33. At 7,850 kg/m³ this is
+  **2.461 kg** before edge radii, machining and coating, not guaranteed 2.5 kg.
+- Nominal targets: 2.5 kg full, 1.25 kg half, **measured finished**. Agree mass
+  tolerance with the maker. A sharp, uncoated rectangular core needs about
+  33.52 mm thickness for 2.5 kg before radius/coating effects; tune cores only
+  while staying inside the finished envelope. If that cannot be achieved,
+  revise envelope or mass target, not the label.
+- Finished maximum including coating and tolerances: full **97 × 102 × 35**;
+  half **97 × 102 × 18**. This provisionally reserves up to 1 mm per face on
+  the footprint; coating thickness and process still need specification.
+- Grid allocation: 2 mm edge clearance each side and 2 mm between modules.
+  These are provisional insertion allowances, not machining tolerances.
 
-Work bags that are **heavy on purpose**. The user carries the bag in one
-hand on the walk to work (a "suitcase carry" exercise), switching hands when
-the grip tires. Removable weights live in a separate compartment.
+| Assembly | Outer | Clear cavity | Stack / clamp allowance |
+| --- | --- | --- | --- |
+| Laptop 4 × 1 cassette, L × D × H | 406 × 114 × 106 | 398 × 106 × 98 | 88 stack + 4 clamp + 6 compression/hardware reserve |
+| Big Pack 3 × 3 carrier, W × H × D | 307 × 322 × 66 | 299 × 314 × 58 | 53 stack + 4 clamp + 1 compression reserve |
 
-**Critical requirements:**
+Walls/floor/lid allowance = 4 mm per face for packaging, not specified
+structural thickness. Clamp fittings/straps and folded grips must stay within
+outer envelopes. Low stacks use secured spacers: do not imply the plate has
+88 mm of unsupported clamping travel. Test contact pressure and retention.
+The Big Pack's 1 mm reserve is tight; increase enclosure depth if real hardware
+cannot fit, rather than cutting the brick or coating allowance silently.
 
-1. **Load:** up to **30 kg total** (bag + laptop + contents + up to 24 kg of
-   weights), every day, for 5+ years.
-2. **Structure:** load path is handle → aluminium frame → weight tray. Fabric
-   is not the main structure, but must also hold 30 kg alone as a backup.
-3. **Balance:** handle sits directly over the loaded centre of mass, so the
-   bag hangs straight in either hand.
-4. **Weights:** removable in one motion (< 10 s), with a two-step release so
-   they can't fall out by accident. No rattle.
-5. **Laptop:** fits a 16" MacBook Pro (356 × 248 × 17 mm), separated from the
-   weights by a rigid floor or panel.
+- Laptop length: **4×97 + 3×2 + 2×2 = 398**; depth 102 + 2×2 = 106.
+- Big Pack width: **3×97 + 2×2 + 2×2 = 299**; height
+  **3×102 + 2×2 + 2×2 = 314**. Add 8 total wall allowance → 307 × 322.
+- A 380 mm cavity for 4×95 or 285 mm cavity for 3×95 had **zero** nominal
+  clearance even before coating. Those v0.1 cavity dimensions are superseded.
+- Two full and one half finished brick: 35+35+18 = **88** high, inside laptop
+  stack space, but 2.5+2.5+1.25 = **6.25 kg per module**, ×4 = **25 kg**.
+  That fits spatially but exceeds the illustrative 24 kg allowance.
+- Illustrative allowed laptop loading: eight full + three half = **23.75 kg**
+  nominal, one module has no half. Restrain the asymmetric partial load.
+- Big Pack: nine full = **22.5 kg**; add one half = **23.75**, not 24. Maximum
+  local stack is 35+18 = 53. More halves may fit physically and overload the
+  bag. Label and weigh the entire bag, including the carrier and all adapters.
 
-## 3. Dimensions (concept)
+## 3. Bodies, insertion bays and laptop protection
 
 | | Laptop bag | Big Pack |
 | --- | --- | --- |
-| External W × H × D | 420 × 400 × 130 | 310 × 480 × 160 |
-| Handle (above body) | 170 wide × 62 high, ~30 grip | same |
-| Weight zone | Base band 100 high; tray 392 × 112 × 95 | Back sleeve; carrier 297 × 312 × ~50 |
-| Laptop sleeve (internal) | 370 × 260 × 25 | 370 × 260 × 25 |
-| Target empty weight | ≤ 2.5 kg incl. frame and empty tray | ≤ 2.5 kg incl. frame and empty carrier |
+| External body W × H × D | 440 × 430 × 150 | 360 × 500 × 190 |
+| Clear enclosure bay | 414 L × 122 D × 110 H | 319 W × 334 H × 78 D |
+| Insertion clearance | 4 at each L/D face, 2 at top/bottom | 6 each face |
+| Laptop clear sleeve W × H × D | 370 × 260 × 25 | **260 × 370 × 25**, portrait |
+| Padded sleeve outer W × H × D | 382 × 272 × 37 | 272 × 382 × 37 |
 
-## 4. Bill of materials (draft)
+Laptop bag width stack: 406 cassette + 8 insertion + 26 combined end-frame /
+textile allowance = 440. Reserve 13 each end (candidate stay 5 thick + 8 textile /
+seam); depth 114 + 8 insertion + 28 front/back allowance = 150. **Clear hatch
+opening 118 D × 110 H minimum**, measured after zip/lining intrusion: leaves
+2 per face around 114 × 106 cassette. End stays/bridge must route around the
+hatch; no cross-member through the extraction path. Reinforce and test the
+load detour. Body height from base upward:
 
-| Component | Laptop bag | Big Pack | Spec / notes |
-| --- | --- | --- | --- |
-| Outer shell | ✓ | ✓ | 1680D ballistic nylon (or 1000D Cordura-class), PU-coated, black |
-| Lining | ✓ | ✓ | 210D–420D nylon, light grey (easy to see contents) |
-| Weight compartment lining | ✓ | ✓ | Heavy TPU-coated nylon, abrasion-resistant; replaceable slide plate |
-| Padding | ✓ | ✓ | Closed-cell foam 6–10 mm (laptop sleeve, back panel, base) |
-| Frame | U-frame: top bridge, 2 end stays, base cradle | 2 back stays, top bridge, base cradle | 6061-T6 aluminium; stays ~20 × 5 flat bar or 12 mm tube (to confirm by load test); riveted or bolted joints |
-| Frame sheet / floor | HDPE false floor 3–4 mm; HDPE front/back stiffeners | HDPE frame sheet 3–4 mm | |
-| Handle | ✓ | ✓ | Aluminium or glass-filled nylon core, rubber or leather wrap, ~30 mm grip; bolted or riveted to bridge |
-| Weight tray | ✓ | — | 392 × 112 × 95; aluminium or glass-filled nylon; HDPE runners; end cap with pull grip and latch |
-| Weight carrier | — | ✓ | 297 × 312 × ~50; HDPE or glass-filled nylon; pull loop |
-| Clamp | Clamp plate + 2 cam straps | Cam strap | Clamps any stack 10–85 mm (tray) / 10–50 mm (carrier) |
-| Zips | Main 2-way, front pocket, weight hatch | Main 2-way, front pocket, weight slot, strap stow panel | Heavy coil (#10 class) on main and weight openings; water-resistant on exterior |
-| Webbing | ✓ | ✓ | Nylon or polyester, 25–38 mm; backup load path anchored to frame |
-| Hardware | 2 D-rings, strap clips | Strap buckles, sternum strap, slot buckle tab | **Metal on any load path** (aluminium or steel) |
-| Shoulder strap | Detachable, padded | Harness: 2 padded straps, stowable | |
-| Feet | 4 | 4 | Moulded, replaceable |
-| Thread | ✓ | ✓ | Bonded nylon or polyester, heavy weight on load seams |
-| Branding | Debossed logo patch on front pocket | same | Tonal |
+1. Base/cradle allowance 10; cassette top 116.
+2. 4 head clearance (bay starts 8, ends 118; 2 more to barrier) → barrier
+   underside 120; 4 HDPE barrier → top 124.
+3. Replaceable impact pads 6 → top 130.
+4. **12 free gap above the pads** → suspended sleeve bottom 142.
+5. Sleeve outer height 272 → top 414; 16 top/access allowance → body 430.
 
-## 5. Construction notes
+Attach suspension straps at reinforced upper structure with no weight load
+through sleeve. The free gap must survive suspension stretch and impacts;
+pads catch overtravel without a hard strike. This stack-up is only unloaded
+packaging. Test with a 356 × 248 × 17 surrogate before a real laptop.
 
-- **Bar-tacks or box-X stitching** at every load point (handle, D-rings,
-  strap anchors, frame pockets).
-- Frame stays sit in **sewn pockets** and are fixed to the bridge and cradle
-  so the frame can't shift.
-- **Handle bolted or riveted through the bridge**, never only sewn.
-- Tray / carrier never rubs the outer shell directly: lined compartment +
-  slide plate.
-- Laptop bag: weight hatch zip on **one end panel**; tray slides out on
-  runners.
-- Big Pack: weight slot zip across the **top of the back panel**; carrier
-  lifts out by its loop. Shoulder straps stow behind a zipped panel.
-- Prefer designs where the handle wrap, feet and slide plate can be replaced.
+Big Pack width: 307 carrier + 12 insertion + **41 side structure/textile** =
+360 (20.5 each side: reserve 12 for stay packaging + 8.5 textile/seams). Bay
+height 334 exceeds carrier 322 by 12, unlike the old 300 mm zone. Proposed
+carrier bottom **36 above base (low)** or **66 (mid-low)**, top respectively
+358 / 388; surrounding bay 30–364 or 60–394. Both fit within the 500 body.
+These are separate fixed-mount POC layouts, not a sliding adjustment mechanism.
 
-## 6. Weights (separate suppliers, for reference)
+Big Pack depth from back: **18 padding/frame + 78 carrier bay + 4 rigid
+barrier + 12 lateral isolation space + 37 padded laptop sleeve + 41 main/front
+allowance = 190**. Pads replaceable on barrier within that lateral gap;
+6 mm pads leave 6 free lateral space. Portrait sleeve bottom 32 above base;
+base stop top 14 + 6 impact pad + 12 free vertical gap = 32. Sleeve top 414,
+leaving 86 for access/suspension. Test lateral and base impacts; frame must
+not bypass isolation. Everyday-volume and access claims await mock-ups.
 
-The bag maker does not need to make weights, but the tray and carrier must
-fit them. See sheet 3.
+## 4. Source-specific capacity — never “24 kg from any source”
 
-- **Module:** 95 × 100 mm footprint.
-- **Steel brick:** 95 × 100 × 33 mm (2.5 kg), half brick 16.5 mm (1.25 kg),
-  TPU or rubber coated, R3 edges, laser-marked. No lead.
-- **Fill-your-own shell:** HDPE, same footprint, screw cap. A long 4-module
-  shell (380 × 100 × 35) for the laptop tray.
-- **Local steel bar:** 100 × 10 mm cut to 380 mm (laptop tray) or 285 mm
-  (Big Pack), in a TPU sleeve.
-- **Plates:** standard ruck plate 229 × 292 mm fits the Big Pack sleeve.
+All examples include no sleeve/container mass unless stated; weigh that mass
+as well. Bulk density, shell wall thickness and closures reduce capacities.
+Two bags share the interface goal, not the same cassette geometry.
 
-For samples, we'll supply test weights (steel plates or sandbags) to the
-factory.
-
-## 7. Testing and acceptance (first samples)
-
-| Test | Requirement |
-| --- | --- |
-| Static pull | Handle and every load attachment hold 90 kg (3 × 30 kg), no failure |
-| Fatigue | 10,000 lift-and-carry cycles at 30 kg, no seam, frame or handle damage |
-| Fabric-only | With frame disconnected, 30 kg load held by fabric and seams |
-| Drop | Loaded bag dropped from desk height onto concrete, incl. corners: frame, base, tray intact |
-| Creep | 30 kg hung for 72 h: no lasting sag |
-| Tray / carrier | Removed and replaced 2,000 times: runners, lining and zips still work |
-| Release | Weights out in < 10 s; no accidental release in a shake test |
-| Fabric | Abrasion (Martindale), tear, tensile and water-resistance results for the chosen fabric |
-
-## 8. Still to design or decide (before or with the first samples)
-
-| Item | Owner | Notes |
+| Source | Laptop bag | Big Pack |
 | --- | --- | --- |
-| Handle grip shape and diameter | Us | Test 25–35 mm grips at 30 kg on walks |
-| Handle position on the Big Pack | Us + factory | First sample with an adjustable mount to find the loaded centre of mass |
-| Frame profile and joints | Factory + us | Flat bar vs tube; rivet vs bolt; confirm with load test |
-| Hatch latch and tray runners | Us + factory | Two-step release; low friction under 24 kg |
-| Clamp design | Us | Cam straps vs screw-down plate |
-| Big Pack harness | Factory | Standard harness; stow panel |
-| Colourways | Us | Black first; charcoal, olive, sand later |
-| Labels and packaging | Us | Care label, load rating label, carry guide card, box |
-| Target unit cost | Us | Set after quotes; see price hypothesis in [`brand.md`](brand.md) |
-| Name clearance | Us | "Heavy Bag", "Big Pack" (and "Heavy Brief") need trademark checks before branding goes on product |
+| Own nominal steel bricks | 20 kg: 8 full in two layers; 23.75 kg: 8 full + 3 half example | 22.5 kg: 9 full; 23.75: 9 full + 1 half example |
+| 100 × 10 raw steel bar, 7,850 kg/m³ | 380 length ≈2.983 kg each; sleeved ≤384 × 104 × 12; **7 layers =84 mm, ≈20.88 kg steel**; 8 layers =96 fails 88 stack | 285 length ≈2.237 kg each; sleeved ≤289 × 104 × 12; **2 rows × 4 depth layers =8 pieces ≈17.90 kg steel** (214 row span incl. 2 gap +4 edges, 48 depth); 3 rows need 320 height with 2 mm gaps/edges and do not fit; secure unused space |
+| Shot-filled sealed shells | Absolute cavity bounding volume at 88 stack: 3.713 L; loose shot 3.7–4.8 kg/L gives **13.7–17.8 kg theoretical fill**, less after walls, gaps, closures | At 53 stack: 4.976 L; same density → **18.4–23.9 kg theoretical fill**, less after shells/closures; no promised 24 kg |
+| Sand / water shells | Same 3.713 L geometric upper bound: ~5.9 kg sand at 1.6 kg/L or ~3.7 kg water, before shell losses | 4.976 L: ~8.0 kg sand / ~5.0 kg water before losses |
+| Ruck plates | Not supported in this narrow cavity | Candidate 229 × 292 footprint inside 299 × 314 after grid insert removal; **finished thickness incl. sleeves ≤53**, clamped; inspect actual plate, no universal standard fit |
+| Small gym plates | Not supported (106 clear depth) | Candidate ≤150 diameter flat in empty cavity; maximum finished stack 53 incl. separators; layout and rating per actual SKU, not automatic 24 kg |
+
+Long shells must stay inside 398 × 106 × 88 (laptop) or 299 × 314 × 53
+(Big Pack); a nominal 380 × 100 shell body is not usable fill volume.
+Sealed fillers need leak and rattle tests; no loose sand/water in the tray.
+
+## 5. Structure, modular handles and construction
+
+- 6061-T6 frame bridge, stays and cradle; HDPE barriers/shape panels; profiles,
+  joint design, fasteners and thicknesses selected after structural review.
+- Shared frame receivers, provisional **140 mm centres**, for fabric or standard
+  rigid handle. Rigid POC has 120 usable grip length, 30/35/40 grip trials and
+  ≥45 clear knuckle space. Receiver pitch is an initial fixture dimension,
+  not a claim that commercial off-the-shelf handles fit it.
+- Fabric grip still bolts through structural end fittings to the same
+  receivers; not sewn-only. Each complete module must pass the same tests.
+- Captive bolts for POC: final diameter, edge distance, thread engagement,
+  torque, anti-loosening and inspection marks TBD. Swap only unloaded using
+  a tool. No quick-release or permanently riveted replaceable modules.
+- **Double weight handle: requested variant, meaning and geometry TBD**. Do
+  not assume two-hand, two grips, a thicker grip or any load multiplier.
+- Heavy Core nylon, lighter lining, reinforced seams, backup load webbing,
+  metal load hardware, protective feet, abrasion liner and replaceable runners.
+- Stowable backpack harness; detachable laptop-bag shoulder strap. Keep all
+  straps clear of receivers, knuckles, hatch and extraction support.
+
+## 6. Extraction and backpack placement — proposals only
+
+**A. Supported single cassette (recommended for comparison, not decided):**
+set bag on stable level support at hatch height; slide onto an adjacent stable
+surface/platform, never pull the suspended heavy tray one-handed. Two stowable
+lifting grips, positive travel stop before loss of runner support, and a
+separate deliberate final release only after support is established. Check
+pinch zones, tipping, rail friction, zip opening and reseating/lock indication.
+Budget ≥450 clear support length for the 406 tray plus finger space; determine
+support strength and geometry in the POC. No unsupported cantilever at full load.
+
+**B. Two smaller cassettes:** compare lower lift mass against extra walls,
+clamps, releases and loading errors; breaks continuous long-bar compatibility
+unless redesigned. No frozen split dimensions or automatic approval.
+
+Big Pack remains top-loading. Do not lift a 23.75 kg carrier by an untested
+pull loop: two grips, grounded bag, progressive supported rig tests; if human
+removal is not controlled, revise the enclosure/handling method before freezing.
+
+**Placement comparison:** low vs fixed mid-low, both close to the back. Check
+hand-carry tilt, back/shoulder pressure, harness stow and laptop/main access
+with equal total mass. Do not assert low is best for worn comfort.
+
+## 7. POC tests before supplier-ready drawings
+
+Use fit gauges including finished coating, runners, folded grips, zip intrusion
+and worst-case tolerances. Record empty assembly mass with each handle.
+Start unloaded/submaximal; heavy proof tests on an engineered rig, not a person.
+
+| Test | Proposed target / evidence; not an achieved result |
+| --- | --- |
+| Handle modules / joints | Engineer-reviewed 90 kg-equivalent static proof and 10,000 lift cycles up to 30 kg; all supported modules; no pull-out, loosening or permanent set |
+| Backup textiles | Controlled frame-disconnected containment at 30 kg |
+| Retention / extraction | Empty, partial, highest permitted load; travel stop, deliberate release and reseat; no unintended exit, tip or pinch; record time rather than impose 10 s |
+| Wear / creep | 2,000 removal cycles; 72 h hang up to 30 kg after rig review; no unsafe wear or lasting sag |
+| Laptop isolation | Instrumented surrogate, agreed desk-height / corner drops; no hard bottom-out, intrusion or release; define acceptable acceleration before testing |
+| Balance / comfort | Both hands; each handle; low/mid-low Big Pack layouts; comfortable human loads only after structural screening |
+| Fill / coating | Seal leakage, abrasion, low-stack rattle, actual mass, closure clearance |
+
+After design choices settle, prepare a parts and sample order (Israel or
+abroad). Marketing, ads/Kickstarter, market proof, legal and shipping studies
+remain deferred. No manufacturing release until unresolved fits, structure,
+handle fasteners and test protocols are reviewed with the sample maker.
