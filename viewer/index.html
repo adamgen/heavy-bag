@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <title>Heavy Bag — 3D visual prototype (provisional v0.3)</title>
+  <meta name="description" content="Interactive 3D visual prototype of Heavy Brief and Big Pack. Provisional v0.2.">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    :root {
+      --bg: #1a1a1c;
+      --panel: #121214;
+      --ink: #f2efe8;
+      --muted: #a8a39a;
+      --line: #2c2c30;
+      --brief: #3d3d40;
+      --pack: #4a5340;
+      --sand: #cbb99a;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100dvh;
+    }
+
+    header {
+      flex: 0 0 auto;
+      padding: 16px 20px 12px;
+      padding-left: max(20px, env(safe-area-inset-left));
+      padding-right: max(20px, env(safe-area-inset-right));
+      padding-top: max(16px, env(safe-area-inset-top));
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.05rem, 3.6vw, 1.45rem);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      line-height: 1.25;
+    }
+
+    .sub {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    nav button {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: #1c1c1f;
+      color: var(--ink);
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      min-height: 40px;
+    }
+
+    nav button:hover { border-color: #55555c; }
+    nav button:focus-visible { outline: 2px solid var(--sand); outline-offset: 2px; }
+    nav button[aria-pressed="true"] {
+      background: var(--ink);
+      color: var(--panel);
+      border-color: var(--ink);
+    }
+
+    model-viewer {
+      flex: 1 1 auto;
+      width: 100%;
+      min-height: 0;
+      height: 62dvh;
+      background: radial-gradient(ellipse at 50% 58%, #2a2a2e 0%, #161618 70%);
+      --poster-color: transparent;
+    }
+
+    .meta {
+      flex: 0 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px 20px;
+      padding: 10px 20px 16px;
+      padding-left: max(20px, env(safe-area-inset-left));
+      padding-right: max(20px, env(safe-area-inset-right));
+      padding-bottom: max(16px, env(safe-area-inset-bottom));
+      background: var(--panel);
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.45;
+    }
+
+    .meta strong { color: var(--ink); font-weight: 650; }
+
+    @media (min-height: 700px) {
+      model-viewer { height: auto; }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Heavy Bag — 3D visual prototype (provisional v0.3)</h1>
+    <p class="sub">Drag to rotate, pinch or scroll to zoom. Visual estimate only — not fabrication CAD.</p>
+    <nav role="tablist" aria-label="Choose a model">
+      <button type="button" role="tab" aria-pressed="true" data-src="models/heavy-brief.glb" data-label="Heavy Brief, closed, 35 mm fat-grip handle">Heavy Brief</button>
+      <button type="button" role="tab" aria-pressed="false" data-src="models/heavy-brief-fabric-handle.glb" data-label="Heavy Brief, closed, fabric handle module">Brief · fabric handle</button>
+      <button type="button" role="tab" aria-pressed="false" data-src="models/heavy-brief-open.glb" data-label="Heavy Brief, open cutaway with weight cassette">Brief · open</button>
+      <button type="button" role="tab" aria-pressed="false" data-src="models/big-pack.glb" data-label="Big Pack, closed, low weight placement">Big Pack</button>
+      <button type="button" role="tab" aria-pressed="false" data-src="models/big-pack-door-open.glb" data-label="Big Pack, back-panel door open, carrier in place">Big Pack · door open</button>
+      <button type="button" role="tab" aria-pressed="false" data-src="models/big-pack-open.glb" data-label="Big Pack, carrier removed">Big Pack · carrier out</button>
+    </nav>
+  </header>
+
+  <model-viewer
+    id="viewer"
+    src="models/heavy-brief.glb"
+    alt="Heavy Brief, closed, 35 mm fat-grip handle"
+    camera-controls
+    touch-action="pan-y"
+    auto-rotate
+    auto-rotate-delay="2000"
+    rotation-per-second="16deg"
+    shadow-intensity="0.85"
+    shadow-softness="0.8"
+    environment-image="neutral"
+    exposure="1.05"
+    tone-mapping="aces"
+    interaction-prompt="auto"
+    ar-status="not-presenting"
+  ></model-viewer>
+
+  <p class="meta">
+    <span id="caption"><strong>Heavy Brief</strong> — closed, 35 mm fat-grip handle. Charcoal body, 440 × 430 × 150 mm.</span>
+    <span>Provisional defaults: one cassette, low Big Pack placement, single fat grip. Logo is placeholder text.</span>
+  </p>
+
+  <script>
+    const captions = {
+      "models/heavy-brief.glb": "<strong>Heavy Brief</strong> — closed, 35 mm fat-grip handle. Charcoal body, 440 × 430 × 150 mm.",
+      "models/heavy-brief-fabric-handle.glb": "<strong>Heavy Brief</strong> — fabric handle on the same 140 mm receivers. Charcoal body, 440 × 430 × 150 mm.",
+      "models/heavy-brief-open.glb": "<strong>Heavy Brief</strong> — cassette slid out of the end hatch onto the mat; green shows where it sits inside.",
+      "models/big-pack.glb": "<strong>Big Pack</strong> — closed. Deep olive body, 360 × 500 × 190 mm. Weights sit low against the back panel.",
+      "models/big-pack-door-open.glb": "<strong>Big Pack</strong> — lying face-down with the back-panel door open. Bricks and spacers are swapped in place.",
+      "models/big-pack-open.glb": "<strong>Big Pack</strong> — optional whole-carrier removal; green shows its seat."
+    };
+
+    const viewer = document.getElementById("viewer");
+    const caption = document.getElementById("caption");
+    const buttons = document.querySelectorAll("nav button");
+
+    function show(src, label, button) {
+      viewer.src = src;
+      viewer.alt = label;
+      caption.innerHTML = captions[src] || label;
+      buttons.forEach((b) => b.setAttribute("aria-pressed", b === button ? "true" : "false"));
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        show(button.dataset.src, button.dataset.label, button);
+      });
+    });
+  </script>
+</body>
+</html>
